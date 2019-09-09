@@ -10,5 +10,8 @@
         <module name="javacore1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javacore1" target="12" />
+    </bytecodeTargetLevel>
   </component>
 </project>
