@@ -16,6 +16,9 @@ public class Methods {
         System.out.println("Hello");
         System.out.println("Hello");
         System.out.println("Hello, GIT");
-
+        System.out.println("Hi");
+        System.out.println("Hello");
+        System.out.println("Hello");
+        System.out.println("Hello, GIT");
     }
 }
