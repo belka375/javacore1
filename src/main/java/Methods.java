@@ -5,5 +5,10 @@ public class Methods {
         System.out.println("Hello");
         System.out.println("Hello");
         System.out.println("Hey")
+        System.out.println("Hey")
+        System.out.println("Hey")
+        System.out.println("Hey")
+        System.out.println("Hey")
+        System.out.println("Hey")
     }
 }
