@@ -10,7 +10,7 @@ public class Methods {
         System.out.println();
         System.out.println("task3: ");
         int[] num3 = new int[]{3,9,1,8,4,8,5};
-        min(num3);
+        System.out.println(getMinValue(num3));
 
     }
     public static int sum(int[]numbers){
@@ -35,13 +35,29 @@ public class Methods {
             System.out.println(numbers[m]);
         }
     }
-    public static int min(int[]numbers){
-        int t = numbers[0];
-        for(int n:numbers){
-            if(n<t){
-                t=n;
+//    public static void min(int[]numbers){
+////        int t = numbers[0];
+//        for(int n:numbers){
+//            int t = numbers[0];
+//            if(n > t){
+//                t=n;
+//            }
+////            return numbers[t];
+//            System.out.println(numbers[t]);
+//
+//        }
+////        return numbers[t];
+////        System.out.println(numbers[t]);
+    }
+    public static int getMinValue(int[] numbers){
+        int minValue = numbers[0];
+        for(int i=0; i<numbers.length; i++){
+            if(numbers[i] < minValue){
+                minValue = numbers[i];
             }
         }
-        return numbers[t];
+        return minValue;
+
     }
+
 }
