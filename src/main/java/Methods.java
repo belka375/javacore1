@@ -3,9 +3,11 @@ public class Methods {
 
     int[] chisla=new int[]{2,3,5,6,7,8};
 
-        System.out.println(sum(chisla));
+        System.out.println("The sum of numbers in array is: "+sum(chisla));
 
-//    int[] chisla2=new int[]{3,9,1,8,4,8,5};
+    int[] chisla2=new int[]{3,9,1,8,4,8,5};
+
+        System.out.println("The minimum number in array is: "+minMethod(chisla2));
 
     }
 
@@ -17,17 +19,16 @@ public class Methods {
         return summa;
     }
 
-//    public static int[] sort(int numbers2[]){
-//        int min=numbers2[0];
-//        for (int numbers:numbers2) {
-//            if (numbers<min){
-//                if
-//                min=
-//            }
-//
-//
-//        }
-//
-//    }
+    public static int minMethod(int numbers2[]) {
+        int min = numbers2[0];
+        for (int numbers : numbers2) {
+            if (numbers < min) {
+                min = numbers;
+            }
+        }
+        return min;
+    }
 
-   }
+    }
+
+
