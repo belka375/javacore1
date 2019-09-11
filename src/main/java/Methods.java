@@ -35,13 +35,13 @@ public class Methods {
             System.out.println(numbers[m]);
         }
     }
-    public static void min(int[]numbers){
+    public static int min(int[]numbers){
         int t = numbers[0];
         for(int n:numbers){
             if(n<t){
                 t=n;
             }
         }
-        System.out.println(t);
+        return numbers[t];
     }
 }
