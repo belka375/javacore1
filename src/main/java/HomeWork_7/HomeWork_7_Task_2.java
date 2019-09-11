@@ -5,9 +5,8 @@ package HomeWork_7;//package HomeWork_7;
 
 //        int[] sort = {3, 9, 1, 8, 4, 8, 5};
 //        System.out.println(sortedArrayElementsAsc(sort));
-//
+
 //    }
-//
 //    private static int[] sortedArrayElementsAsc(int[] nonSortedArray) {
 //        int[] sortedArray = new int[nonSortedArray.length];
 //        int temp;
