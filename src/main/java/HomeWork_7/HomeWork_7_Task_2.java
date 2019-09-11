@@ -9,8 +9,8 @@ public class HomeWork_7_Task_2 {
 
     private static void sortArrayElementsAsc(int[] sort) {
         int temporary;
-        for (int i = 0; i <= sort.length - 1; i++) {
-            for (int j = 0; j <= sort.length - 2; j++) {
+        for (int i = 0; i < sort.length; i++) {
+            for (int j = 0; j < sort.length - 1; j++) {
                 if (sort[j] > sort[j + 1]) {
                     temporary = sort[j];
                     sort[j] = sort[j + 1];
