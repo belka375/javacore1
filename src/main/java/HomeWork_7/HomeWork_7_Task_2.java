@@ -29,8 +29,7 @@ public class HomeWork_7_Task_2 {
     }
 
 
-
-// Sort ASC order
+    // Sort ASC order
     private static void sortArrayElementsAsc(int[] sort) {
         int temporary;
         for (int i = 0; i < sort.length; i++) {
