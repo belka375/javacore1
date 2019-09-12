@@ -28,7 +28,6 @@ public class HomeWork_7_Task_2 {
         }
     }
 
-
     // Sort ASC order
     private static void sortArrayElementsAsc(int[] sort) {
         int temporary;
