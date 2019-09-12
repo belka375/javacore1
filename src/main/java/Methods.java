@@ -1,41 +1,48 @@
-import java.util.Arrays;
 public class Methods {
     public static void main(String[] args) {
 
-        int[] chisla=new int[]{2,3,5,6,7,8};
+        System.out.println("**********************");
 
-        System.out.println("The sum of numbers in array is: "+sum(chisla));
+        Person mailman = new Person();
+        mailman.name="John";
+        mailman.lastName="Dole";
+        mailman.eyeColor="Blue";
+        mailman.weight=180;
+        mailman.age=45;
+        mailman.hasChildren=true;
 
-        int[] chisla2=new int[]{3,9,1,8,4,8,5};
+        mailman.printFullName();
+        mailman.printPhysicalConditions();
 
-        System.out.println("The minimum number in array is: "+minMethod(chisla2));
+/*
+        Car mashina = new Car();
+        mashina.beep();
 
-        sort(chisla2);
-        for (int a:chisla2) {
-            System.out.println(a+" ");/
-        }
+//        int[] ma = new int[10];
+//        int x=5;
 
-    }
+        Car ivanCar=new Car();
+        ivanCar.brand="BMW";
+        ivanCar.model="X5";
+        ivanCar.color="Pink";
+        ivanCar.gasTankVolume=18.5;
 
-    public static int sum(int numbers[]){
-        int summa =0;
-        for (int i=0; i<numbers.length; i++){
-            summa=summa+ numbers[i];
-        }
-        return summa;
-    }
+        ivanCar.lightOn();
 
-    public static int minMethod(int numbers2[]) {
-        int min = numbers2[0];
-        for (int numbers : numbers2) {
-            if (numbers < min) {
-                min = numbers;
-            }
-        }
-        return min;
-    }
+//        System.out.println("color of "+ivanCar.model+" is "+ivanCar.color);
+        ivanCar.printCarInfo();
 
-    public static void sort(int[] numbers2){
-        Arrays.sort(numbers2);
+        Car janeCar = new Car();
+        janeCar.color="Silver";
+        janeCar.brand="Audi";
+        janeCar.model="A2";
+        janeCar.gasTankVolume=15;
+
+        janeCar.printCarInfo();
+*/
+
+
+
+
     }
 }
