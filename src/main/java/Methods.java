@@ -1,13 +1,19 @@
+import java.util.Arrays;
 public class Methods {
     public static void main(String[] args) {
 
-    int[] chisla=new int[]{2,3,5,6,7,8};
+        int[] chisla=new int[]{2,3,5,6,7,8};
 
         System.out.println("The sum of numbers in array is: "+sum(chisla));
 
-    int[] chisla2=new int[]{3,9,1,8,4,8,5};
+        int[] chisla2=new int[]{3,9,1,8,4,8,5};
 
         System.out.println("The minimum number in array is: "+minMethod(chisla2));
+
+        sort(chisla2);
+        for (int a:chisla2) {
+            System.out.println(a+" ");/
+        }
 
     }
 
@@ -29,6 +35,7 @@ public class Methods {
         return min;
     }
 
+    public static void sort(int[] numbers2){
+        Arrays.sort(numbers2);
     }
-
-
+}
