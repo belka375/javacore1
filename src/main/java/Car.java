@@ -7,6 +7,7 @@ public class Car {
     public void beep(){
         System.out.println("beep");
     }
+
     public void drive(){
         System.out.println("driving");
     }
@@ -16,7 +17,6 @@ public class Car {
     }
 
     public void printCarInfo(){
-        System.out.println("Model = "+model+"; Brand = "+brand+"; Color ="+color+"; Gas Tank Volume = "+gasTankVolume);
+        System.out.println("Model = "+model+"; Brand="+brand+"; Color="+color+"; Gas Tank Volume="+gasTankVolume);
     }
-
 }
