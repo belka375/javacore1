@@ -13,8 +13,7 @@ public class Methods {
 
         mailman.printFullName();
         mailman.printPhysicalConditions();
-
-
+        
 /*
         Car mashina = new Car();
         mashina.beep();
