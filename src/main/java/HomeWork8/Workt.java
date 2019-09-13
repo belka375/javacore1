@@ -15,6 +15,19 @@ public class Workt {
         cat1.isFeamale= true;
         cat1.mood="good";
 
+        cat2.name = "Tom";
+        cat2.age =1;
+        cat2.weight=1.3;
+        cat2.isFeamale=false;
+        cat2.mood="bad";
+
+        cat3.name = "Kisa";
+        cat3.age =2;
+        cat3.weight=1.0;
+        cat3.isFeamale= true;
+        cat3.mood="great";
+
     }
+
 
 }

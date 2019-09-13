@@ -21,5 +21,7 @@ public class Cat {
 
     }
 
-
+    public void tellMeAboutYourself(){
+        System.out.println("Age="+age+";\nWeight="+weight+";\nGood="+mood+"");
+    }
 }
