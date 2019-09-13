@@ -8,6 +8,4 @@ public class Employee {
     public int salaryAfterTaxes() {
         return this.salary = (int) (this.salary * 0.8);
     }
-
-
 }

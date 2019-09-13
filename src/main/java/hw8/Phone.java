@@ -10,5 +10,4 @@ public class Phone {
         System.out.println("Phone OS: " + this.os);
         System.out.println("Phone price: $" + this.price);
     }
-
 }
