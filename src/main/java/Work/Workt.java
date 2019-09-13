@@ -1,6 +1,6 @@
-package HomeWork8;
+package Work;
 
-public class WorkCat {
+public class Workt {
     public static void main(String[] args) {
 
         Cat cat1=new Cat();

@@ -1,4 +1,4 @@
-package HomeWork8;
+package Work;
 
 public class Cat {
 
@@ -21,5 +21,5 @@ public class Cat {
 
     }
 
-   
+
 }

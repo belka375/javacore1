@@ -1,3 +1,5 @@
+package java.core1;
+
 public class SumaTrexChisel {
 
     int getSum (int a, int b, int c){

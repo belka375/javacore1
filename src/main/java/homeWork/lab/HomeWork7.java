@@ -1,6 +1,6 @@
 package homeWork.lab;
 
-public class MEthods {
+public class HomeWork7 {
 
 
 
@@ -15,8 +15,6 @@ public class MEthods {
 
 
     }
-
-
 
 
 //    1. Создайте метод sum - который в качестве аргумента берет int[] и возвращает его сумму.

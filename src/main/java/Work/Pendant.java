@@ -1,4 +1,4 @@
-package HomeWork8;
+package Work;
 
 public class Pendant {
    {
