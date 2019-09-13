@@ -1,30 +1,48 @@
 public class Methods {
     public static void main(String[] args) {
-        int a = 5;
-        int b = 8;
 
-        sumNumbrs(a, b);
-        System.out.println("---------------");
+        System.out.println("**********************");
 
-        int sumNumber = sum(a, b);
-        System.out.println(sumNumber);
-        System.out.println("---------------");
+        Person mailman = new Person();
+        mailman.name="John";
+        mailman.lastName="Dole";
+        mailman.eyeColor="Blue";
+        mailman.weight=180;
+        mailman.age=45;
+        mailman.hasChildren=true;
 
-        boolean numIsEven = isEven(a);
-        System.out.println(numIsEven);
-        
+        mailman.printFullName();
+        mailman.printPhysicalConditions();
+
+/*
+        Car mashina = new Car();
+        mashina.beep();
+
+//        int[] ma = new int[10];
+//        int x=5;
+
+        Car ivanCar=new Car();
+        ivanCar.brand="BMW";
+        ivanCar.model="X5";
+        ivanCar.color="Pink";
+        ivanCar.gasTankVolume=18.5;
+
+        ivanCar.lightOn();
+
+//        System.out.println("color of "+ivanCar.model+" is "+ivanCar.color);
+        ivanCar.printCarInfo();
+
+        Car janeCar = new Car();
+        janeCar.color="Silver";
+        janeCar.brand="Audi";
+        janeCar.model="A2";
+        janeCar.gasTankVolume=15;
+
+        janeCar.printCarInfo();
+*/
+
+
+
+
     }
-    public static void sumNumbrs(int a, int b){
-        System.out.println("a+b="+(a+b) );
-    }
-    public static int sum (int a, int b){
-        return a+b;
-    }
-  public static boolean isEven(int a){
-        if(a%2==0){
-            return true;
-        }
-        else return false;
-            }
-
 }
