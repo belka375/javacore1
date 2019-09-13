@@ -1,8 +1,8 @@
 public class Baba {
-    String name1;
-    int age;
-    int weight;
-    boolean exercise;
+    public String name1;
+    public int age;
+    public int weight;
+    public boolean exercise;
 
     public boolean yagodka (int a, int b, boolean c) {
         if (a > 40 && b < 130 && c == true) {
