@@ -4,10 +4,10 @@ public class Work {
     public static void main(String[] args) {
 
         Hobby myHobby = new Hobby();
-        myHobby.Friday= "piano";
-        myHobby.Saturday= "soccer";
-        myHobby.Sunday= "sleep";
-        myHobby.Schedule();
+        myHobby.friday= "piano";
+        myHobby.saturday= "soccer";
+        myHobby.sunday= "sleep";
+        myHobby.schedule();
 
         System.out.println("*****************");
 
@@ -20,9 +20,9 @@ public class Work {
         System.out.println("*****************");
 
         Vacation johnVacation = new Vacation();
-        johnVacation.Country= "USA";
-        johnVacation.City= "LA";
-        johnVacation.State= "California";
+        johnVacation.country= "USA";
+        johnVacation.city= "LA";
+        johnVacation.state= "California";
         johnVacation.visit();
     }
 }

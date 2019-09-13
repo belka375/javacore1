@@ -1,11 +1,11 @@
 package HW8;
 
 public class Hobby {
-     public String Friday;
-     public String Saturday;
-     public String Sunday;
+     public String friday;
+     public String saturday;
+     public String sunday;
 
-     public void Schedule() {
-         System.out.println("Friday - "+Friday+"; Saturday - "+Saturday+"; Sunday - "+Sunday+".");
+     public void schedule() {
+         System.out.println("Friday - "+friday+"; Saturday - "+saturday+"; Sunday - "+sunday+".");
      }
 }
