@@ -9,7 +9,7 @@ public class Person {
     public void printFullName(){
         System.out.println(name+" "+lastName);
     }
-    public void printPhisicalConditions(){
-        System.out.println("Age: "+age+" Weight: "+weight+" Eye Color: "+eyeColor);
+    public void printPhysicalConditions(){
+        System.out.println("Age="+age+";\nWeight="+weight+";\nEye Color="+eyeColor);
     }
 }
