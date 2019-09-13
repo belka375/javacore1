@@ -19,7 +19,7 @@ public class Methods {
         mashina.beep();
 
 //        int[] ma = new int[10];
-//        int x=5;
+      int x=5;
 
         Car ivanCar=new Car();
         ivanCar.brand="BMW";
