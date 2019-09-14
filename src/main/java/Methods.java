@@ -1,7 +1,7 @@
 public class Methods {
     public static void main(String[] args) {
 
-        System.out.println("**********************");
+        System.out.println("***********************");
 
         Person mailman = new Person();
         mailman.name="John";
