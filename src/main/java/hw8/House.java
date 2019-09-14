@@ -1,9 +1,9 @@
 package hw8;
 
 public class House {
-    public int price;
-    public String location;
-    public int zipCode;
+    private int price;
+    private String location;
+    private int zipCode;
 
     public int getPrice(){
         return price;
