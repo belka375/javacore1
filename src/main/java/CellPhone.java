@@ -1,9 +1,22 @@
+import org.ietf.jgss.GSSCredential;
+
 public class CellPhone {
     private String brand;
     private String model;
     private double screenSize;
 
     private String chip;
+
+    public CellPhone(){
+
+    }
+
+    public CellPhone(String brand, String model, double screenSize){
+        this.brand=brand;
+        this.model=model;
+        this.screenSize=screenSize;
+    }
+
 
     public void setBrand(String brand) {
         this.brand = brand;

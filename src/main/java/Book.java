@@ -5,6 +5,21 @@ public class Book {
     private int yearofIssue;
     private int yearOfIssue;
 
+    public Book(String name){
+        this.name=name;
+    }
+    public Book(){}
+    public Book(String name, String author){
+        this.name=name;
+        this.author=author;
+    }
+    public Book(String name, String author, int bp, int yr){
+        this.author=author;
+        this.name=name;
+        this.buyingPrice=bp;
+        yearOfIssue=yr;
+    }
+
     public void setName(String n){
         this.name=n;
     }
