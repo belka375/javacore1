@@ -1,16 +1,29 @@
 package homework8;
-public class Pet {
+public class Work {
+    private boolean hasKitten;
+    private int age;
+    private double weight;
+    private String eyeColor;
+    private String name;
+    private String breed;
+
     public static void main(String[] args) {
-        Pet cat = new Pet();
+        Work cat = new Work();
         cat.breed = "Maincoon";
         cat.name = "Markiz";
         cat.eyeColor = "Blue";
-        cat.weight = 18;
+        cat.weight = 18.1;
         cat.age = 5;
         cat.hasKitten = true;
 
         cat.printFullName();
         cat.printPhysicalConditions();
+    }
+
+    private void printFullName() {
+    }
+
+    private void printPhysicalConditions() {
     }
 
 }
