@@ -1,4 +1,4 @@
-public class Methods {
+public class Methods8class {
     public static void main(String[] args) {
 
         System.out.println("**********************");
