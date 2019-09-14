@@ -3,6 +3,23 @@ public class Methods {
 
         System.out.println("***********************");
 
+        Book triDruga = new Book();
+        //triDruga.author ="Some name";
+        //triDruga.name = "Tri Druga";
+        triDruga.setName("Tri Druga");
+        triDruga.setAuthor("Pushkin");
+        triDruga.setYearofIssue(1550);
+        triDruga.setBuyingPrice(-12);
+
+        String bookName = triDruga.getName();
+        String bookAuthor = triDruga.getAuthor();
+        int bPrice = triDruga.getBuyingPrice();
+        int yr=triDruga.getYearofIssue();
+
+
+        System.out.println(bookName+ ", "+bookAuthor+ ", "+ bPrice+ ", "+yr);
+
+
         Person mailman = new Person();
         mailman.name="John";
         mailman.lastName="Dole";
