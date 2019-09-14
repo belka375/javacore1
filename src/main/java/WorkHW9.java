@@ -2,10 +2,10 @@ public class WorkHW9 {
 
     public static void main(String[] args){
 
-        CellPhone cellOld =  new  CellPhone();
+        Hw9CellPhone cellOld =  new Hw9CellPhone();
 
         cellOld.setBrand("Apple");
-        cellOld.setModel("iPhone");
+        cellOld.setModel("iPhone 6");
         cellOld.setScreenSize(8.25);
 
 
