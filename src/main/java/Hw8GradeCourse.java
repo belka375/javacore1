@@ -13,9 +13,13 @@ public class Hw8GradeCourse {
         System.out.println("Welcome to the Test Room!");
     }
 
-    public void gradeInfo(){
-
-       System.out.println(" You passed a test: " + coursename + " " + " with grade = " + " " + grade );
+    public void gradeInfo()
+    {
+        String msg = String.format("You passed a test: %s with grade = %s", coursename, grade);
+        if (retaken) {
+            msg = msg + " and retaken is true";
+        }
+        System.out.println(msg);
     }
 
 }

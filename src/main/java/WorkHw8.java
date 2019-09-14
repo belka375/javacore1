@@ -18,17 +18,19 @@ public class WorkHw8 {
         myfavm.myAction();
         myfavm.relDate();
 //*************************************
-        Hw8GradeCourse mygrade = new  Hw8GradeCourse();
+        Hw8GradeCourse mygrade = new Hw8GradeCourse();
         mygrade.retaken =false;
         mygrade.grade = 10;
         mygrade.coursename = "Java for kids";
         mygrade.displayGreeting();
         mygrade.gradeInfo();
-
-
-
-
-
+//*************************************
+        Hw8GradeCourse myOtherGrade = new Hw8GradeCourse();
+        myOtherGrade.retaken = true;
+        myOtherGrade.grade = 5;
+        myOtherGrade.coursename = "C# for Adults";
+        myOtherGrade.displayGreeting();
+        myOtherGrade.gradeInfo();
 
 
 
