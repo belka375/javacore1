@@ -1,8 +1,9 @@
 public class CellPhone {
-
     private String brand;
     private String model;
     private double screenSize;
+
+    private String chip;
 
     public void setBrand(String brand) {
         this.brand = brand;
@@ -13,13 +14,14 @@ public class CellPhone {
     }
 
     public void setScreenSize(double screenSize) {
+        if(screenSize<=2){
+            this.screenSize=4;
+            System.out.println("wrong screen size");
+        }
         this.screenSize = screenSize;
     }
 
     public double getScreenSize() {
-        if (screenSize<=2){
-            this.screenSize=4;
-            System.out.println("wrong screen size");
         return screenSize;
     }
 
@@ -30,6 +32,4 @@ public class CellPhone {
     public String getModel() {
         return model;
     }
-
-}
 }
