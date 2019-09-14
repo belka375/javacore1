@@ -1,4 +1,4 @@
-package HomeWork_8;
+package homeWork_8;
 
 public class SportWithBall {
     public String sporName;
