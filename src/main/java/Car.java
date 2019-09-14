@@ -4,9 +4,7 @@ public class Car {
     public String brand;
     public double gasTankVolume;
 
-    public void beep(){
-        System.out.println("beep");
-    }
+    public void beep(){System.out.println("beep");}
 
     public void drive(){
         System.out.println("driving");
