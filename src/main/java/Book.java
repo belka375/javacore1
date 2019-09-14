@@ -1,20 +1,44 @@
 public class Book {
+    private String name;
+    private String author;
+    private int buyingPrice;
+    private int yearOfIssue;
 
-    public String name;
-    public String author;
-    public int numberOfPages;
-    public int publishedDate;
-    public boolean isNew;
-    public String mainCharecterName;
-
-
-    public void tellAStory(){
-        System.out.println("Book " +name +" is telling a story about " +mainCharecterName+".\n");
+    public void setName(String n){
+        this.name=n;
+    }
+    public void setAuthor(String a){
+        this.author=a;
+    }
+    public void setBuyingPrice(int bPrice){
+        if(bPrice<=0){
+            System.out.println("buying price must be positive");
+            buyingPrice=1;
+        }else {
+            buyingPrice=bPrice;
+        }
     }
 
-    public void bookInfo(){
-        System.out.println("Book title: " +name+ ";\nAuthor: "
-                        +author+ ";\nNumber of pages: "+numberOfPages+";\nYear Published: "+publishedDate+";\nNew: "+isNew+".\n");
+    public void setYearOfIssue(int year){
+        if(year>2020 || year<1950){
+            System.out.println("Year is wrong");
+            yearOfIssue=1950;
+        }else {
+            yearOfIssue=year;
+        }
+    }
 
+    public String getName(){
+        return name;
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+    public int getBuyingPrice(){
+        return buyingPrice;
+    }
+    public int getYearOfIssue(){
+        return yearOfIssue;
     }
 }
