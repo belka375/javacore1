@@ -8,7 +8,7 @@ public class Methods {
         //triDruga.name = "Tri Druga";
         triDruga.setName("Tri Druga");
         triDruga.setAuthor("Pushkin");
-        triDruga.setYearofIssue(1550);
+
         triDruga.setBuyingPrice(-12);
 
         String bookName = triDruga.getName();

@@ -2,6 +2,7 @@ public class Book {
     private String name;
     private String author;
     private int buyingPrice;
+    private int yearofIssue;
     private int yearOfIssue;
 
     public void setName(String n){
@@ -29,16 +30,26 @@ public class Book {
     }
 
     public String getName(){
+
         return name;
     }
 
     public String getAuthor(){
+
         return author;
     }
     public int getBuyingPrice(){
         return buyingPrice;
     }
     public int getYearOfIssue(){
+
         return yearOfIssue;
+    }
+
+
+
+
+    public int getYearofIssue() {
+        return yearofIssue;
     }
 }
