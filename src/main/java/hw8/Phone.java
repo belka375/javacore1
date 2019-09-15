@@ -15,7 +15,7 @@ public class Phone {
 
     }
     public void printParameters() {
-        System.out.println("Display size = " + displaysize + "\nDimensions = " + length + "x" + width + "x" + height + "\nWeight = " + weight);
+        System.out.println("Display size = " + displaysize+" inches" + "\nDimensions = " + length + " x " + width + " x " + height + "\nWeight = " + weight+" oz");
 
 
     }

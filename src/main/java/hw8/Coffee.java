@@ -12,9 +12,9 @@ public class Coffee {
 
         public void printInfo(){
             if(isDecaff) {
-                System.out.println("Name: "+name+"\nCountry of Origin: "+country+"\nRoast: "+roast+"Bag size: "+size+"\nDecaff");
+                System.out.println("Name: "+name+"\nCountry of Origin: "+country+"\nRoast: "+roast+"\nBag size: "+size+" oz "+"\nDecaff");
             }else{
-                System.out.println("Name: "+name+"\nCountry of Origin: "+country+"\nRoast: "+roast+"Bag size: "+size);
+                System.out.println("Name: "+name+"\nCountry of Origin: "+country+"\nRoast: "+roast+"\nBag size: "+size+" oz");
             }
         }
 

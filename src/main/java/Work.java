@@ -14,10 +14,26 @@ public static void main(String[]args){
     nataliaPhone.length = 2.92;
     nataliaPhone.width = 0.31;
     nataliaPhone.height = 6.20;
+    nataliaPhone.weight = 6.17;
 
 
     nataliaPhone.printName();
     nataliaPhone.printParameters();
+
+    System.out.println("_______________________");
+
+    Phone chinesePhone=new Phone();
+    chinesePhone.brand = "OnePlus";
+    chinesePhone.model = "7 Pro";
+    chinesePhone.displaysize = 6.67;
+    chinesePhone.length = 2.99;
+    chinesePhone.width = 0.34;
+    chinesePhone.height = 6.4;
+    chinesePhone.weight = 6.87;
+
+    chinesePhone.printName();
+    chinesePhone.printParameters();
+
 
 
     System.out.println("_______________________");
