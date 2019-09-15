@@ -4,41 +4,56 @@ public class Book {
     private int buyingPrice;
     private int yearOfIssue;
 
+    public Book(String name){
+        this.name=name;
+    }
+    public Book(){}
+    public Book(String name, String author){
+        this.name=name;
+        this.author=author;
+    }
+    public Book(String name, String author, int bp, int yr){
+        this.author=author;
+        this.name=name;
+        this.buyingPrice=bp;
+        yearOfIssue=yr;
+    }
+
     public void setName(String n){
-        name = n;
+        this.name=n;
     }
     public void setAuthor(String a){
-        author = a;
+        this.author=a;
     }
-    public void setBuyingPrice(int bp){
-        if(bp<=0){
-            System.out.println("Buying price cannot be negative");
-            buyingPrice = 1;
-        } else {
-            buyingPrice = bp;
+    public void setBuyingPrice(int bPrice){
+        if(bPrice<=0){
+            System.out.println("buying price must be positive");
+            buyingPrice=1;
+        }else {
+            buyingPrice=bPrice;
         }
     }
-    public void setYearOfIssue(int yoi){
-        if(yoi>2020 || yoi<1950){
-            System.out.println("year is wrong");
-            yearOfIssue = 1950;
-        } else {
-            yearOfIssue = yoi;
-        }
 
+    public void setYearOfIssue(int year){
+        if(year>2020 || year<1950){
+            System.out.println("Year is wrong");
+            yearOfIssue=1950;
+        }else {
+            yearOfIssue=year;
+        }
     }
+
     public String getName(){
         return name;
     }
+
     public String getAuthor(){
         return author;
     }
-
-    public int getBuyingPrice() {
+    public int getBuyingPrice(){
         return buyingPrice;
     }
-
-    public int getYearOfIssue() {
+    public int getYearOfIssue(){
         return yearOfIssue;
     }
 }

@@ -1,69 +1,34 @@
 public class Methods {
     public static void main(String[] args) {
 
-
-
-
-
-
         System.out.println("**********************");
-        Book triDruga = new Book();
-
-        triDruga.setName("Tri Druga");
-        triDruga.setAuthor("Pushkin");
-        triDruga.setBuyingPrice(-12);
-        triDruga.setYearOfIssue(1950);
-
-        String bookName = triDruga.getName();
-        String bookAuthor = triDruga.getAuthor();
-        int bookBuyingPrice = triDruga.getBuyingPrice();
-        int yearOfIssue = triDruga.getYearOfIssue();
-
-        System.out.println(bookName+" "+bookAuthor+" "+bookBuyingPrice+" "+yearOfIssue);
 
 
+        String[] subjs= new String[]{"Math","History","Biology","Social studies"};
 
+        Student john = new Student("John","Dole","Finance",subjs);
+        Student jane = new Student("Jane","Dole","Finance",subjs);
+        Student boris =new Student();
+        boris.setName("Boris");
+        boris.setLastName("Johnson");
+        boris.setMajor("Politics");
+        boris.setSubjects(subjs);
 
-//        Person mailman = new Person();
-//        mailman.name="John";
-//        mailman.lastName="Dole";
-//        mailman.eyeColor="Blue";
-//        mailman.weight=180;
-//        mailman.age=45;
-//        mailman.hasChildren=true;
+        john.printStudentInfo();
+        jane.printStudentInfo();
+        boris.printStudentInfo();
+        String borisMajor=boris.getMajor();
+
+        boris.superSetter("ne Boris"," ne Jonson","New",subjs);
+        boris.printStudentInfo();
+
+//        CellPhone iPhone = new CellPhone("Apple", "11", 6);
+//        CellPhone samsungGalaxy=new CellPhone();
+//        iPhone.setScreenSize(5.5);
 //
-//        mailman.printFullName();
-//        mailman.printPhysicalConditions();
-
-/*
-        Car mashina = new Car();
-        mashina.beep();
-
-//        int[] ma = new int[10];
-//        int x=5;
-
-        Car ivanCar=new Car();
-        ivanCar.brand="BMW";
-        ivanCar.model="X5";
-        ivanCar.color="Pink";
-        ivanCar.gasTankVolume=18.5;
-
-        ivanCar.lightOn();
-
-//        System.out.println("color of "+ivanCar.model+" is "+ivanCar.color);
-        ivanCar.printCarInfo();
-
-        Car janeCar = new Car();
-        janeCar.color="Silver";
-        janeCar.brand="Audi";
-        janeCar.model="A2";
-        janeCar.gasTankVolume=15;
-
-        janeCar.printCarInfo();
-*/
-
-
-
+//        Book book1= new Book("Anchar");
+//        Book book = new Book();
+//        Book book3 = new Book("Bukvar'","Rumyanzev",15,2010);
 
     }
 }
