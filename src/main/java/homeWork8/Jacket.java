@@ -1,4 +1,4 @@
-package HomeWork8;
+package homeWork8;
 
 public class Jacket {
     public String model;
