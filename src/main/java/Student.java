@@ -10,7 +10,7 @@ public class Student {
        this.major=major;
        this.subjects=subjects;
    }
-    protected Student(){}
+    public Student(){}
     public  void superSetter(String name, String lastName, String major, String[] subjects){
         this.name=name;
         this.lastName=lastName;
