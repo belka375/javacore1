@@ -1,18 +1,39 @@
 public class Methods {
     public static void main(String[] args) {
 
+
+
+
+
+
         System.out.println("**********************");
+        Book triDruga = new Book();
 
-        Person mailman = new Person();
-        mailman.name="John";
-        mailman.lastName="Dole";
-        mailman.eyeColor="Blue";
-        mailman.weight=180;
-        mailman.age=45;
-        mailman.hasChildren=true;
+        triDruga.setName("Tri Druga");
+        triDruga.setAuthor("Pushkin");
+        triDruga.setBuyingPrice(-12);
+        triDruga.setYearOfIssue(1950);
 
-        mailman.printFullName();
-        mailman.printPhysicalConditions();
+        String bookName = triDruga.getName();
+        String bookAuthor = triDruga.getAuthor();
+        int bookBuyingPrice = triDruga.getBuyingPrice();
+        int yearOfIssue = triDruga.getYearOfIssue();
+
+        System.out.println(bookName+" "+bookAuthor+" "+bookBuyingPrice+" "+yearOfIssue);
+
+
+
+
+//        Person mailman = new Person();
+//        mailman.name="John";
+//        mailman.lastName="Dole";
+//        mailman.eyeColor="Blue";
+//        mailman.weight=180;
+//        mailman.age=45;
+//        mailman.hasChildren=true;
+//
+//        mailman.printFullName();
+//        mailman.printPhysicalConditions();
 
 /*
         Car mashina = new Car();

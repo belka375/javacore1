@@ -1,29 +1,28 @@
 package HW8;
 
 public class Printer {
-    public static String model;
-    public static boolean inkEmpty;
-    public static boolean printColor;
-    public static boolean on;
-    public static double maxPaperSizeWidth;
-    public static double maxPaperSizeLength;
-    public static boolean wifiConnection;
+    public  String model;
+    public  boolean inkEmpty;
+    public  boolean printColor;
+    public  boolean on;
+    public  double maxPaperSizeWidth;
+    public  double maxPaperSizeLength;
+    public  boolean wifiConnection;
 
-    public static void print(){
+    public  void print(){
         if(on = false){
             System.out.println("Printer is off");
         }
         else {
             if(inkEmpty = true){
                 System.out.println("Printer needs refill");
-            }
-            else {
+            } else {
                 System.out.println("Printer is printing");
             }
         }
 
     }
-    public static void scan(){
+    public  void scan(){
         if(on = false){
             System.out.println("Printer is off");
         }
@@ -36,7 +35,7 @@ public class Printer {
             }
         }
     }
-    public static void  copy(){
+    public  void  copy(){
         if(on = true){
             System.out.println("Printer is copying");
         }
@@ -45,7 +44,7 @@ public class Printer {
         }
 
     }
-    public static void printSettings(){
+    public  void printSettings(){
         System.out.println("Model: "+model+";\nNeed ink refill: "+inkEmpty+";\nPrint in color: "+printColor+";\nIs it on: "+on+";\nMax paper dimantions: "+maxPaperSizeLength+"x"+maxPaperSizeWidth+";\nIs it connected to the wifi: "+wifiConnection+";");
     }
 
