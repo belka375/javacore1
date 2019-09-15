@@ -1,4 +1,26 @@
-public class Car {
+public class Car<sout> {
+//    public String color;
+//    public String model;
+//    public String brand;
+//    public double gasTankVolume;
+//
+//    public void beep(){
+//        System.out.println("beep");
+//    }
+//
+//    public void drive(){
+//        System.out.println("driving");
+//    }
+//
+//    public void lightOn(){
+//        System.out.println("Light turned on");
+//    }
+//
+//    public void printCarInfo(){
+//        System.out.println("Model = "+model+"; Brand="+brand+"; Color="+color+"; Gas Tank Volume="+gasTankVolume);
+//    }
+
+
     public String color;
     public String model;
     public String brand;
@@ -8,15 +30,15 @@ public class Car {
         System.out.println("beep");
     }
 
-    public void drive(){
+    public void drive() {
         System.out.println("driving");
-    }
 
+    }
     public void lightOn(){
-        System.out.println("Light turned on");
+        System.out.println("Light turn on");
     }
 
     public void printCarInfo(){
-        System.out.println("Model = "+model+"; Brand="+brand+"; Color="+color+"; Gas Tank Volume="+gasTankVolume);
+        System.out.println("Model=" +model+ "; Brand " +brand+ "; Color " +color+" Gas Tank Volume" +gasTankVolume);
     }
 }
