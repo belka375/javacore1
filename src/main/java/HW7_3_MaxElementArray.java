@@ -1,12 +1,12 @@
-public class HW7and3 {
+public class HW7_3_MaxElementArray {
     public static void main(String[] args){
         int[] numbers = new int[]{3,9,1,8,4,8,5};
 
-        sort(numbers);
+        System.out.println(max(numbers));
 
     }
 
-    private static void sort(int[] numbers) {
+    private static int max(int[] numbers) {
         int i = -555555;
 
         for (int num : numbers) {
@@ -15,7 +15,8 @@ public class HW7and3 {
             }
 
         }
-        System.out.println(i);
+        return i;
     }
+
 
 }
