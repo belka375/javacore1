@@ -1,4 +1,6 @@
-public class NomeWork7 {
+package hw7;
+
+public class HomeWork7 {
     public static void main(String[]args){
         int numb[]={2,3,5,6,7,8};
         System.out.println("Sum of numbers is "+getSum(numb));

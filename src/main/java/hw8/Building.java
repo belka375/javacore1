@@ -1,3 +1,5 @@
+package hw8;
+
 public class Building {
     public String country;
     public String city;
@@ -14,5 +16,5 @@ public class Building {
     public int printStory(){
         return story;
     }
-    public void printAmenities(){System.out.println("Pool"+","+"Dog Park"+","+"Washer and Dryer");}
+    public void printAmenities(){System.out.println("Pool"+","+"hw8.Dog Park"+","+"Washer and Dryer");}
 }

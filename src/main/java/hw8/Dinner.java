@@ -1,3 +1,5 @@
+package hw8;
+
 public class Dinner {
     public String nameOfMeal;
     public String listOfIngridient;

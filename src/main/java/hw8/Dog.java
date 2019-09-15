@@ -1,3 +1,5 @@
+package hw8;
+
 public class Dog {
     public String name;
     public String Breed;

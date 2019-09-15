@@ -1,3 +1,5 @@
+package hw7;
+
 public class HomeWork_7_3 {
     public static void main(String[] args) {
         int[]numb2=new int[]{3, 9, 1, 8, 4, 8, 5};
