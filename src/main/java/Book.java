@@ -4,7 +4,22 @@ public class Book {
     private int buyingPrice;
     private int yearOfIssue;
 
-    private String chip;
+    public  Book(){}
+
+    public Book(String name){
+        this.name=name;
+    }
+    public Book(String name, String author){
+        this.name=name;
+        this.author=author;
+    }
+    public Book(String name, String author, int buyingPrice, int yr){
+        this.author=author;
+        this.name=name;
+        this.buyingPrice=buyingPrice;
+        yearOfIssue=yr;
+    }
+
 
     public void setName(String name){
         this.name=name;
