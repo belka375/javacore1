@@ -1,3 +1,5 @@
+import classes.CellPhone;
+
 public class Methods {
     public static void main(String[] args) {
 
@@ -7,7 +9,7 @@ public class Methods {
 
         cf.setBrand("Nokia");
 
-//        Book triDruga = new Book();
+//        classes.Book triDruga = new classes.Book();
 //
 //        triDruga.setName("Tri Druga");
 //        triDruga.setAuthor("Pushkin");

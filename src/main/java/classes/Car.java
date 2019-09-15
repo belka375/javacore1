@@ -1,3 +1,5 @@
+package classes;
+
 public class Car {
     public String color;
     public String model;

@@ -1,3 +1,5 @@
+package classes;
+
 public class Person {
     public String name;
     public String lastName;

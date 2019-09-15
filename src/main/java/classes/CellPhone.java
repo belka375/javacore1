@@ -1,3 +1,5 @@
+package classes;
+
 public class CellPhone {
     private String brand;
     private String model;
