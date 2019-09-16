@@ -52,7 +52,25 @@ public class Work {
         Navy.printUsage1();
         Navy.printPrice();
 
+        System.out.println("________________________________________________________________________________");
 
+        Bottle fancy=new Bottle();
+        fancy.brand="YETI";
+        fancy.capacity=18;
+        fancy.material="Stainless Steel";
+        fancy.color= "Red";
+        fancy.price=29.99;
 
+        fancy.printBottle();
+
+        System.out.println("-----------------------");
+        Bottle glassBottle=new Bottle();
+        glassBottle.brand="Beaumore";
+        glassBottle.capacity=24;
+        glassBottle.material="Glass";
+        glassBottle.color="White";
+        glassBottle.price=34.99;
+        glassBottle.printBottle();
     }
 }
+
