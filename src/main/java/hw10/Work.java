@@ -12,7 +12,7 @@ public class Work {
          plane.printPlaneInfo();
 
 
-        String[] crossStreets = new String[]{"Millenium Ave,","SE Walnut,","West Lane."};
+        String[]crossStreets=new String[]{"Millenium Ave,","SE Walnut,","West Lane."};
         Road street=new Road();
         street.setCrossStreets(crossStreets);
         street.setLength(58.8);
