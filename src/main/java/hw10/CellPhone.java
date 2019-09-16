@@ -4,8 +4,18 @@ public class CellPhone {
     private String brand;
     private String model;
     private double screenSize;
-
     private String ship;
+
+
+    public CellPhone(){
+
+    }
+
+    public CellPhone(String brand, String model, double screenSize){
+        this.brand=brand;
+        this.model=model;
+        this.screenSize=screenSize;
+    }
 
     public void setBrand(String brand){
         this.brand=brand;
@@ -20,5 +30,11 @@ public class CellPhone {
         }
         this.screenSize=screenSize;
     }
+    public double getScreenSize(int i){ return screenSize;}
+
+    public String getBrand(){return brand;}
+
+    public String getModel(){return model;}
+
 
 }
