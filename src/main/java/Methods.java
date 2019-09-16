@@ -32,10 +32,10 @@ public class Methods {
 //
 //    }
 //}
-        Car mashina = new Car();
-        int[] ma = new int[10];
-
-        mashina.beep();
+//        Car mashina = new Car();
+//        int[] ma = new int[10];
+//
+//        mashina.beep();
 
 //Car ivanCar=new Car();
 //ivanCar.brand="BMW";
@@ -51,18 +51,21 @@ public class Methods {
 
 //
 
-      Person waiter=new Person();
-          waiter.name="John";
-          waiter.lastName="Dole";
-          waiter.age=30;
-          waiter.eyeColor="Blue";
-          waiter.weight=100;
-          waiter.hasChildren=true;
+//      Person waiter=new Person();
+//          waiter.name="John";
+//          waiter.lastName="Dole";
+//          waiter.age=30;
+//          waiter.eyeColor="Blue";
+//          waiter.weight=100;
+//          waiter.hasChildren=true;
+//
+//
+//          waiter.printFullName();
+//          waiter.printPhysicalCondition();
+//
+//      }
 
 
-          waiter.printFullName();
-          waiter.printPhysicalCondition();
-
-      }
+    }
 
     }
