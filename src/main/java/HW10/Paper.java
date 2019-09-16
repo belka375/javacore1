@@ -1,4 +1,4 @@
-package HW8;
+package HW10;
 
 public class Paper {
     public static String color;
