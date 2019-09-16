@@ -1,4 +1,4 @@
-package HW8;
+package hw8;
 
 public class WorkPlace {
     public String table;
