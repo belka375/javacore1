@@ -37,7 +37,7 @@ public class Work {
 
 
         System.out.println("***********Phones***********");
-        
+
         Phone phone1 = new Phone();
         phone1.model = "iPhone 11";
         phone1.os = "iOS";
