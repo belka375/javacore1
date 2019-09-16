@@ -2,24 +2,26 @@ package hw10;
 
 public class Work {
     public static void main(String[] args) {
-        String[]streets=new String[]{"Lomonosova,","Mendeleeva,","Mkr.Tretiy,","Sadovaya,","Mayakovskogo."};
+         Plane plane=new Plane();
+         plane.setPlane("\nBoeng");
+         plane.setColor("Orange");
+         plane.setSize("\nVery big one plane");
+         plane.setDoors(11);
+         plane.setSeats(289);
+         plane.setFuelTankVolume(342.8);
+         plane.printPlaneInfo();
 
-        City gorod=new City();
-        gorod.setState("Best");
-        gorod.setCity("Ever");
-        gorod.setZipCode(75757575);
-        gorod.setStreets(streets);
-        gorod.printCityInfo();
+
+        String[] crossStreets = new String[]{"Millenium Ave,","SE Walnut,","West Lane."};
+        Road street=new Road();
+        street.setCrossStreets(crossStreets);
+        street.setLength(58.8);
+        street.setRoad("Lomonosova");
+        street.setSpeedLimit(35);
+
+        street.printRoad();
 
 
-        Plane plane=new Plane();
-        plane.setPlane("\nBoeng");
-        plane.setColor("Orange");
-        plane.setSize("\nVery big one plane");
-        plane.setDoors(11);
-        plane.setSeats(289);
-        plane.setFuelTankVolume(342.8);
-        plane.printPlaneInfo();
 
     }
 }
