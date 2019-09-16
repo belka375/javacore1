@@ -8,7 +8,7 @@ public String sign;
 public boolean changeColor;
 
     public void printCupInfo(){
-        System.out.println("Color = "+color+"; Material="+material+"; Sign on Cup="+sign);
+        System.out.println("Color = "+color+"; Material="+material+"; Handle="+handle+"; Sign on Cup="+sign+"; Can it change a color?="+changeColor);
 
     }
 
