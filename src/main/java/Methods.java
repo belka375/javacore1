@@ -3,7 +3,7 @@ public class Methods {
 
         System.out.println("**********************");
 
-        CellPhone cf=new CellPhone();
+        Hw9CellPhone cf=new Hw9CellPhone();
 
         cf.setBrand("Nokia");
 

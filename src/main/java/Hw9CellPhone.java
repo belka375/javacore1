@@ -1,4 +1,4 @@
-public class CellPhone {
+public class Hw9CellPhone {
     private String brand;
     private String model;
     private double screenSize;
