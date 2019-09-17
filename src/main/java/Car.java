@@ -7,13 +7,16 @@ public class Car {
     public void beep(){
         System.out.println("beep");
     }
+
     public void drive(){
         System.out.println("driving");
     }
+
     public void lightOn(){
         System.out.println("Light turned on");
     }
+
     public void printCarInfo(){
-        System.out.println("Model = "+model+"; Brand ="+brand+"; Color = "+color+"; Gas tank Volume = "+gasTankVolume);
+        System.out.println("Model = "+model+"; Brand="+brand+"; Color="+color+"; Gas Tank Volume="+gasTankVolume);
     }
 }

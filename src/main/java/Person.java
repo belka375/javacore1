@@ -7,7 +7,7 @@ public class Person {
     public boolean hasChildren;
 
     public void printFullName(){
-        System.out.println(name+ " "+lastName);
+        System.out.println(name+" "+lastName);
     }
     public void printPhysicalConditions(){
         System.out.println("Age="+age+";\nWeight="+weight+";\nEye Color="+eyeColor);
