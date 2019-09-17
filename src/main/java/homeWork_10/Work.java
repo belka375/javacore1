@@ -61,6 +61,7 @@ public class Work {
         Tires someTires2 = new Tires(20, 220, "All season");
 
         someTires2.printParameters();
+        System.out.println("\n*********");
 
 
         //Class Perfume
@@ -71,12 +72,12 @@ public class Work {
 
         Perfume item2 = new Perfume();
         item2.setBrand("Chanel");
-        item2.setVolume(125);
+        item2.setVolume(90);
         item2.setGoodFitFor("Female");
         item2.setPrice(150);
         item2.setStores(stores);
 
-        Perfume item3 = new Perfume("Boss", 150, 175, "Male");
+        Perfume item3 = new Perfume("Boss", 100, 175, "Male");
 
         System.out.println("\n*********");
         item2.printWhereToBuy();

@@ -29,7 +29,12 @@ public class Perfume {
     }
 
     public void setVolume(int volume) {
-        this.volume = volume;
+        if(volume<=75){
+            System.out.println("Warning! Minimum volume size is 80ml.");
+            this.volume = 80;
+        }else{
+        this.volume = volume;}
+
     }
 
     public void setGoodFitFor(String goodFitFor) {
@@ -66,11 +71,11 @@ public class Perfume {
 
 
     public void printClassPerfume() {
-        System.out.println("Brand name - " + brand + "\nVolume - " + volume + "\nPrice - " + price + "$" + "\nGood for - " + goodFitFor);
+        System.out.println("Brand name - " + brand + "\nVolume - " + volume +"ml"+ "\nPrice - " + price + "$" + "\nGood for - " + goodFitFor);
     }
 
     public void printWhereToBuy() {
-        System.out.println("Brand name - " + brand + "\nVolume - " + volume);
+        System.out.println("Brand name - " + brand + "\nVolume - " + volume+"ml");
         for (String st : stores) {
             System.out.println("Available at " + st + " ");
         }
