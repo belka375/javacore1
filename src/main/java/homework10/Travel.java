@@ -1,18 +1,18 @@
 package homework10;
 
-import com.sun.source.tree.UsesTree;
+import java.util.Arrays;
 
 public class Travel {
     private String country;
-    private int duration;
+    private int[] duration = new int[5];
     private double expenses;
 
     public void travelInfo() {
         if (!(country.equals("USA"))) {
             expenses = expenses*2;
-        }  System.out.println(country+" "+duration+" "+expenses);
+        }  System.out.println(country+" "+ Arrays.toString(duration) +" "+expenses);
     }
-    public Travel (String destination, int during, double cost){
+    public Travel (String destination, int[] during, double cost){
         this.country = destination;
         this.duration = during;
         this.expenses = cost;
@@ -23,8 +23,8 @@ public class Travel {
         this.country = country;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDuration(int[] during) {
+        this.duration = during;
     }
 
     public void setExpenses(double expenses) {
@@ -35,7 +35,7 @@ public class Travel {
         return expenses;
     }
 
-    public int getDuration() {
+    public int[] getDuration() {
         return duration;
     }
 

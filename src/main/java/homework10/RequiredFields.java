@@ -1,20 +1,22 @@
 package homework10;
 
+import java.util.Arrays;
+
 public class RequiredFields {
-    private String fieldName;
+    private String[] fieldName;
     private int fieldLength;
     private boolean isRequired;
 
-    public RequiredFields (String name, int length, boolean required) {
+    public RequiredFields (String[] name, int length, boolean required) {
         this.fieldName = name;
         this.fieldLength = length;
         this.isRequired = required;
     }
     public void typeFieldInfo() {
         if (isRequired == false) {
-            System.out.println(fieldName + "\n" + fieldLength + "\n" + isRequired + "\n" +"It is required field");
+            System.out.println(Arrays.toString(fieldName) + "\n" + fieldLength + "\n" + isRequired + "\n" +"It is required field");
         } else {
-            System.out.println(fieldName + "\n" + fieldLength + "\n" + isRequired);
+            System.out.println(Arrays.toString(fieldName) + "\n" + fieldLength + "\n" + isRequired);
         }
     }
 
@@ -25,7 +27,7 @@ public class RequiredFields {
         this.fieldLength = fieldLength;
     }
 
-    public void setFieldName(String fieldName) {
+    public void setFieldName(String[] fieldName) {
         this.fieldName = fieldName;
     }
 
@@ -37,7 +39,7 @@ public class RequiredFields {
         return fieldLength;
     }
 
-    public String getFieldName() {
+    public String[] getFieldName() {
         return fieldName;
     }
 

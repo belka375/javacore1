@@ -2,19 +2,21 @@ package homework10;
 
 import com.sun.source.tree.UsesTree;
 
+import java.util.Arrays;
+
 public class Store {
-    private String name;
+    private String[] name;
     private int numberOfEmployees;
     private boolean isProfited;
 
     public void storeInfo () {
-        System.out.println(name+" "+ numberOfEmployees+" "+isProfited );
+        System.out.println(Arrays.toString(name)+" "+ numberOfEmployees+" "+isProfited );
         if (isProfited == false) {
-            System.out.println("Store \'" +name+ "\' should be closed");
+            System.out.println("Store \'" + Arrays.toString(name)+ "\' should be closed");
         }
     }
 
-    public Store (String storeName, int employees,boolean profit) {
+    public Store (String[] storeName, int employees,boolean profit) {
         this.name = storeName;
         this.numberOfEmployees = employees;
         this.isProfited = profit;
@@ -22,7 +24,7 @@ public class Store {
     public Store () {
     }
 
-    public void setName(String name) {
+    public void setName(String[] name) {
         this.name = name;
     }
 
@@ -38,7 +40,7 @@ public class Store {
         return numberOfEmployees;
     }
 
-    public String getName() {
+    public String[] getName() {
         return name;
     }
 
