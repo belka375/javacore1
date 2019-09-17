@@ -37,13 +37,13 @@ public class Classwork {
         mailman.printPhysicalConditions();
 
 /*
-        Car mashina = new Car();
+        hw8byTanik.Car mashina = new hw8byTanik.Car();
         mashina.beep();
 
 //        int[] ma = new int[10];
 //        int x=5;
 
-        Car ivanCar=new Car();
+        hw8byTanik.Car ivanCar=new hw8byTanik.Car();
         ivanCar.brand="BMW";
         ivanCar.model="X5";
         ivanCar.color="Pink";
@@ -54,7 +54,7 @@ public class Classwork {
 //        System.out.println("color of "+ivanCar.model+" is "+ivanCar.color);
         ivanCar.printCarInfo();
 
-        Car janeCar = new Car();
+        hw8byTanik.Car janeCar = new hw8byTanik.Car();
         janeCar.color="Silver";
         janeCar.brand="Audi";
         janeCar.model="A2";

@@ -1,8 +1,19 @@
+package hw10byTanik;
+
 public class Movie {
 
     private String name;
     private int year;
     private String[] actors;
+
+    public Movie(String name, int year, String[] actors){
+        this.name=name;
+        this.year=year;
+        this.actors=actors;
+    }
+
+    public Movie(){
+    }
 
     public void setName(String n) {
         this.name = n;
@@ -35,12 +46,4 @@ public class Movie {
 
        }
 
-    public Movie(String name, int year, String[] actors){
-        this.name=name;
-        this.year=year;
-        this.actors=actors;
     }
-
-    public Movie(){
-            }
-}

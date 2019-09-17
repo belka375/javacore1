@@ -1,8 +1,18 @@
+package hw10byTanik;
+
 public class School {
 
     private String schoolName;
     private int highestGrade;
     private String[] subjects;
+
+    public School (){};
+
+    public School (String name, int highest, String[] subj){
+        this.schoolName=name;
+        this.highestGrade=highest;
+        this.subjects=subj;
+    }
 
 
     public void setSchoolName(String schoolName) {
@@ -29,11 +39,6 @@ public class School {
         return subjects;
     }
 
-    public School (String name, int highest, String[] subj){
-        this.schoolName=name;
-        this.highestGrade=highest;
-        this.subjects=subj;
-    }
 
     public void printSchoolInfo(){
         System.out.print("Name: "+schoolName+";\nHighest Grade: "+highestGrade+";\nSubjects: ");
@@ -42,8 +47,6 @@ public class School {
 
         }
     }
-
-    public School (){};
 
     }
 

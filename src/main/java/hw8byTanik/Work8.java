@@ -1,5 +1,6 @@
-//public class Homework8byTanik {
+//package hw8byTanik;
 //
+//public class Work8 {
 //    public static void main(String[] args) {
 //
 //        System.out.println("My class 1: Book.\n");
@@ -15,9 +16,9 @@
 //        tanikBook.bookInfo();
 //
 //        System.out.println("**********************");
-//        System.out.println("My class 2: Dog.\n");
+//        System.out.println("My class 2: hw8byTanik.Dog.\n");
 //
-//        Dog tanikDog = new Dog();
+//        hw8byTanik.Dog tanikDog = new hw8byTanik.Dog();
 //        tanikDog.name = "Sharik";
 //        tanikDog.breed = "Labrador";
 //        tanikDog.yearsOld = 3;
@@ -29,11 +30,11 @@
 //        tanikDog.bark();
 //
 //        System.out.println("**********************");
-//        System.out.println("My class 3: Kids.\n");
+//        System.out.println("My class 3: hw8byTanik.Kids.\n");
 //
 //        System.out.println("**My first kid: ");
 //
-//        Kids son = new Kids();
+//        hw8byTanik.Kids son = new hw8byTanik.Kids();
 //        son.name = "Max";
 //        son.age = 10;
 //        son.boyOrGirl = "Boy";
@@ -44,7 +45,7 @@
 //
 //        System.out.println("**My second kid: ");
 //
-//        Kids daughter = new Kids();
+//        hw8byTanik.Kids daughter = new hw8byTanik.Kids();
 //        daughter.name = "Mia";
 //        daughter.age = 3;
 //        daughter.boyOrGirl = "Girl";
@@ -53,4 +54,3 @@
 //        daughter.printInfo();
 //    }
 //}
-//

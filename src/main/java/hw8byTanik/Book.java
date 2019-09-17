@@ -1,8 +1,14 @@
+package hw8byTanik;
+
 public class Book {
-    private String name;
-    private String author;
-    private int buyingPrice;
-    private int yearOfIssue;
+    public String name;
+    public String author;
+    public int buyingPrice;
+    public int yearOfIssue;
+    public int numberOfPages;
+    public int publishedDate;
+    public boolean isNew;
+    public String mainCharecterName;
 
     public void setName(String n){
         this.name=n;
@@ -42,3 +48,4 @@ public class Book {
         return yearOfIssue;
     }
 }
+

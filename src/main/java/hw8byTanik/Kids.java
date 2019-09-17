@@ -1,3 +1,5 @@
+package hw8byTanik;
+
 public class Kids {
 
     public String name;

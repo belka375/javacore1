@@ -1,3 +1,5 @@
+package hw8byTanik;
+
 public class Car {
     public String color;
     public String model;
