@@ -1,19 +1,27 @@
 public class Lesson6 {
-    public static void main(String[] args) {
-        sayHi();
+    public static void main (String[]args){
 
-        double sphere1 = getSphereVolume(15.5);
-        double sphere2 = getSphereVolume(45.6);
+        Lesson6 les6 = new Lesson6();
+        les6.sum(3,6);
 
-        System.out.println("V1=" + sphere1 + "V2="+sphere2);
+        int result =les6.sum1(3,6);
+        System.out.println(result);
 
+        boolean result2 = les6.isEven(6);
+        System.out.println(result2);
     }
-    public static void sayHi(){
-        System.out.print("Hi");
+    public void sum (int a, int b){
+        int c = a +b;
+        System.out.println("Sum: " + c);
     }
-    public static double getSphereVolume(double radius){
-        return Math.PI*radius*radius*radius;
+    public int sum1(int a, int b){
+        int c = a + b;
+        return c;
+    }
+    public boolean isEven(int a){
+        return a %2==0;
+    }
 
-    }
+
 
     }
