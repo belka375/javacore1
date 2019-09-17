@@ -36,6 +36,8 @@ public class Casino {
         System.out.println( name + ", " + rating + ", [" + getGamesText() + "]");
     }
 
+
+
     public String getGamesText(){
         String gamesList = "";
 
@@ -72,10 +74,13 @@ public class Casino {
         this.games = games;
     }
 
-    public String[] getGames() {
-        return games;
+
     }
-}
+
+
+
+
+
 
 
 
