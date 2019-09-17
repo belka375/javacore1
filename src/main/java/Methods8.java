@@ -26,16 +26,16 @@ public class Methods8 {
 //        janeCar.printCarInfo();
 //
 
-//Person mailman = new Person();
-//mailman.name = "John";
-//mailman.lastName ="Dole";
-//mailman.eyeColor = "Blue";
-//mailman.weight = 180;
-//mailman.age = 45;
-//mailman.hasChildren = true;
-//
-//mailman.printFullName();
-//mailman.printPhysicalConditions();
+Person mailman = new Person();
+mailman.name = "John";
+mailman.lastName ="Dole";
+mailman.eyeColor = "Blue";
+mailman.weight = 180;
+mailman.age = 45;
+mailman.hasChildren = true;
+
+mailman.printFullName();
+mailman.printPhysicalConditions();
 
     }
 
