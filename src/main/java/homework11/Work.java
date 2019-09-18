@@ -1,4 +1,4 @@
-package lesson8.homework11;
+package homework11;
 
 public class Work {
 
@@ -7,7 +7,7 @@ public class Work {
         Pets p = getSize(25);
         System.out.println(p);
 
-        
+
 
     }
 
