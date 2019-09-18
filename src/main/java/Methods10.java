@@ -15,7 +15,7 @@ public class Methods10 {
         john.printStudentInfo();
         jane.printStudentInfo();
         boris.printStudentInfo();
-        String borisMajor=boris.getMajor;
+        String borisMajor=boris.getMajor();
 
         boris.superSetter("ne Boris", " ne Jonson", "New",subjs);
 
