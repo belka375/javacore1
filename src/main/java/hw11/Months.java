@@ -1,6 +1,7 @@
 package hw11;
 
 public enum Months {
+    DEC,
     JAN,
     FEB,
     MAR,
@@ -12,5 +13,5 @@ public enum Months {
     SEP,
     OCT,
     NOV,
-    DEC,
+
 }
