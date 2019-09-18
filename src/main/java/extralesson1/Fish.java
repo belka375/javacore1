@@ -11,12 +11,8 @@ public class Fish {
         this.isFreshWater=waterType;
     }
 
-    public double calculateSazeInInches(){
+    public double calculateSizeInInches(){
         return size/2.54;
-    }
-
-    public void setFreshWater(boolean freshWater) {
-        isFreshWater = freshWater;
     }
 
     public void setName(String name) {
