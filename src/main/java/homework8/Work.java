@@ -1,5 +1,5 @@
 package homework8;
-public class Work {
+ public class Work {
     private boolean hasKitten;
     private int age;
     private double weight;
