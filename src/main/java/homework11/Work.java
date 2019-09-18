@@ -7,6 +7,8 @@ public class Work {
         Pets p = getSize(25);
         System.out.println(p);
 
+        Pets[] cats = new Pets[]{Pets.CUP, Pets.SMALL, Pets.MEDIUM, Pets.LARGE};
+        Cats cat1= new Cats("Murka", 12, cats);
 
 
     }
@@ -22,6 +24,7 @@ public class Work {
             return Pets.SMALL;
         }else{
             return Pets.CUP;
-        }
-    }}
+
+
+            }}}
 
