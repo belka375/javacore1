@@ -1,4 +1,4 @@
-package HW10;
+package HW11;
 
 public class Theaters {
     private String name;
@@ -6,13 +6,16 @@ public class Theaters {
     private int totalCapacity;
     private String[] typesOfScreen;
     private Movies[] moviesShowing;
+    private MovieRating[] ratingsShowing;
+    private Movies movies;
 
-    public Theaters(String name, String address, int totalCapacity, String[] typesOfScreen, Movies[] moviesShowing){
+    public Theaters(String name, String address, int totalCapacity, String[] typesOfScreen, Movies[] moviesShowing, MovieRating[] ratingsShowing){
         this.name = name;
         this.address = address;
         this.totalCapacity = totalCapacity;
         this.typesOfScreen = typesOfScreen;
         this.moviesShowing = moviesShowing;
+        this.ratingsShowing = ratingsShowing;
     }
     public void printTheaterDetails(){
         System.out.println("Name: "+name+"\nAddress: "+address+"\nCapacity: "+totalCapacity);
@@ -21,6 +24,19 @@ public class Theaters {
             System.out.print(sc+"; ");
         }
         System.out.println();
+        System.out.println("Ratings showing: ");
+        for (MovieRating mr: ratingsShowing){
+            System.out.print(mr+"; ");
+        }
+        System.out.println();
+    }
+
+    public MovieRating tr(MovieRating[] ratingsShowing){
+        MovieRating thr = MovieRating.R;
+        for (MovieRating rt: ratingsShowing){
+            thr.equals(rt);
+        }
+        return thr;
     }
 
     public void showing(){

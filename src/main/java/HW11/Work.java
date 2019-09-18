@@ -1,4 +1,4 @@
-package HW10;
+package HW11;
 
 public class Work {
     public static void main(String[]args){
@@ -26,17 +26,20 @@ public class Work {
         String[] movieCast = new String[]{"Brad Pitt", "Scarlet Johanson", "Jonny Depp"};
         String[] movieCast1 = new String[]{"Will Farrel", "Anna Kendrik", "John Oliver"};
 
-        Movies houseOnTheHill = new Movies("House on the hill", "Quntine Tarantino", 1998, movieCast);
-        Movies greatWeekend = new Movies( "Great Weekend", "David Lynch", 2010, movieCast1);
-        Movies thisCold = new Movies("This Cold", "Martin Scorsese", 2011, movieCast);
+        Movies houseOnTheHill = new Movies("House on the hill", "Quntine Tarantino", 1998, movieCast, MovieRating.PG_13, MovieGanre.COMEDY);
+        Movies greatWeekend = new Movies( "Great Weekend", "David Lynch", 2010, movieCast1, MovieRating.R, MovieGanre.HORROR);
+        Movies thisCold = new Movies("This Cold", "Martin Scorsese", 2011, movieCast, MovieRating.PG, MovieGanre.ACTION);
+
 
         Movies[] theater1 = new Movies[]{houseOnTheHill, greatWeekend};
         Movies[] theater2 = new Movies[]{greatWeekend, thisCold};
         String[] Screens1 = new String[]{"iMax", "3D", "High-def", "Dolby sound"};
         String[] Screens2 = new String[]{"High-def", "Dolby sound"};
+        MovieRating[] Rating1 = new MovieRating[]{MovieRating.PG, MovieRating.PG_13, MovieRating.R};
+        MovieRating[] Rating2 = new MovieRating[]{MovieRating.R, MovieRating.G, MovieRating.NC_17};
 
-        Theaters newAmsterdam = new Theaters("New Amsterdam", "324 Amsterdam St.", 125, Screens1, theater1);
-        Theaters greatView = new Theaters("Great View", "15 Bardstown Rd.", 200, Screens2, theater2);
+        Theaters newAmsterdam = new Theaters("New Amsterdam", "324 Amsterdam St.", 125, Screens1, theater1, Rating1);
+        Theaters greatView = new Theaters("Great View", "15 Bardstown Rd.", 200, Screens2, theater2, Rating2);
 
         newAmsterdam.printTheaterDetails();
         System.out.println("------------------------------");
