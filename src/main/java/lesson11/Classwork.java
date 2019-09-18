@@ -1,47 +1,51 @@
 package lesson11;
 
-import java.awt.*;
-
 public class Classwork {
-    public static final int TEMPERATURA = 55;
+    public static final int TEMP = 55;
 
     public static void main(String[] args) {
 
-        SchoolType st = getSchoollType(8);
+        SchoolType st = getSchoolType(4);
         System.out.println(st);
 
         Lipstick lipstick = new Lipstick(Colors.PINK_PINK,50);
-        lipstick.setColor(Colors.GREY);
+        lipstick.setColor(Colors.GREEN);
 
+        Colors col1=Colors.RED;
+        Colors col2=col1;
+        Colors col3=Colors.BLACK;
+        col2=col3;
 
-
-        Colors col1 = Colors.RED;
-        Colors col2 = col1;
-        Colors col3 = Colors.BLACK;
         printColor(Colors.GREEN);
-        Colors [] colArray = new Colors[]{Colors.BLACK,Colors.BLUE, Colors.GREEN, Colors.ORANGE};
+
+        Colors[] colArray=new Colors[]{Colors.BLACK,Colors.GREEN,Colors.BLUE,Colors.ORANGE};
+
+        col1=colArray[0];
+
         printColor(colArray);
 
     }
 
-    public  static SchoolType getSchoollType(int grade){
+    public static SchoolType getSchoolType(int grade){
         if(grade>8){
-            return SchoolType.HIGT;
-
+            return SchoolType.HIGH;
         }
-        if (grade>5){
+        if(grade>5){
             return SchoolType.MIDDLE;
         }
         return SchoolType.ELEMENTARY;
     }
-    public static void printColor (Colors c){
+
+
+    public static void printColor(Colors c){
         System.out.println(c);
     }
-    public static  void printColor(Colors[] c){
-        for(Colors cc:c){
-            System.out.println(cc);
 
+    public static void printColor(Colors[] c){
+        for (Colors cc:c){
+            System.out.println(cc);
         }
     }
-}
 
+
+}
