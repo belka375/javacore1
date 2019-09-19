@@ -5,10 +5,10 @@ public class School {
     private Student[] students;
     private Address address;
 
-    public School(String name, Student[] students, Address address){
-        this.name=name;
-        this.address=address;
-        this.students=students;
+    public School(String name, Student[] students, Address address) {
+        this.name = name;
+        this.address = address;
+        this.students = students;
     }
 
     public String getName() {
@@ -22,10 +22,11 @@ public class School {
     public Student[] getStudents() {
         return students;
     }
-    public void printSchool(){
+
+    public void printSchool() {
         System.out.println(name);
         address.printAddress();
-        for (Student student:students){
+        for (Student student : students) {
             student.printStudent();
         }
     }

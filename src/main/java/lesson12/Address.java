@@ -1,16 +1,16 @@
 package lesson12;
 
 public class Address {
-    private  String streetAddress;
-    private  String city;
+    private String streetAddress;
+    private String city;
     private String state;
     private int zip;
 
-    public Address(String streetAddress, String city, String state, int zip){
-        this.streetAddress=streetAddress;
-        this.city=city;
-        this.state=state;
-        this.zip=zip;
+    public Address(String streetAddress, String city, String state, int zip) {
+        this.streetAddress = streetAddress;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
     }
 
     public String getStreetAddress() {
@@ -28,7 +28,8 @@ public class Address {
     public int getZip() {
         return zip;
     }
-     public void printAddress(){
-         System.out.println(streetAddress+"\n"+city+" "+state+"\n"+zip);
-     }
+
+    public void printAddress() {
+        System.out.println(streetAddress + "\n" + city + " " + state + "\n" + zip);
+    }
 }
