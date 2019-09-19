@@ -9,7 +9,7 @@ public class Work11 {
         new1.setCurrency(Currency.EUR);
 
         new1.printOrderInfo();
-        System.out.println("------------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
         CruiseDate ship1 = new CruiseDate();
         ship1.setName("Caribean");
