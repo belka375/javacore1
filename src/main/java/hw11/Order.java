@@ -38,7 +38,7 @@ public class Order {
         return currency;
     }
     public void printOrderInfo() {
-        System.out.println("Order Information: " +number+" "+amount+" "+currency);
+        System.out.println("Order Information: Number " +number+", Price "+amount+" "+currency);
 
     }
 }

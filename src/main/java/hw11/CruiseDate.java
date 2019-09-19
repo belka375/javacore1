@@ -37,7 +37,7 @@ public CruiseDate(){}
         return arrivalmonth;
     }
     public void printCruiseDateInfo() {
-        System.out.println("Cruise arrival: Name "+name+" Date: " +arrivalday);
+        System.out.println("Cruise arrival: Name: "+name+" Date: " +arrivalday);
 
     }
 }
