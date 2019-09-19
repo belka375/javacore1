@@ -5,10 +5,10 @@ public class Student {
     private String lastName;
     private int id;
 
-    public Student(String name, String lastName, int id) {
-        this.name = name;
-        this.id = id;
-        this.lastName = lastName;
+    public Student(String name, String lastName,int id){
+        this.id=id;
+        this.name=name;
+        this.lastName=lastName;
     }
 
     public String getName() {
@@ -22,8 +22,7 @@ public class Student {
     public String getLastName() {
         return lastName;
     }
-
-    public void printStudent() {
-        System.out.println(name + " " + lastName + " " + id);
+    public void printStudent(){
+        System.out.println(name+" "+ lastName+" "+ id);
     }
 }

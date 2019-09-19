@@ -6,15 +6,15 @@ public class Address {
     private String state;
     private int zip;
 
-    public Address(String streetAddress, String city, String state, int zip) {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+    public Address(String streetAddress,String city,String state, int zip){
+        this.streetAddress=streetAddress;
+        this.city=city;
+        this.state=state;
+        this.zip=zip;
     }
 
-    public String getStreetAddress() {
-        return streetAddress;
+    public int getZip() {
+        return zip;
     }
 
     public String getCity() {
@@ -25,11 +25,12 @@ public class Address {
         return state;
     }
 
-    public int getZip() {
-        return zip;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void printAddress() {
-        System.out.println(streetAddress + "\n" + city + " " + state + "\n" + zip);
+    public void printAddress(){
+        System.out.println(streetAddress   +"\n"+city+" "+ state+ "\n"+zip);
     }
 }
+
