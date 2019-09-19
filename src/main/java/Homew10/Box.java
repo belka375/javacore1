@@ -28,14 +28,10 @@ public class Box {
     }
 
     public void setVolume(int[] volume) {
-        int i=volume.lenght ;
-        if(i==size){
-            this.volume = volume;
-        }else {
-            volume=volume.lenght;
-            System.out.println("Box  for shoes"+model+" not right");
+
+    this.volume=volume;
         }
-    }
+
 
     public String getModel(){return model;}
     public String getMaaterial(){return material;}

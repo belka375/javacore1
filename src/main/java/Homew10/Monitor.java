@@ -18,7 +18,7 @@ public class Monitor {
     public void setDiagonal(double diagonal){this.diagonal=diagonal;}
 
     public String getName(){return name;}
-    public int[] getBrightness(){return diagonal;}
+    public int[] getBrightness(){return brightness ;}
     public double getDiagonal(){return diagonal;}
 
     public void printClass(){

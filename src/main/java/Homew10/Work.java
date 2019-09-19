@@ -7,7 +7,8 @@ public class Work {
 
         Monitor lg = new Monitor();
         lg.setName("carbon");
-        lg.setBrightness();(new int[]{-2,-3,-2,-1,0,2,5,3,1});
+        int[]br=new int[]{1,2,3}
+        lg.setBrightness(br);
         lg.setDiagonal(32.5);
 
         lg.printClass();
@@ -18,7 +19,7 @@ public class Work {
         Box lilia = new Box();
         lilia.setModel("White");
         lilia.setMaterial("Cartboard");
-        lilia.setVolume(3);
+        lilia.setVolume(br);
         lilia.setVolume(new int[]{2,4,6,1});
 
         gift.printClass();
@@ -28,7 +29,7 @@ public class Work {
 
         Shoes sneakers = new Shoes();
         sneakers.setName("Nike");
-        sneakers.setSize();(new int[]{8,6});
+        sneakers.setSize(br);
         sneakers.setMaterial("Leather");
 
         sneakers.printClass();
