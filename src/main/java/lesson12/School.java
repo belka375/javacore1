@@ -7,8 +7,8 @@ public class School {
 
     public School(String name, Student[] students, Address address){
         this.name=name;
-        this.students=students;
         this.address=address;
+        this.students=students;
     }
 
     public String getName() {
@@ -22,15 +22,16 @@ public class School {
     public Address getAddress() {
         return address;
     }
-    
+
     public void printSchool(){
         System.out.println(name);
+
         address.printAddress();
+//        System.out.println(address);
+
         for (Student student:students) {
             student.printStudent();
-
+//            System.out.println(student);
         }
     }
-
-
 }

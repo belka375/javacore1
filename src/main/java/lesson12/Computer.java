@@ -4,12 +4,12 @@ public class Computer {
     private Keyboard keyboard;
     private Mouse mouse;
     private Monitor mon;
-    private Systemblock sb;
+    private SystemBlock sb;
 
-    public Computer(Keyboard k, Mouse m, Monitor mon, Systemblock sb){
+    public Computer(Keyboard k, Monitor mon, Mouse mouse, SystemBlock sb){
         this.keyboard=k;
-        this.mouse=m;
         this.mon=mon;
         this.sb=sb;
+        this.mouse=mouse;
     }
 }

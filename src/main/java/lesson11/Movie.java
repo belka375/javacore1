@@ -1,9 +1,12 @@
 package lesson11;
 
+import java.util.PrimitiveIterator;
+
 public class Movie {
-    private String moviename;
+    private String movieName;
     private String directorName;
     private String producerName;
-    private String[] actors;
+    private String[]actors;
     private MovieRating ratings;
+
 }
