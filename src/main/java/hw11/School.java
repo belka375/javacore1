@@ -1,7 +1,6 @@
 package hw11;
 
 public class School {
-
     private Age age;
     private int yearsOld;
     private ClassLevel classLevel;

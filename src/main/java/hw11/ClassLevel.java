@@ -6,5 +6,5 @@ public enum ClassLevel {
     KINDERGARDEN,
     ELEMENTARY_SCHOOL,
     MIDDLE_SCHOOL,
-    HIGH_SCHOOL;
+    HIGH_SCHOOL
 }
