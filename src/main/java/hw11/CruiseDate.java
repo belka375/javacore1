@@ -6,9 +6,10 @@ public class CruiseDate {
     private int arrivalday;
     private Month[] arrivalmonth;
 
-public CruiseDate(String name, int arrivalday, Month arrivalmonth){
+public CruiseDate(String name, int arrivalday, Month[] arrivalmonth){
     this.name=name;
     this.arrivalday=arrivalday;
+    this.arrivalmonth=arrivalmonth;
 }
 public CruiseDate(){}
 
@@ -38,6 +39,9 @@ public CruiseDate(){}
     }
     public void printCruiseDateInfo() {
         System.out.println("Cruise arrival: Name: "+name+" Date: " +arrivalday);
-
+        System.out.println("Arrival month ");
+        for(Month thisyear : this.arrivalmonth) {
+            System.out.println(thisyear);
+        }
     }
 }

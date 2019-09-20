@@ -16,10 +16,8 @@ public class Work11 {
         ship1.setArrivalday(3);
         Month[] months = new Month[]{Month.JANUARY, Month.FEBRUARY, Month.MARCH, Month.JUNE};
 
+        ship1.setArrivalmonth(months);
         ship1.printCruiseDateInfo();
-        System.out.println("Arrival month ");
-        for(Month thisyear : months) {
-            System.out.println(thisyear);
-        }
+
     }
 }
