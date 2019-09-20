@@ -1,4 +1,4 @@
-package HW11;
+package hW11;
 
 public class Grossery {
         private DayOfWeek [] dayOfWeek;
