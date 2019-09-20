@@ -2,7 +2,7 @@ public class WorkHW9 {
 
     public static void main(String[] args){
 
-        Hw9CellPhone cellOld =  new Hw9CellPhone();
+        CellPhone cellOld =  new CellPhone();
 
         cellOld.setBrand("Apple");
         cellOld.setModel("iPhone 6");
