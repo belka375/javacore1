@@ -1,28 +1,19 @@
 package hw11;
 
+
 public class Work {
     public static void main (String[] args){
+        Amenities[] ament = new Amenities[]{Amenities.DOG_PARK, Amenities.GARAGE};
 
-        SolarSystem allPlanets = SolarSystem.MERCURY;
-        SolarSystem planet1= SolarSystem.MERCURY;
-        SolarSystem planet2 = SolarSystem.VENUS;
-        SolarSystem planet2_1=planet1;
-        SolarSystem planet3=SolarSystem.EARTH;
-        SolarSystem planet4 =SolarSystem.MARS;
-        SolarSystem Planet5 =SolarSystem.JUPITER;
-        SolarSystem Planet6 = SolarSystem.SATURN;
-        printPlanets(SolarSystem.MARS);
+        Apartment numberOne = new Apartment("Luxury",3425.0, 3100,5, ament);
+        Apartment numberTwo = new Apartment("AZALEA", 1000, 600,1, ament);
+        Apartment numberThree = new Apartment("CAMELIA", 1240.0, 700, 2, ament);
+        Apartment numberFour = new Apartment("BELMONT", 2000, 1800, 4,ament);
 
-
-        System.out.println(planet2_1);
-//        allPlanets.printPlanetsInfo();
-
-//        Planet  plArray = new Planet(, 88, );
-
-        SolarSystem[] planetName = new SolarSystem [] {SolarSystem.MERCURY, SolarSystem.VENUS, SolarSystem.EARTH, SolarSystem.MARS, SolarSystem.JUPITER, SolarSystem.SATURN};
-//        import static SolarSystem.MERCURY
-
-
+        numberOne.printApartmentInfo();
+        numberTwo.printApartmentInfo();
+        numberThree.printApartmentInfo();
+        numberFour.printApartmentInfo();
 
 
         System.out.println("---------------------------------------");
@@ -32,17 +23,14 @@ public class Work {
 
         School student1 = new School(Age.BIG_KID, 15, ClassLevel.HIGH_SCHOOL);
 
+        School student3 = new School(Age.LITTLE_KID, 5, ClassLevel.KINDERGARDEN);
+
         student.printStudentInfo();
         student1.printStudentInfo();
+        student3.printStudentInfo();
 
         System.out.println("---------------------------------------");
 
-
     }
-    public static void printPlanets(SolarSystem s){
-        System.out.println(s);
-    }
-
-
 
 }
