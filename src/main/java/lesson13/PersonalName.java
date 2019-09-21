@@ -3,10 +3,9 @@ package lesson13;
 public class PersonalName {
     private String firstName;
     private String lastName;
-
     public PersonalName(String fn, String ln){
-        this.firstName=fn;
-        this.lastName=ln;
+        firstName=fn;
+        lastName=ln;
     }
 
     public String getLastName() {
@@ -17,11 +16,11 @@ public class PersonalName {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 }
