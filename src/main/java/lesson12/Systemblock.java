@@ -1,4 +1,4 @@
 package lesson12;
 
-public class Systemblock {
+public class SystemBlock {
 }
