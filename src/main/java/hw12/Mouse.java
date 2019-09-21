@@ -25,6 +25,6 @@ public class Mouse {
         return batteryLife;
     }
     public  void printMouse(){
-        System.out.println(name+" "+color+" "+wirelessConnection+" "+batteryLife);
+        System.out.println("Brand:"+name+" "+color+" "+wirelessConnection+" connection"+","+batteryLife+"~battery life.");
     }
 }

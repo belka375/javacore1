@@ -25,6 +25,6 @@ public class Keyboard {
         return connectionType;
     }
     public  void printKeyboard(){
-        System.out.println(brandName+" "+color+" "+numberOfKeys+" "+connectionType);
+        System.out.println("Brand:"+brandName+" "+color+"number of keys:"+numberOfKeys+","+connectionType+" connection.");
     }
 }

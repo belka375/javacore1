@@ -30,6 +30,6 @@ public class Monitor {
         return weight;
     }
     public void printMonitor(){
-        System.out.println(name+" "+color+" "+screenSize+" "+displayType+" "+weight);
+        System.out.println("Brand:"+name+","+color+","+screenSize+" "+displayType+" "+weight+"weight.");
     }
 }

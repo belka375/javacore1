@@ -44,6 +44,6 @@ public class SystemBlock {
     }
 
     public void printSystemBlock(){
-        System.out.println(brandName+" "+color+" "+oS+" "+graphics+" "+hardDr+" "+RAM+" "+processorSpeed);
+        System.out.println("Brand:"+brandName+","+color+","+"OS:"+oS+","+"graphics:"+graphics+","+" hard drive:"+hardDr+" gigabytes,"+"RAM:"+RAM+","+processorSpeed+" gigahertz.");
     }
 }
