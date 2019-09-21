@@ -48,7 +48,7 @@ public class ClassWork {
         System.out.println("-----------------------");
         newComputer.printComputerInfo();
 
-        
+
 
 
 
