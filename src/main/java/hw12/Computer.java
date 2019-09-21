@@ -25,9 +25,13 @@ public class Computer {
        return sb;
     }
     public void printComputer(){
+        System.out.println("Keyboard:");
         keyboard.printKeyboard();
+        System.out.println("Mouse:");
         mouse.printMouse();
+        System.out.println("Monitor:");
         mon.printMonitor();
+        System.out.println("System block:");
         sb.printSystemBlock();
 
     }
