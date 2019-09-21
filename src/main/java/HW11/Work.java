@@ -26,9 +26,9 @@ public class Work {
         String[] movieCast = new String[]{"Brad Pitt", "Scarlet Johanson", "Jonny Depp"};
         String[] movieCast1 = new String[]{"Will Farrel", "Anna Kendrik", "John Oliver"};
 
-        Movies houseOnTheHill = new Movies("House on the hill", "Quntine Tarantino", 1998, movieCast, MovieRating.PG_13, MovieGanre.COMEDY);
-        Movies greatWeekend = new Movies( "Great Weekend", "David Lynch", 2010, movieCast1, MovieRating.R, MovieGanre.HORROR);
-        Movies thisCold = new Movies("This Cold", "Martin Scorsese", 2011, movieCast, MovieRating.PG, MovieGanre.ACTION);
+        Movies houseOnTheHill = new Movies("House on the hill", "Quntine Tarantino", 1998, movieCast, MovieRating.PG_13, MovieGenre.COMEDY);
+        Movies greatWeekend = new Movies( "Great Weekend", "David Lynch", 2010, movieCast1, MovieRating.R, MovieGenre.HORROR);
+        Movies thisCold = new Movies("This Cold", "Martin Scorsese", 2011, movieCast, MovieRating.PG, MovieGenre.ACTION);
 
 
         Movies[] theater1 = new Movies[]{houseOnTheHill, greatWeekend};

@@ -16,8 +16,19 @@ public class Theaters {
         this.typesOfScreen = typesOfScreen;
         this.moviesShowing = moviesShowing;
         this.ratingsShowing = ratingsShowing;
+//        for (Movies m: moviesShowing){
+//            int i = 0;
+//            for (MovieRating mr : ratingsShowing){
+//                if (m.getRating()==mr){
+//                    this.moviesShowing[i] = m;
+//                    i++;
+//                    break;
+//                }
+//            }
+//        }
     }
     public void printTheaterDetails(){
+
         System.out.println("Name: "+name+"\nAddress: "+address+"\nCapacity: "+totalCapacity);
         System.out.println("Screens: ");
         for (String sc : typesOfScreen){

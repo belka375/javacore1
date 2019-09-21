@@ -1,6 +1,6 @@
 package HW11;
 
-public enum MovieGanre {
+public enum MovieGenre {
     DRAMA,
     HORROR,
     COMEDY,
