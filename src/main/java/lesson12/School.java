@@ -10,19 +10,15 @@ public class School {
         this.address=address;
         this.students=students;
     }
-
     public String getName() {
         return name;
     }
-
     public Student[] getStudents() {
         return students;
     }
-
     public Address getAddress() {
         return address;
     }
-
     public void printSchool(){
         System.out.println(name);
 
