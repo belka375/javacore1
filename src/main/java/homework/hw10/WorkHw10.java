@@ -30,7 +30,7 @@ public class WorkHw10 {
             }
         System.out.println("            ");
 
-        Artist pollock=new Artist();
+        Artist pollock=new Artist("Jackson Pollock","USA",1952,genP);
 
         pollock.setName("Jackson Pollock");
         pollock.setYearOfBirth(1912);
@@ -49,12 +49,9 @@ public class WorkHw10 {
         System.out.println("            ");
 
 
-        Singer jamala= new Singer();
+        Singer jamala= new Singer("Jamala",false,"Ukraine",genJ);
 
-        jamala.setName("Jamala");
-        jamala.setActiveNow(true);
-        jamala.setCountry("Ukraine");
-        jamala.setGenres(genJ);
+        
 
         String jamalaName=jamala.getName();
         String jamalaCountry=jamala.getCountry();
@@ -76,7 +73,7 @@ public class WorkHw10 {
         Singer shmailyuk= new Singer();
 
         shmailyuk.setName("Tatiana Shmailyuk");
-        shmailyuk.setActiveNow(true);
+        shmailyuk.setActiveNow(false);
         shmailyuk.setCountry("Ukraine");
         shmailyuk.setGenres(genSh);
 
@@ -87,7 +84,7 @@ public class WorkHw10 {
 
         System.out.println("     ");
         System.out.print(shmailyukName+", "+shmailyukCountry+", ");
-        if(shmailyukActiveNow=false){
+        if(shmailyukActiveNow=true){
             System.out.print("active"+"\ngenres: ");
         }else{
             System.out.print("retired"+"\ngenres: ");
@@ -103,7 +100,7 @@ public class WorkHw10 {
         annaKarenina.setTitle("Anna Karenina");
         annaKarenina.setAuthor("Leo Tolstoy");
         annaKarenina.setYear(1877);
-        annaKarenina.setIsFilmed(true);
+        annaKarenina.setIsFilmed(false);
         annaKarenina.setYearsOfFilms(yearOfFiAn);
 
         String annaKareninaTitle=annaKarenina.getTitle();
@@ -130,7 +127,7 @@ public class WorkHw10 {
         chaika.setTitle("Chaika");
         chaika.setAuthor("Anton Chekhov");
         chaika.setYear(1897);
-        chaika.setIsFilmed(true);
+        chaika.setIsFilmed(false);
         chaika.setYearsOfFilms(yearOfFiCh);
 
         String chaikaTitle=chaika.getTitle();
@@ -143,11 +140,12 @@ public class WorkHw10 {
         System.out.print(chaikaTitle+", "+chaikaAuthor+", "+chaikaYear+", ");
         if(chaikaIsFilmed=true) {
             System.out.print("staged " + "\nYears staged: ");
-            for (int yo : yearOfFiCh) {
+        }else{
+            System.out.print("never staged"+"\nYears staged: ");
+        }
+        for (int yo : yearOfFiCh) {
                 System.out.print("  " + yo);
             }
-        }
-
 
         vrubel.printClassArtist();
         pollock.printClassArtist();

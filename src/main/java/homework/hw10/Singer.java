@@ -2,7 +2,7 @@ package homework.hw10;
 
 public class Singer {
     private String name;
-    private boolean activeNow;
+    public boolean activeNow;
     private String country;
     private String[] genres;
 
@@ -36,7 +36,7 @@ public class Singer {
     return country;
     }
     public String[] getGenres(){
-        return genres;
+    return genres;
     }
 
     public void printClassSinger() {
