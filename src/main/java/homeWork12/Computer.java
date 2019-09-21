@@ -30,6 +30,7 @@ public class Computer {
     public SystemBlock getSb() {
         return sb;
     }
+
     public void printComputer(){
         System.out.println (owner);
                            keyboard.printKeyboard();
