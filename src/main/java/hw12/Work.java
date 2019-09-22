@@ -15,6 +15,11 @@ public class Work {
         Computer mycomp=new Computer(keyboard, monitor,mouse, systemBlock );
         mycomp.printComruterInfo();
 
+       String keyboardBrand= mycomp.getKeyboard().getBrand();
+       String mdBrand=mycomp.getSb().getMotherBoard().getBrand();
+       System.out.println(keyboardBrand);
+       System.out.println(mdBrand);
+
 
     }
 }

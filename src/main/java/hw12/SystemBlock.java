@@ -13,6 +13,11 @@ public class SystemBlock {
     public Color getColor() {
         return color;
     }
+
+    public MotherBoard getMotherBoard() {
+        return motherBoard;
+    }
+
     public void systemBlockPrintInfo(){
         System.out.println("SystemBlock color is - "+color);
         motherBoard.printNotherBoardInfo();
