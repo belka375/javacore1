@@ -37,5 +37,17 @@ public class Sauna {
     public String getBench() {
         return bench;
     }
+    public void printSaunaAttributes() {
+        System.out.print( "Sauna has : " + door + " door ; " + steam+ " steam ; " + temperature + " temperature ; " + bench + " bench. ");
+    }
+    public Sauna(){
+
+    }
+    public Sauna ( String sB, String sM, int dR, double temp){
+        this.bench =sB;
+        this.door =dR;
+        this.temperature=temp;
+        this.steam =sM;
+    }
 }
 

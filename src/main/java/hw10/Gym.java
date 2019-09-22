@@ -1,10 +1,13 @@
 package hw10;
 
+import java.sql.SQLOutput;
+import java.util.SortedMap;
+
 public class Gym {
     private String trainer;
     private String [] machines;
     private int indoorPool;
-    private boolean kidsClub;
+    public boolean kidsClub;
 
     public void setIndoorPool(int indoorPool) {
         this.indoorPool = indoorPool;
@@ -36,6 +39,16 @@ public class Gym {
 
     public boolean isKidsClub() {
         return kidsClub;
+    }
+    public void printGymInfo(){
+        System.out.println("Gym has: "+indoorPool+" indoor pool, "+ trainer+" , "+kidsClub);
+    }
+    public Gym(){
+        this.indoorPool = getIndoorPool();
+        this.machines = getMachines();
+        this.kidsClub =isKidsClub();
+        this.trainer=getTrainer();
+
     }
 }
 

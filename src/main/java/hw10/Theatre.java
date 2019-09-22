@@ -1,7 +1,7 @@
 package hw10;
 
 public class Theatre {
-    private String name;
+    private String type;
     private String stage;
     private String performers;
     private int seats;
@@ -14,14 +14,14 @@ public class Theatre {
         performers = f;
     }
 
-    public void setName(String n){
-        name  = n;
+    public void setType(String t){
+        type  = t;
     }
     public void setSeats(int s){
         s = 350;
     }
     public String getName(){
-        return name ;
+        return type ;
     }
     public String getPerformers(){
         return performers;
@@ -33,6 +33,20 @@ public class Theatre {
         return seats;
     }
 
+    public void printTheatreInfo() {
+        System.out.println( "Theatre: "+type+", "+performers+", "+stage+", "+seats+".");
+    }
+
+    public Theatre() {
+
+    }
+
+    public Theatre(String theatreType, String theatrePerformers, String theatreStage, int theatreSeats){
+        this.type = theatreType;
+        this.performers = theatrePerformers;
+        this.stage = theatreStage;
+        this.seats =theatreSeats;
+    }
     }
 
 
