@@ -6,7 +6,9 @@ public class Monitor {
     private int size;
 
     public Monitor (String brand, double resolution, int size) {
-
+    this.brand = brand;
+    this.resolution = resolution;
+    this.size = size;
     }
 
     public void setSize(int size) {

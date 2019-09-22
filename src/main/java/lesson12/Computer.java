@@ -14,7 +14,11 @@ public class Computer {
     }
 
     public void printComp() {
-       System.out.println (keyboard + " " + mouse + " " + mon + " " +sb) ;
+
+        keyboard.printKeyboard();
+        mouse.printMouse();
+        mon.printMonitor();
+        sb.printSystemBlock();
 
     }
 

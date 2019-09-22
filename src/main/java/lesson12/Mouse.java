@@ -5,7 +5,7 @@ public class Mouse {
     public Colors color;
 
     public Mouse (Colors color) {
-
+    this.color = color;
     }
 
     public void setColor(Colors color) {

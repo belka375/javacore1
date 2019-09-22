@@ -6,6 +6,9 @@ public class SystemBlock {
     private int operationalMemory;
 
     public SystemBlock (int size, String brand, int operationalMemory) {
+        this.size = size;
+        this.brand = brand;
+        this.operationalMemory = operationalMemory;
 
     }
 

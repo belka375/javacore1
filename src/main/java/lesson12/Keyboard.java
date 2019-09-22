@@ -7,7 +7,9 @@ public class Keyboard {
 
 
     public Keyboard (int size, Colors color, String material) {
-
+    this.size = size;
+    this.color = color;
+    this.material = material;
     }
 
     public void setSize(int size) {
