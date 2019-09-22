@@ -6,13 +6,9 @@ public class Car {
     private int[] prices;
     private CarColors[] colors;
 
-    public Car (String name, int[] prices) {
+    public Car (String name, int[] prices, CarColors[] colors) {
         this.name = name;
-        //this.color = color;
         this.prices = prices;
-    }
-
-    public void setColors(CarColors[] colors) {
         this.colors = colors;
     }
 }

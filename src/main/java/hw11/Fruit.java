@@ -3,11 +3,11 @@ package hw11;
 public class Fruit {
 
     private String name;
-    private fruitSize sizeOfFruit;
+    private FruitSize sizeOfFruit;
 
-    public Fruit (String name, fruitSize fruitSize) {
+    public Fruit (String name, FruitSize sizeOfFruit) {
         this.name = name;
-        this.sizeOfFruit = fruitSize;
+        this.sizeOfFruit = sizeOfFruit;
     }
 
 }

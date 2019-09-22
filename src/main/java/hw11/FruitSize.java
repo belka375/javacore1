@@ -1,6 +1,6 @@
 package hw11;
 
-public enum fruitSize {
+public enum FruitSize {
     SMALL,
     AVERAGE,
     BIG
