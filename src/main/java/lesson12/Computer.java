@@ -12,4 +12,8 @@ public class Computer {
         this.sb=sb;
         this.mouse=mouse;
     }
+    public void printComp() {
+        System.out.println (keyboard + " " + mouse + " " + mon + " " +sb) ;
+
+    }
 }
