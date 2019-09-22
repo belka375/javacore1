@@ -1,4 +1,4 @@
-package HW11;
+package homework11;
 
 public class Paper {
     public static String color;

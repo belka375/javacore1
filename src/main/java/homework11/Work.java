@@ -1,4 +1,4 @@
-package HW11;
+package homework11;
 
 public class Work {
     public static void main(String[]args){

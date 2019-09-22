@@ -1,4 +1,4 @@
-package hw8;
+package homework8;
 
 public class Book {
 }
