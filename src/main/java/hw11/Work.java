@@ -1,7 +1,7 @@
 package hw11;
 
 public class Work {
-    public static final int TEMP = 55;
+    
 
     public static void main (String [] args) {
 

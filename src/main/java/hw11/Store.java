@@ -51,10 +51,12 @@ public class Store {
         return employees;
     }
     public void printStoreInfo(){
-        System.out.println(""+name+", "+hours+","+employees+","+storeClosed+".");
-        for (WeekDays st : storeClosed);
+        System.out.println(""+name+", "+hours+","+employees+".");
+        for (WeekDays st : storeClosed){
+            System.out.println(st);
+        }
 
-            System.out.println(storeClosed);
+
 
 
     }
