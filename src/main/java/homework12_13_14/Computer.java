@@ -1,4 +1,4 @@
-package homework12;
+package homework12_13_14;
 
 public class Computer {
     private Keyboard keyboard;
@@ -11,5 +11,21 @@ public class Computer {
         this.mon=mon;
         this.sb=sb;
         this.mouse=mouse;
+    }
+
+    public Keyboard getKeyboard() {
+        return keyboard;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
+    public SystemBlock getSb() {
+        return sb;
+    }
+
+    public Monitor getMon() {
+        return mon;
     }
 }

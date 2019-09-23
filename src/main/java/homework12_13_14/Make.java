@@ -1,4 +1,4 @@
-package homework12;
+package homework12_13_14;
 
 public enum Make {
     HP,
@@ -10,6 +10,7 @@ public enum Make {
     LENOVO,
     RAZOR,
     VAIO,
-    VIZIO
+    VIZIO,
+    APPLE
 
 }
