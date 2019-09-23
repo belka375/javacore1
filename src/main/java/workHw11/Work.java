@@ -1,20 +1,40 @@
-package workHw11;
 
-/*
- * Homework 11.1-  top casinos in UK
- *Make enum (or 2 enum)
-  * Make two classes - in the first class attribute to make the enum
-   * in second class Grade - attribute type enum []
-*/
 
-public class Work {
+ package workHw11;
 
-    public static void main (String arg[]){
+    /*
+     * Homework 11.1
+     *Make enum (or 2 enum)
+     * 1.Make two classes - in the first class attribute to make the enum
+     * 2.in second class Grade - attribute type enum []
+     */
 
-        System.out.println(java.util.Arrays.asList(Enumvalues.personInfo.values()));
-        System.out.println(java.util.Arrays.asList(Enumvalues.testList1.values()));
 
+    public class Work {
+
+        public static void main(String arg[]) {
+
+//#1
+
+            SubjectList sub1 = SubjectList.JAVA;
+            SubjectList sub2 = SubjectList.RUBY;
+            SubjectList sub3 = SubjectList.ANGULAR;
+
+            System.out.println(sub2);
+
+
+
+            ComputerCurricula curricula1 = new ComputerCurricula(" Cynthia Bond", 80, SubjectList.RUBY);
+            ComputerCurricula curricula2 = new ComputerCurricula(" James Golsing", 120, SubjectList.JAVA);
+            curricula2.printSubject();
+
+ //#2
+            LetterGrade[] gradeArrays = new LetterGrade[]{LetterGrade.A, LetterGrade.B, LetterGrade.C, LetterGrade.D, LetterGrade.F};
+
+           StudentGrades alex = new StudentGrades ("Alex Demer","Algebra",80,null);
+
+         //gradeArrays.printGrade;
+
+        }
 
     }
-
-}
