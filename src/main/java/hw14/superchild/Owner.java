@@ -3,9 +3,9 @@ package hw14.superchild;
 import java.time.LocalDateTime;
 
 public class Owner {
-    private String firstName;
-    private String lastName;
-    LocalDateTime dob;
+    protected String firstName;
+    protected String lastName;
+    protected LocalDateTime dob;
 
     public Owner(String firstName, String lastName, LocalDateTime dob){
         this.firstName=firstName;
@@ -36,7 +36,7 @@ public class Owner {
     public LocalDateTime getDob() {
         return dob;
     }
-    public void printOwner(){
+    protected void printOwner(){
         System.out.println("Car owner first Name: "+firstName+" last Name: "+lastName+" Date of Birth: "+dob.toString());
     }
 }
