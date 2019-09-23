@@ -9,7 +9,8 @@ public class Work {
         Samsung.setMonitorPrice(300);
         myComp.computerInfo();
         System.out.println("My computer prise is: ");
-        System.out.println(Samsung.getMonitorPrice()+mouseHP.getMousePrice()+keyboardHP.getKeyboardPrice());
+        double price = Samsung.getMonitorPrice()+mouseHP.getMousePrice()+keyboardHP.getKeyboardPrice();
+        System.out.println("Price "+ price);
 
-    }
+}
 }
