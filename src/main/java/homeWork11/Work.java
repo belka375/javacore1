@@ -3,12 +3,12 @@ package homeWork11;
 public class Work {
     public static void main(String[] args) {
 
-       Relative aibek = new Relative(Sons.AIBEK, 21, "Swimming");
-       Relative bika = new Relative(Sons.BIKA, 18, "Boxing");
-       Relative iman = new Relative(Sons.IMAN, 11, "Dancing");
-               iman.setAge(12);
-               iman.setSport("Swimming");
-               aibek.setSport("Hiking");
+        Relative aibek = new Relative(Sons.AIBEK, 21, "Swimming");
+        Relative bika = new Relative(Sons.BIKA, 18, "Boxing");
+        Relative iman = new Relative(Sons.IMAN, 11, "Dancing");
+        iman.setAge(12);
+        iman.setSport("Swimming");
+        aibek.setSport("Hiking");
 
         aibek.printSons();
         System.out.println("=========================");
@@ -18,6 +18,8 @@ public class Work {
 
         iman.printSons();
         System.out.println("=========================");
+
+
 
         RelativeAlmaty berik = new RelativeAlmaty(Cousins.BERIK, "Zh", 21, "Bota", "Marat");
         RelativeAlmaty nuka = new RelativeAlmaty(Cousins.NUKA, "Zh", 18, "Bota", "Marat");
@@ -47,14 +49,28 @@ public class Work {
 
         natali.printCousin();
         System.out.println("=========================");
- 
+
+        Cousins[] cousins = new Cousins[]{Cousins.NUKA, Cousins.NATALY, Cousins.NASTASYA, Cousins.MICHAEL, Cousins.LEO,
+                Cousins.BERIK, Cousins.ALIBEK};
+        printCousins(cousins);
+        System.out.println("=========================");
 
 
-
-
-
-
-
+        Sons[] sons = new Sons[]{Sons.IMAN, Sons.BIKA, Sons.AIBEK};
+        printSons(sons);
 
     }
+
+
+    public static void printCousins(Cousins[] cous) {
+        for (Cousins x : cous) {
+            System.out.println(x);
+        }
+    }
+    public static void printSons(Sons[] son){
+        for(Sons y: son){
+            System.out.println(y);
+        }
+    }
 }
+
