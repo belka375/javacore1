@@ -17,7 +17,7 @@ package workHw12;
 
         //getter
         public void printMonitor(){
-            System.out.println(brand + " " +model + " " +" resolution = " + resolution + " " + " diagonal = " + diagonal);
+            System.out.println( "Monitor characteristics:" + " Brand:"+  brand + " Model:" + model + " Resolution:"  + resolution +  " Diagonal: " + diagonal);
         }
     }
 

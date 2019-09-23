@@ -17,8 +17,9 @@ public class WorkHw12 {
         Keyboard keyboard1 = new Keyboard(Language.ENGLISH,"Logitech G513");
         Mouse mouse1 = new Mouse(MColor.GREY,true,false);
         SystemBlock systemBlock1 = new SystemBlock("Intel Core i5-9400F",6,"ATX12V"," RX 560");
-
         Computer dell = new Computer(keyboard1,monitor1,mouse1,systemBlock1);
+
+
 
      //object 2
 
@@ -31,9 +32,10 @@ public class WorkHw12 {
         System.out.println(keyboard1.getBrand() + " " + keyboard1.getLang());
         System.out.println(keyboard2.getBrand() + " " + keyboard2.getLang());
         systemBlock2.printSystemBlock();
-
-
-
+        System.out.println("************************************************************");
+        dell.printComputer();
+        System.out.println("************************************************************");
+        hp.printComputer();
     }
 
 

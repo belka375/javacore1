@@ -18,5 +18,10 @@ public class Keyboard{
     public Language getLang() {
         return lang;
     }
+
+    public void printKeyboard(){
+        System.out.println( "Brand : "  + brand);
+       System.out.println( "Language : " + lang);
+    }
 }
 

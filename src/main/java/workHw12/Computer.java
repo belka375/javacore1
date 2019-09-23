@@ -12,5 +12,30 @@ public class Computer {
         this.sb=sb;
         this.mouse=mouse;
     }
+
+
+    public Keyboard getKeyboard(){
+        return keyboard;
+    }
+
+    public Monitor getMon() {
+        return mon;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
+    public SystemBlock getSb() {
+        return sb;
+    }
+
+    public void printComputer(){
+        keyboard.printKeyboard();
+        mouse.printMouse();
+        sb.printSystemBlock();
+        mon.printMonitor();
+    }
 }
+
 

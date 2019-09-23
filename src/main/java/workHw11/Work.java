@@ -30,10 +30,12 @@
 
  //#2
             LetterGrade[] gradeArrays = new LetterGrade[]{LetterGrade.A, LetterGrade.B, LetterGrade.C, LetterGrade.D, LetterGrade.F};
+            System.out.println("---------------------------------");
 
-           StudentGrades alex = new StudentGrades ("Alex Demer","Algebra",80,null);
+            StudentGrades alex = new StudentGrades ("Alex Demer","Algebra",80, new LetterGrade[]{LetterGrade.B});
 
-         //gradeArrays.printGrade;
+            alex.printGrade();
+
 
         }
 
