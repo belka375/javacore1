@@ -40,7 +40,7 @@ public class RelativeAlmaty {
         return age;
     }
 
-    public static void printCousin(){
-        System.out.println("My Cousin is "+ name +" " + lastname+);
+    public void printCousin(){
+        System.out.println("My Cousin is "+ name +" " + lastName + " he/she is "+age + "years old"+"\nParents are: "+mama +", "+papa);
     }
 }
