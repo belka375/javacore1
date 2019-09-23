@@ -4,5 +4,4 @@ public enum FruitSize {
     SMALL,
     AVERAGE,
     BIG
-
 }

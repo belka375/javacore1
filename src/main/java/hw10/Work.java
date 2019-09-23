@@ -43,14 +43,5 @@ public class Work {
 
         flower1.printFlower();
         flower2.printFlower();
-
-
-
-
-
-
-
-
-
     }
 }
