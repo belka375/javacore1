@@ -19,6 +19,5 @@ public class Work14 {
         System.out.println("=========================");
         washingtonCapitals.printWCinfo();
 
-
     }
 }
