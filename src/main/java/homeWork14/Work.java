@@ -7,7 +7,7 @@ public class Work {
         Monitor monitor=new Monitor("ASUS", "ProArt PA32UCX ", Color.SILVER, 32, 6, 3, "4K");
         String[] ports=new String[]{"1 x Mic in / Headphone out", "2x USB3.1", "1x HDMI", "2x USB Type-C"};
         SystemBlock systemBlock=new SystemBlock("ASUS", "ROG Strix GL12CX-DH981 Gaming Desktop", Color.BLACK, 37, 24.3,
-                1, "Windows Pro 10 (64bit)", " Intel Core i9-9900K", ports, storage);
+                1, "Windows Pro 10 (64bit)", "Intel Core i9-9900K", ports, storage);
         String keyboard=new String("ROG Strix Flare K/B");
         String mouse= new String("ROG Gladius II Mouse");
 
