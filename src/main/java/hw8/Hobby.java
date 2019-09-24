@@ -6,6 +6,6 @@ public class Hobby {
      public String sunday;
 
      public void schedule() {
-         System.out.println("Friday - "+friday+"; Saturday - "+saturday+"; Sunday - "+sunday+".");
+         System.out.println("My activities: Friday - "+friday+"; Saturday - "+saturday+"; Sunday - "+sunday+".");
      }
 }

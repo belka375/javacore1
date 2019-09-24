@@ -6,13 +6,13 @@ public class Europe {
     private String capital;
 
     public Europe(){
-
     }
     public Europe(String country, String city, String capital){
         this.country=country;
         this.city=city;
         this.capital=capital;
     }
+
 
     public void setCountry(String country) {
         this.country=country;
@@ -32,5 +32,8 @@ public class Europe {
     }
     public String getCapital() {
         return capital;
+    }
+    public void europeInfo(){
+        System.out.println(country+" "+city+" "+capital);
     }
 }
