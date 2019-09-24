@@ -1,4 +1,4 @@
-package HomeWork;
+package homeWork;
 
 public class MethodsHW7 {
     public static void main(String[] args) {

@@ -12,6 +12,11 @@ public class Keyboard {
         this.price = price;
         this.wireless = wireless;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printKeyboard(){
         System.out.println("My Mouse is "+brand +"\nIt is "+ wireless+"; and color is "+color + "\nAnd it coast "+price+"$");
     }

@@ -1,6 +1,5 @@
 package homeWork_10;
 
-import homeWork.Kids;
 
 public class PrintClass {
     public static void main(String[] args) {

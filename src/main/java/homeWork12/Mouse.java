@@ -12,6 +12,11 @@ public class Mouse {
         this.price = price;
         this.wireless = wireless;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printMouse(){
         System.out.println("My Mouse brand is "+brand +"\nIt is "+ wireless +"and color is "+color + "\nAnd it coast "+price+"$");
     }

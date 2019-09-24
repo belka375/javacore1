@@ -1,32 +1,38 @@
 package homeWork11;
 
 public class Relative {
-    public static void main(String[] args) {
+    private Sons name;
+    private int age;
+    private String sport;
 
-        Sons first = Sons.AIBEK;
-        Sons second = Sons.BIKA;
-        Sons third = Sons.IMAN;
-
-        Sons son = getAge(21);
-        System.out.println(son);
-
-        Sons son2 = getAge( 18);
-        System.out.println(son2);
-
-        Sons son3 = getAge(11);
-        System.out.println(son3);
+    public Relative(Sons name, int age, String sport){
+        this.sport = sport;
+        this.age = age;
+        this.name = name;
     }
 
-    public static Sons getAge(int age){
-        if(age ==21){
-            return Sons.AIBEK;
-        }
-        if(age ==18){
-            return Sons.BIKA;
-        }
-        if (age == 11){
-            return Sons.IMAN;
-        }
-        return null;
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public Sons getName() {
+        return name;
+    }
+
+    public void printSons(){
+        System.out.println("My lovely son is "+ name + " he is "+age + " years old "+ "and he likes " + sport);
     }
 }
+

@@ -10,6 +10,11 @@ public class SystemBlock {
         this.color = color;
         this.price = price;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printSystemBlock(){
         System.out.println("My Mouse brand is "+brand + "and color is "+color + "\nAnd it coast "+price+"$");
     }

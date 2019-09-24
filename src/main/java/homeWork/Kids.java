@@ -1,4 +1,4 @@
-package HomeWork;
+package homeWork;
 
 public class Kids {
     public String firstName;

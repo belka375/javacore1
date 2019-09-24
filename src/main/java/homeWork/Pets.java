@@ -1,4 +1,4 @@
-package HomeWork;
+package homeWork;
 
 public class Pets {
     public String family;

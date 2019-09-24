@@ -1,4 +1,4 @@
-package HomeWork;
+package homeWork;
 
 public class Parents {
     public String firstName;

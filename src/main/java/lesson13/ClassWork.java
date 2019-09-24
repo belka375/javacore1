@@ -23,7 +23,9 @@ public class ClassWork {
         String an = aibekAddress.getOwner().getName();
         System.out.println(an);
 
+        double cost = monitor.getPrice()+mouse.getPrice()+keyboard.getPrice()+sb.getPrice();
 
+        System.out.println("My computers price is "+ cost);
 
 
     }

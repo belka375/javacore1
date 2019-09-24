@@ -10,7 +10,18 @@ public class ClassWork14 {
         Student aibek = new Student("Aibek", "Dosym", 1998, aibekSub, Subject.CHEMISTRY);
         Student bika = new Student("Beybit", "Dosym", 2001, bikaSub, Subject.HISTORY);
         Teacher baur = new Teacher("Baurzhan", "Dosym", 1975, Subject.MATH);
-        
+
+        aibek.printStudent();
+        System.out.println("===================");
+        bika.printStudent();
+        System.out.println("===================");
+
+        baur.printTeacher();
+        System.out.println("===================");
+
+
+
+
 
 
 
