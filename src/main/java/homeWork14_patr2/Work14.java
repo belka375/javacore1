@@ -12,7 +12,6 @@ public class Work14 {
 
         Lakers lakers = new Lakers("LA Lakers", "Los Angeles", "USA", 0.9, "LeBron James", 16);
 
-
         lakers.printLakersInfo();
         System.out.println("=========================");
         manchesterCity.printSoccerTeamInfo();

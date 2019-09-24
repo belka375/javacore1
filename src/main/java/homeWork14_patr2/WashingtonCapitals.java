@@ -16,7 +16,6 @@ public class WashingtonCapitals extends Team {
         return captain;
     }
 
-
     public void printWCinfo() {
         System.out.println("'" + teamName + "' (" + city + ")" + " \n" + country + " \nBudget: " + budget + "$ bln." + "\nCaptain: " + captain);
     }

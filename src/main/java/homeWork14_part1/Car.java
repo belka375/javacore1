@@ -14,7 +14,6 @@ public class Car {
         this.color = color;
     }
 
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
