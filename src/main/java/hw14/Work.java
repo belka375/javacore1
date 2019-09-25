@@ -2,7 +2,6 @@ package hw14;
 
 public class Work {
     public static void main(String[] args){
-        System.out.println("____________________________________________");
 
         Price price = new Price(5,"$");
         Item item = new Item("Shrimp",price);
