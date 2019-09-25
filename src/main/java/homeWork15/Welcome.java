@@ -8,6 +8,6 @@ public interface Welcome {
     }
 
     default void printMore() {
-        System.out.println("\nCustomers who viewed this item also viewed");
+        System.out.println("\nCustomers who viewed this item also viewed: ");
     }
 }
