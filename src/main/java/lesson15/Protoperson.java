@@ -1,6 +1,5 @@
 package lesson15;
 
-public interface Protoperson {
+public interface ProtoPerson {
     public void printInfo();
-
 }
