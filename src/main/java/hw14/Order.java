@@ -1,13 +1,20 @@
 package hw14;
 
-import hw11.Currency;
 
 public class Order extends Product {
     private DeliveryCity delcity;
 
-    public Order(String prodName, double price, Currency currency, DeliveryCity delcity) {
-        super(prodName, price, Currency currency);
+    public Order(String firstName, String lastName, int personId, String comName, double price, String prodName, Currency cur, DeliveryCity delcity) {
+        super(firstName, lastName, personId, comName, price, prodName, cur);
         this.delcity = delcity;
+    }
+
+    public void setDelcity(DeliveryCity delcity) {
+        this.delcity = delcity;
+    }
+
+    public DeliveryCity getDelcity() {
+        return delcity;
     }
 
     public void printOrder() {

@@ -1,15 +1,15 @@
 package hw14;
 
-import hw11.Currency;
-
-public class Product {
+public class Product extends Seller{
     private String prodName;
     private double price;
-    private Currency currency;
+    private hw14.Currency currency;
 
-    public Product(String prodName, double price){
+    public Product(String firstName, String lastName, int personId, String comName, double price, String prodName, Currency cur){
+        super(firstName, lastName, personId, comName);
         this.prodName=prodName;
         this.price=price;
+        this.currency=cur;
     }
 
     public void setprodName(String prodName) {
@@ -20,7 +20,7 @@ public class Product {
         this.price = price;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(hw14.Currency currency) {
         this.currency = currency;
     }
 
@@ -32,12 +32,12 @@ public class Product {
         return price;
     }
 
-    public Currency getCurrency() {
-        return currency;
+    public Currency getCurrency() { return currency;
     }
 
     public void printProduct(){
-        System.out.println("Your product is: "+prodName+", price: "+price+" "+currency);;
+        printSeller();
+        System.out.println("Your product is: "+prodName+", price: "+price+" "+currency);
     }
 }
 

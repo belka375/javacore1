@@ -8,6 +8,14 @@ public class Seller extends Person {
         this.companyName=comName;
     }
 
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
     public void printSeller(){
         printPerson();
         System.out.println("Company: "+companyName);
