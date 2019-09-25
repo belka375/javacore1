@@ -1,6 +1,6 @@
 package hw14;
 
-public class Animals extends WorldMap {
+public class Animals extends Live {
     private String animalName;
 
     public Animals(Continent continent,String country, Region region, String animalName){

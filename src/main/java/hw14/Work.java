@@ -10,5 +10,9 @@ public class Work {
         oak.printTreeInfo();
         agava.printPlantInfo();
 
+        rabbit.getAnimalName();
+        oak.getTreeName();
+        agava.getPlantName();
+
     }
 }

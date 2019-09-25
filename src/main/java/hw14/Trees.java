@@ -1,6 +1,6 @@
 package hw14;
 
-public class Trees extends WorldMap {
+public class Trees extends Live {
     private String treeName;
 
     public Trees(Continent continent,String country, Region region, String treeName){
