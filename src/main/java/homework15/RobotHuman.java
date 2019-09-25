@@ -36,7 +36,7 @@ public class RobotHuman implements Robot {
 
     @Override
     public void printInfo() {
-        System.out.println("Robot Dog Price: "+salesPrice()+" Motions "+ Arrays.toString(motions));
+        System.out.println("Robot Human Price: "+salesPrice()+" Motions "+ Arrays.toString(motions));
         ableToSpeak();
 
     }
