@@ -1,4 +1,4 @@
-package hw8;
+package hw8a;
 
 public class Apartment {
     public String type;
