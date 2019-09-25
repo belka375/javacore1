@@ -7,7 +7,7 @@ public class Tiers {
         tiresSize=ts;
     }
 
-    public TiresSize getTiresSize() {
+    public TiresSize getTires() {
         return tiresSize;
     }
 }
