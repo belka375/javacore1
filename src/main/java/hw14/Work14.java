@@ -9,7 +9,7 @@ public class Work14 {
         Seller nick= new Seller("Nick", "McMayers", 45776, "Liquid,Inc");
 
         mary.printCustomer();
-        System.out.println("-------------------------------------------------------");
+        System.out.println("--------------------------------------------------------");
         nick.printSeller();
 
         //get
