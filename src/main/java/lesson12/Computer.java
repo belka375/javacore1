@@ -25,10 +25,10 @@ public class Computer {
         ) {
             mou.printMouseInfo();}
 
-            System.out.println("Moreover: ");
-            mon.printMonitor();
+        System.out.println("Moreover: ");
+        mon.printMonitor();
 
-            sb.printSb();
+        sb.printSb();
 
         }
     }
