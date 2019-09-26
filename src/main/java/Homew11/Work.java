@@ -1,10 +1,10 @@
-package Homew11;
+package homew11;
 
-public class Games {
+public class Work {
     public static void main(String[] args) {
-        NFL team1 = NFL.GIANTS;
-        NFL team2 = NFL.SAINTS;
-        NFL team3 = NFL.RAMS;
+        Nfl team1 = Nfl.GIANTS;
+        Nfl team2 = Nfl.SAINTS;
+        Nfl team3 = Nfl.RAMS;
         Months game1 = Months.SEPTEMBER;
 
         System.out.println("Game with " + team1 + ": ");
@@ -12,17 +12,17 @@ public class Games {
         System.out.println();
 
         printMonth(Months.SEPTEMBER);
-        printGames(NFL.COWBOYS);
+        printGames(Nfl.COWBOYS);
     }
 
-    private static void printGames(NFL cowboys) {
+    private static void printGames(Nfl cowboys) {
     }
 
     public static void printMonth(Months m){
         System.out.println("Games in  " + m + ": ");
     }
 
-    public static void printGame(NFL n) {
+    public static void printGame(Nfl n) {
         System.out.println(n);
     }
 

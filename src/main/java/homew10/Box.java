@@ -1,4 +1,4 @@
-package Homew10;
+package homew10;
 
 public class Box {
     private String model;

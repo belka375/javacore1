@@ -1,4 +1,4 @@
-package Homew10;
+package homew10;
 
 public class Work {
     public static void main(String[] args){
@@ -7,7 +7,7 @@ public class Work {
 
         Monitor lg = new Monitor();
         lg.setName("carbon");
-        int[]br=new int[]{1,2,3}
+        int[]br=new int[]{1,2,3};
         lg.setBrightness(br);
         lg.setDiagonal(32.5);
 

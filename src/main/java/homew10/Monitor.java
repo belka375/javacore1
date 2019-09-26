@@ -1,4 +1,4 @@
-package Homew10;
+package homew10;
 
 public class Monitor {
     private String name;

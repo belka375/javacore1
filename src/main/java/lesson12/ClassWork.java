@@ -4,7 +4,7 @@ public class ClassWork {
     public static void main(String[] args) {
 
         Student dina = new Student("Dina","Ivanova",102);
-        Student boris=new Student("Boris","Jameson",103);
+        Student boris = new Student("Boris","Jameson",103);
         Student alex = new Student("Alex","Mishin",104);
         Student mina = new Student("Mina","Ivanova",105);
         Student doris=new Student("Doris","Jameson",106);

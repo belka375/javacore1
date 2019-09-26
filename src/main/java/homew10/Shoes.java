@@ -1,4 +1,4 @@
-package Homew10;
+package homew10;
 //Create 3 classes - in itch class create minimum 3 attributes (one of this attributes need be array).
 //        Create getters and setter fro every attribute.
 //        Create minimum 2 contractors in every Class - default and complete (you can create more constructors)

@@ -1,4 +1,4 @@
-package Homew11;
+package homew11;
 
 public enum Months {
     SEPTEMBER,

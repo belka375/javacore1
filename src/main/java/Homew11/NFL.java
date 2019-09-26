@@ -1,11 +1,10 @@
-package Homew11;
+package homew11;
 
-public enum NFL {
+public enum Nfl {
     GIANTS,
     SAINTS,
     RAMS,
-    TEXANS,
-    COWBOYS,
-    LIONS,
-    BEARS
+    COWBOYS
+
+
 }
