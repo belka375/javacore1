@@ -1,4 +1,4 @@
-package hw13;
+package hw14;
 
 public class Work {
     public static void main(String[] args){

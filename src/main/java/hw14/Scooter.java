@@ -1,4 +1,4 @@
-package hw13;
+package hw14;
 
 public class Scooter extends InternalCombustionEngine{
    private String scooterModel;
