@@ -1,4 +1,4 @@
-package samplesOfHv.tanik14;
+package samplesOfHv.ta14;
 
 public class PlaceForRent {
     protected String placeName;
