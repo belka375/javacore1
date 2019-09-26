@@ -14,15 +14,15 @@ public class Work15 {
 
 
             b22.printInfo();
-            System.out.println("=========================");
+            System.out.println("=======================");
             b23.printInfo();
-            System.out.println("=========================");
+            System.out.println("=======================");
             c22.printInfo();
-            System.out.println("=========================");
+            System.out.println("=======================");
             c23.printInfo();
-            System.out.println("=========================");
+            System.out.println("=======================");
             c24.printInfo();
-            System.out.println("=========================");
+            System.out.println("=======================");
 
     }
 
