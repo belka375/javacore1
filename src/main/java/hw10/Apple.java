@@ -18,8 +18,8 @@ public class Apple {
     public void setVersion(String ver) {
         this.version = ver;
     }
-    public void setMemory(int memo) {
-        this.memory = memory;
+    public void setMemory(int[] memo) {
+        this.memory = memo;
     }
     public String getModel() {
         return model;
@@ -31,7 +31,7 @@ public class Apple {
         return memory;
     }
     public void appleInfo() {
-        System.out.println(model + " " + version + " " + memory);
+        System.out.println(model + " " + version);
         for (int memo : memory) {
             System.out.println(memo);
         }

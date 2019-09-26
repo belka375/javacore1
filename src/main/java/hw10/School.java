@@ -6,23 +6,13 @@ public class School {
         private String type;
         private String[] majors;
 
-        public School(){
-        }
+//        public School(){
+//        }
         public School(String name, String location, String type, String[] majors){
             this.name=name;
             this.location=location;
             this.type=type;
             this.majors=majors;
-        }
-
-        public void setCountry(String country) {
-            this.name=name;
-        }
-        public void setCity(String city) {
-            this.location=location;
-        }
-        public void setCapital(String capital) {
-            this.type=type;
         }
         public void setMajors(String[] majors) {
         this.majors = majors;
@@ -40,9 +30,9 @@ public class School {
         return majors;
         }
         public void schoolInfo(){
-        System.out.println(name+", "+location+", "+type+", "+majors);
+        System.out.println(name+", "+location+", "+type);
             for (String major:majors) {
-                System.out.println(major);
+                System.out.print(major);
             }
         }
 }

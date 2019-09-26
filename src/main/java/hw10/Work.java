@@ -14,14 +14,14 @@ public class Work {
 
         apple11.setModel("iPhone");
         apple11.setVersion("Pro");
-        apple11.setMemory(64);
+        apple11.setMemory(memory);
 
         appleXS.setModel("iPhone");
         appleXS.setVersion("XS");
-        appleXS.setMemory(128);
+        appleXS.setMemory(memory);
 
-//        apple11.appleInfo();
-//        appleXS.appleInfo();
+        apple11.appleInfo();
+        appleXS.appleInfo();
         scandinavia.europeInfo();
         baltic.europeInfo();
         school1.schoolInfo();

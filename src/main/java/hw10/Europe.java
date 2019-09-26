@@ -12,8 +12,6 @@ public class Europe {
         this.city=city;
         this.capital=capital;
     }
-
-
     public void setCountry(String country) {
         this.country=country;
     }
