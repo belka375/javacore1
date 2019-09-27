@@ -13,7 +13,7 @@ public class Classwork {
         ivanka.printName();
         ivanka=john;
         ivanka.printName();
-  //      jane=boris; 
+  //      jane=boris;
 
         Shape sq=new Square(4);
         Rectangle sql=new Square(5);
