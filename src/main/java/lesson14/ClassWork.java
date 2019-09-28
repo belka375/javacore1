@@ -16,5 +16,12 @@ public class ClassWork {
 
         dasha.printStudent();
     }
+    Subject[] sub = new Subject[]{Subject.CHEMISTRY, Subject.BIOLOGY};
+    ProtoPerson shelly = new Student("Shelly","Ostrovsky",LocalDateTime.of(2002,1,1,0,0,0), sub ,Subject.CHEMISTRY);
+
+    private static void printPerson(ProtoPerson pp) {
+        pp.printInfo();
+    }
+
 
 }

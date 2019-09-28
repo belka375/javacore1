@@ -1,8 +1,8 @@
-package homework12_13_14;
+package homework;
 
 import java.time.LocalDate;
 
-public class Component {
+public class Component implements PrintInfo {
     protected Make make;
     protected String model;
     protected LocalDate yearOfMake;
@@ -27,7 +27,15 @@ public class Component {
         return model;
     }
 
-    public void setYearOfMake(LocalDate yearOfMake) {
-        this.yearOfMake = yearOfMake;
+    public LocalDate getYearOfMake() {
+        return yearOfMake;
+    }
+
+    @Override
+    public void printInfo() {
+        System.out.println(make);
+        System.out.println(model);
+        System.out.println(yearOfMake);
+        System.out.println(color);
     }
 }

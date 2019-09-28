@@ -1,4 +1,4 @@
-package homework12_13_14;
+package homework;
 
 import java.time.LocalDate;
 
@@ -28,17 +28,23 @@ public class HomeWork {
         Computer[] set2 = new Computer[]{computer2, computer3};
         Computer[] set3 = new Computer[]{computer1, computer3};
 
-        Company sku = new Company("Skuvault", LocalDate.of(2006, 12,06), true, computer1);
-        Company hu = new Company("Humana", LocalDate.of(1998, 06,06), false, computer2);
+        Company sku = new Company("Skuvault", LocalDate.of(2006, 12,06), true, set1);
+        Company hu = new Company("Humana", LocalDate.of(1998, 06,06), false, set2);
 
-        String cn = sku.getName();
-        System.out.println(cn);
+//        String cn = sku.getName();
+//        System.out.println(cn);
 
-        Make cComputerMake = sku.getComputers().getMon().getMake();
-        String cComputerModel = sku.getComputers().getMon().getModel();
 
-        System.out.println(cComputerMake);
-        System.out.println(cComputerModel);
+
+//        for (Computer comp : sku.getComputers()){
+//            System.out.println(comp.getMon().getMake());
+//            System.out.println(comp.getMon().getYearOfMake());
+//        }
+        sku.printInfo();
+        System.out.println("--------------------------");
+        hu.printInfo();
+
+
 
 
 

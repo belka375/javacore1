@@ -2,7 +2,7 @@ package lesson14;
 
 import java.time.LocalDateTime;
 
-public class Person {
+public  class Person implements ProtoPerson {
     protected String firstName;
     protected String lastName;
     protected LocalDateTime dob;
@@ -38,5 +38,11 @@ public class Person {
 
     public void setDob(LocalDateTime dob) {
         this.dob = dob;
+    }
+
+    @Override
+    public void printInfo() {
+        System.out.println(firstName);
+        System.out.println(lastName);
     }
 }

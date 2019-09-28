@@ -1,4 +1,4 @@
-package homework12_13_14;
+package homework;
 
 import java.time.LocalDate;
 
@@ -20,4 +20,6 @@ public class Monitor extends Component {
     public ScreenType getScreenType() {
         return screenType;
     }
+
+
 }

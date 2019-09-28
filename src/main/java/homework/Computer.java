@@ -1,4 +1,4 @@
-package homework12_13_14;
+package homework;
 
 public class Computer {
     private Keyboard keyboard;
