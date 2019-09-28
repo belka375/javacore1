@@ -1,12 +1,12 @@
 package lesson16;
 
 public class Person {
-    protected static int number;
+    public static int number;
     protected String name;
     protected String lastName;
-    public Person(String name, String lastName){
-        this.name=name;
+    public Person(String name,String lastName) {
         this.lastName=lastName;
+        this.name=name;
         number++;
     }
 
@@ -17,6 +17,5 @@ public class Person {
     public void printName(){
         System.out.println(name+" "+lastName);
     }
-
 
 }

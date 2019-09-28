@@ -1,6 +1,6 @@
 package lesson16;
 
-public class Circle implements  Shape {
+public class Circle implements Shape {
     private double radius;
 
     public Circle(double radius) {
@@ -18,7 +18,5 @@ public class Circle implements  Shape {
     @Override
     public double getSquare() {
         return Math.PI*radius*radius;
-
-
     }
 }
