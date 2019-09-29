@@ -17,8 +17,9 @@ public class Person {
         this.height = height;
     }
 
-    public double getAgeMultiplyByWeight(){
-return weight*age;
+
+    public double getAgeMultipleByWeight(){
+        return age*weight;
     }
 
     public String getLastName() {
@@ -29,10 +30,6 @@ return weight*age;
         return name;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
     public int getAge() {
         return age;
     }
@@ -41,8 +38,8 @@ return weight*age;
         return address;
     }
 
-    public int getHeight() {
-        return height;
+    public double getWeight() {
+        return weight;
     }
 
 }

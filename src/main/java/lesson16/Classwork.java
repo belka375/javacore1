@@ -30,12 +30,22 @@ public class ClassWork {
 
         Shape[] shapes = new Shape[]{sq,sq1,cr,rt,cr1};
 
+        List<Shape> listOfShapes = new ArrayList<Shape>();
+
+        listOfShapes.add(sq);
+        listOfShapes.add(sq1);
+        listOfShapes.add(cr);
+        listOfShapes.add(rt);
+        listOfShapes.add(cr1);
+
+        listOfShapes.forEach(shape-> System.out.println(shape.getSquare()));
+
 //        for (Shape sh:shapes){
 //            System.out.println(sh.getSquare());
 //        }
- //       listOfShapes.forEach(shape-> System.out.println(shape.getSquare()));
 
-  //      System.out.println(Person.getNumber());
+
+        System.out.println(Person.getNumber());
     }
 
 
