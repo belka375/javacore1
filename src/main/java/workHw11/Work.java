@@ -10,11 +10,10 @@
      */
 
 
-    public class Work {
-
-        public static void main(String arg[]) {
-
 //#1
+        public class Work {
+
+        public static void main(String[] args) {
 
             SubjectList sub1 = SubjectList.JAVA;
             SubjectList sub2 = SubjectList.RUBY;
