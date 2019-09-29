@@ -34,6 +34,22 @@ public class ClassWork {
         listOfStrings.set(3,"I hope it is a nice weather today");
         System.out.println(listOfStrings.get(3));
 
+        ArrayList<String> listName=new ArrayList<String>();
+        listName.add("Petr");
+        listName.add("Ivan");
+        listName.add("Jane");
+        listName.add("Sasha");
+        listName.add("Tanya");
+        for (String name:listName) {
+            System.out.println(name);
+        }
+        String[] names=new String[]{"Petr", "Ivan","Jane","Sasha","Tanya"};
+        for(int i=0;i<names.length;i++) {
+            System.out.println(names[i]);
+        }
+        float f = 1.0f; int n4 = '1'; double n3 = 1.0; short n1 = 1;
+        String[] arr=new String[]{"1","2","3"};
+        System.out.println(arr.length);
 
     }
 }
