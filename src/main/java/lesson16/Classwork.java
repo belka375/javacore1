@@ -29,17 +29,11 @@ public class ClassWork {
         Circle cr1=new Circle(10);
 
         Shape[] shapes = new Shape[]{sq,sq1,cr,rt,cr1};
-        List<Shape> listOfShapes=new ArrayList<>();
-        listOfShapes.add(sq);
-        listOfShapes.add(sq1);
-        listOfShapes.add(cr);
-        listOfShapes.add(rt);
-        listOfShapes.add(cr1);
 
 //        for (Shape sh:shapes){
 //            System.out.println(sh.getSquare());
 //        }
-        listOfShapes.forEach(shape-> System.out.println(shape.getSquare()));
+ //       listOfShapes.forEach(shape-> System.out.println(shape.getSquare()));
 
   //      System.out.println(Person.getNumber());
     }
