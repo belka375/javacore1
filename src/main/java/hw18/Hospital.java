@@ -11,20 +11,21 @@ public class Hospital {
     private ArrayList<InsuranseCompanies> acceptedInsuranses;
 
 
-    public ArrayList<Doctor> getDoctors() {
-        return doctors;
-    }
-
-
-    public void setRooms(HashMap<Integer, String> rooms) {
-        this.rooms = rooms;}
-
-
-
-    public HashMap<Integer, String> getRooms() {
-        return rooms;
-    }
-
+    public Hospital(String name, Address address, ArrayList<InsuranseCompanies> acceptedInsuranses) {
+        this.hospitalName = name;
+        this.address = address;
+        this.acceptedInsuranses = acceptedInsuranses;
 
 
     }
+
+    public void printInfoH() {
+        address.printInfo();
+        for (InsuranseCompanies comp :acceptedInsuranses) {
+            System.out.println(comp);
+
+
+
+        }
+    }
+}
