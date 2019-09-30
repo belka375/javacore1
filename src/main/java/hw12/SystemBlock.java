@@ -6,4 +6,7 @@ public class SystemBlock {
     public SystemBlock(String color){
         this.color=color;
     }
+
+    public SystemBlock() {
+    }
 }

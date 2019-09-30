@@ -8,4 +8,7 @@ public class Mouse {
         this.color=color;
         this.model=model;
     }
+
+    public Mouse() {
+    }
 }

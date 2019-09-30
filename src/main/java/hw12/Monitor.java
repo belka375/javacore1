@@ -8,4 +8,7 @@ public class Monitor {
         this.model=model;
         this.screenSize=screenSize;
     }
+
+    public Monitor() {
+    }
 }

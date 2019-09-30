@@ -8,4 +8,7 @@ public class Keyboard {
         this.color=color;
         this.model=model;
     }
+
+    public Keyboard() {
+    }
 }

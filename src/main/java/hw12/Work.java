@@ -2,21 +2,20 @@ package hw12;
 
 public class Work {
     public static void main(String[] args) {
-        Monitor monitor1 = new Monitor("HP", 24.0);
-        Monitor monitor2 = new Monitor("Acer", 27.0);
+        Monitor monitor1 = new Monitor();
+        Monitor monitor2 = new Monitor();
 
-        Keyboard keyboard = new Keyboard("silver","Apple");
+        Keyboard keyboard = new Keyboard();
 
-        Mouse mouse1 = new Mouse("white","Magic mouse");
-        Mouse mouse2 = new Mouse("black", "Optical mouse");
+        Mouse mouse1 = new Mouse();
+        Mouse mouse2 = new Mouse();
 
-        SystemBlock systemBlock = new SystemBlock("Red");
+        SystemBlock systemBlock = new SystemBlock();
 
-        Computer computer1 = new Computer(monitor1,keyboard,mouse1,systemBlock);
-        Computer computer2 = new Computer(monitor2,keyboard,mouse2,systemBlock);
+        Computer computer1 = new Computer("LG 24.0","Apple keyboard", "magic mouse", "Mac Mini");
+        Computer computer2 = new Computer("HP 27.0", "Logitech keyboard", "HP mouse", "SB");
 
-
-        System.out.println(computer1);
-        System.out.println(computer2);
+        computer1.printInfo();
+        computer2.printInfo();
     }
 }
