@@ -10,7 +10,7 @@ public class Work18 {
     Doctor drIvanov = new Doctor("Peter", "Ivanov",Position.DERMATOLOGIST);
     Doctor drPetrov = new Doctor("Ivan", "Petrov", Position.NEUROLOGIST);
     Doctor drSidorov = new Doctor("Bob", "Sidorov", Position.PHYSICIAN);
-    Doctor drSmith = new Doctor("Greg", "Smith", Position.PEDIATRICIAN);
+    Doctor drSmith = new Doctor("Gregory", "Smith", Position.PEDIATRICIAN);
 
     ArrayList<Doctor> hoagDoctors = new ArrayList<Doctor>();
     hoagDoctors.add(0,drIvanov);
