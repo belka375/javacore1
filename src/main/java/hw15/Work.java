@@ -14,5 +14,7 @@ public class Work {
         MetalBeam b1644 = new MetalBeam("Beam B1644", 60, 4, 2, 135, 0.282);
         b1644.getInfo();
 
+      //  ProtoElement = new Brick("ss",4,4,2)
+
     }
 }
