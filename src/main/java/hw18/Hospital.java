@@ -10,11 +10,10 @@ public class Hospital {
     private HashMap<Integer, String> rooms;
     private ArrayList<InsuranseCompanies> acceptedInsuranses;
 
-    public Hospital(String hospitalName, Address address, ArrayList<Doctor> doctors, HashMap<Integer, String> rooms, ArrayList<InsuranseCompanies> acceptedInsuranses) {
+    public Hospital(String hospitalName, Address address, ArrayList<Doctor> doctors, ArrayList<InsuranseCompanies> acceptedInsuranses) {
         this.hospitalName = hospitalName;
         this.address = address;
         this.doctors = doctors;
-        this.rooms = rooms;
         this.acceptedInsuranses = acceptedInsuranses;
     }
 

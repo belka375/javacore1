@@ -23,9 +23,12 @@ public class Work {
         ins.add(2,InsuranseCompanies.COBRA);
         ins.add(3,InsuranseCompanies.NGA);
 
-        Hospital hp1=new Hospital("Kaiser Permanent", ad1, dr1, numAndNameOfOffice, ins);
-        hp1.getAddress();
-        hp1.getDoctors();
+        Hospital hp1=new Hospital("Kaiser Permanent", ad1, dr1, ins);
+        hp1.printInfo();
+        hp1.printDoctors();
+
+
+
         Map<String, String> numAndNameOfOffice=new HashMap<>();
 
         numAndNameOfOffice.put("1","Dermatology");
