@@ -3,6 +3,11 @@ package hw11;
 
 public class Work {
     public static void main (String[] args){
+
+        //Сделать Enum (или 2 enum)
+        //Сделать 2 класса - в первом классе атрибут сделать типа Enum//
+        // Во  втором классе - атрибут типа Enum[]
+
         Amenities[] ament = new Amenities[]{Amenities.DOG_PARK, Amenities.GARAGE};
 
         Apartment numberOne = new Apartment("Luxury",3425.0, 3100,5, ament);

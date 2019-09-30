@@ -1,5 +1,5 @@
 package hw15yp;
 
-public abstract interface ProtoStore {
+public interface ProtoStore {
     public void printStoreInfo();
 }

@@ -3,6 +3,11 @@ package hw15yp;
 
 public class Work15 {
     public static void main(String[]args){
+        //INTERFACE
+        //Создайте интерфейс и 2 класса которые его имплементируют
+        // Создайте по 2 объекта каждого класса типа Интерфейса
+
+
         FoodStore kroger=new FoodStore("Kroger", "Atlanta Peachtree corners, Ga", 88,"Gas station","Mark Kirstein",20000000);
         ToolsStore homedepot=new ToolsStore("Home Depot", "101, Wicksteed Ave., Toronto, ON", 130,"Canada", false);
 

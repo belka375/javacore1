@@ -5,6 +5,8 @@ import java.util.logging.Level;
 public class Work {
     public static void main (String []args){
         // SUPERCLASSES
+        // Создать один супер и 2 или 3 детских
+        //Создать объекты с глубиной в 3 класса  создать объект и вытащить объект при помощи геттеров
 
         Triangle shapeOne = new Triangle("Triangle","black",18.4, Thickness.THICK, 3,3,"Acute");
 

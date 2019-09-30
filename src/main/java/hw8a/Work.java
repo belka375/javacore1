@@ -3,6 +3,8 @@ package hw8a;
 public class Work {
 
     public static void main (String[]args){
+//      1. Создайте 3 класса в которых есть аттрибуты и методы
+//      2. В классе Work создайте функцию main() и создайте в ней по 2 объекта каждого класса - покажите как они работают
 
         System.out.println("Home Work 8");
 
