@@ -48,16 +48,16 @@ public class Work18 {
         System.out.println("----- Hospital 1 -----");
 
     hoag.printInfo();
-    hoag.printDoctors();
-    hoag.printRooms();
+//    hoag.printDoctors();
+//    hoag.printRooms();
 
         Hospital kaiserHospital = new Hospital("Kaiser", kaiserAddress, kaiserDoctors, kaiserRooms, kaiserIsuarances);
 
-        System.out.println("----- Hospital 2 -----");
+        System.out.println("\n----- Hospital 2 -----");
 
         kaiserHospital.printInfo();
-        kaiserHospital.printDoctors();
-        kaiserHospital.printRooms();
+//        kaiserHospital.printDoctors();
+//        kaiserHospital.printRooms();
 
     }
 }

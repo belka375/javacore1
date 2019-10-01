@@ -14,8 +14,12 @@ public class Address {
         this.zip=zip;
     }
 
-    public void printAddress(){
-        System.out.print(street+", "+town+", "+state+", "+zip);
+//    public void printAddress(){
+//        System.out.print(street+", "+town+", "+state+", "+zip);
+//    }
+
+    public void printInfo(){
+        System.out.println(state+", "+town+", "+state+", "+zip);
     }
 
 }

@@ -11,7 +11,11 @@ public class Doctor {
         this.position=position;
     }
 
-    public void printDoctor(){
+//    public void printDoctor(){
+//        System.out.println(name+", "+lastName+", "+position);
+//    }
+
+    public void printInfo(){
         System.out.println(name+", "+lastName+", "+position);
     }
 }
