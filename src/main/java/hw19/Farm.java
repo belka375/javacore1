@@ -1,4 +1,4 @@
-package homework19;
+package hw19;
 
 import java.util.ArrayList;
 import java.util.HashMap;

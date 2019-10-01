@@ -1,4 +1,4 @@
-package homework19;
+package hw19;
 
 public enum Cattle {
     COWS,
