@@ -5,6 +5,5 @@ public class Outer {
 
     public class Inner{
         public int theNumber;
-
     }
 }
