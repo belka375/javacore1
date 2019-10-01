@@ -1,5 +1,8 @@
 package lesson16;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ClassWork {
     public static void main(String[] args) {
 
@@ -27,9 +30,19 @@ public class ClassWork {
 
         Shape[] shapes = new Shape[]{sq,sq1,cr,rt,cr1};
 
-        for (Shape sh:shapes){
-            System.out.println(sh.getSquare());
-        }
+        List<Shape> listOfShapes = new ArrayList<Shape>();
+
+        listOfShapes.add(sq);
+        listOfShapes.add(sq1);
+        listOfShapes.add(cr);
+        listOfShapes.add(rt);
+        listOfShapes.add(cr1);
+
+        listOfShapes.forEach(shape-> System.out.println(shape.getSquare()));
+
+//        for (Shape sh:shapes){
+//            System.out.println(sh.getSquare());
+//        }
 
 
         System.out.println(Person.getNumber());
