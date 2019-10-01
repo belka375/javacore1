@@ -52,14 +52,14 @@ public class Hospital {
         printRooms();
 
     }
-    public void printDoctors(){
+    private void printDoctors(){
         System.out.println("Hospital Doctors: ");
         for (Doctor doctor:doctors) {
                 doctor.printDoctor();
            }
 
     }
-    public void printRooms(){
+    private void printRooms(){
         System.out.println("Rooms:");
         for (Map.Entry<Integer, String> pair : rooms.entrySet()) {
             System.out.println("Number: " + pair.getKey() + ", Name = " + pair.getValue());
