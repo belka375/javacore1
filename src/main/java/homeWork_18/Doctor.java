@@ -14,14 +14,15 @@ public class Doctor {
     public String getName() {
         return name;
     }
-
     public String getLastName() {
         return lastName;
     }
-
     public Position getPosition() {
         return position;
     }
 
+    public void printDocInfo(){
+        System.out.println(name+" "+lastName+" ("+position+")");
+    }
 }
 

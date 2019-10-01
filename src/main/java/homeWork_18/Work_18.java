@@ -31,22 +31,22 @@ public class Work_18 {
         listDoc.add(new Doctor("Julio", "Cesar", Position.NEUROLOGISTS));
         listDoc.add(new Doctor("Antonio", "Conte", Position.SURGEONS));
 
+//
+//        System.out.println("Print list of all offices with numbers and names\n");
+//        room.entrySet().forEach(entry -> {
+//            System.out.println(entry.getKey() + " " + entry.getValue());
+//        });
+//
+//        System.out.println("============================================================================================");
+//        System.out.println("Print list of doctors and their positions - public void printDoctors();\n");
+//        listDoc.forEach(x -> System.out.println(x.getName() + " " + x.getLastName() + " (" + x.getPosition() + ")"));
+//
+//
+//        System.out.println("============================================================================================");
+//        System.out.println("Print, address and list insurances, accepted by the Hospital - public void printInfo();\n");
+//
 
-        System.out.println("Print list of all offices with numbers and names\n");
-        room.entrySet().forEach(entry -> {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        });
-
-        System.out.println("============================================================================================");
-        System.out.println("Print list of doctors and their positions - public void printDoctors();\n");
-        listDoc.forEach(x -> System.out.println(x.getName() + " " + x.getLastName() + " (" + x.getPosition() + ")"));
-
-
-        System.out.println("============================================================================================");
-        System.out.println("Print, address and list insurances, accepted by the Hospital - public void printInfo();\n");
-
-
-        Hospital h1 = new Hospital("ABC", address, listDoc, room, acceptedInsuranses);
+       var h1 = new Hospital("ABC", address, listDoc, room, acceptedInsuranses);
         h1.printInfo();
 
 

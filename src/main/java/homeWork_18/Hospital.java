@@ -23,19 +23,15 @@ public class Hospital {
     public String getHospitalName() {
         return hospitalName;
     }
-
     public ArrayList<Doctor> getDoctors() {
         return doctors;
     }
-
     public HashMap<Integer, String> getRooms() {
         return rooms;
     }
-
     public Address getAddress() {
         return address;
     }
-
     public ArrayList<InsuranseCompanies> getAcceptedInsuranses() {
         return acceptedInsuranses;
     }
@@ -44,6 +40,11 @@ public class Hospital {
     public void printInfo() {
         System.out.println("Hospital: " + hospitalName);
         address.printAddress();
-        System.out.println("Work with: " + acceptedInsuranses);
+        System.out.println("=====================================================================");
+        doctors.forEach(doc -> doc.printDocInfo());
+        System.out.println("=====================================================================");
+        rooms.forEach((rommNumber, roomName)-> System.out.println(rommNumber+" "+roomName));
+        System.out.println("======================================================================");
+        System.out.println("Work with: "); acceptedInsuranses.forEach(i-> System.out.println(i));
     }
 }
