@@ -29,39 +29,16 @@ public class Work {
         listAcceptedInsurances.add(InsuranceCompanies.HCSC);
         listAcceptedInsurances.add(InsuranceCompanies.AETNA);
 
-        Hospital santaClaraCenter = new Hospital("Santa Clara Center", hospitalAddress, doctors, listAcceptedInsurances);
+        Hospital santaClaraCenter = new Hospital("Santa Clara Center", hospitalAddress, doctors, rooms, listAcceptedInsurances);
 
         //print Hospital info
-        printInfo(santaClaraCenter);
+        santaClaraCenter.printInfo();
 
-        //print doctors
-        printDoctors(santaClaraCenter);
 
-        System.out.println("*************************");
-        //print doctors using lambda expression
-        doctors.forEach(doctor -> doctor.printDoctor());
-
-        //print rooms
-        System.out.println("*************************");
-        System.out.println("Rooms:");
-        for (Map.Entry<Integer, String> pair : rooms.entrySet()) {
-            System.out.println("Number: " + pair.getKey() + ", Name = " + pair.getValue());
-        }
-        //print rooms using lambda expression
-        rooms.forEach((key, value) -> {
-            System.out.println("Number = " + key + ", Name = " + value);
-        });
-
-    }
-
-    public static void printInfo(Hospital h) {
-        h.printInfo();
-
-    }
-
-    public static void printDoctors(Hospital h) {
-        System.out.println("Hospital Doctors: ");
-        h.printDoctors();
+//        //print rooms using lambda expression
+//        rooms.forEach((key, value) -> {
+//            System.out.println("Number = " + key + ", Name = " + value);
+//        });
 
     }
 
