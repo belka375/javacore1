@@ -1,4 +1,4 @@
-package hw18;
+package hw18_right_version;
 
 public enum InsuaranceCompanies {
     AETNA,
