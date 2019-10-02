@@ -1,6 +1,7 @@
 package hw18;
 
 public enum Position {
+<<<<<<< HEAD
 
     PHISICIAN,
     DENTIST,
@@ -8,4 +9,11 @@ public enum Position {
     PEDIATRIC,
     UROLOGIST
 
+=======
+    PHYSICIAN,
+    NEUROLOGIST,
+    PEDIATRICIAN,
+    DERMATOLOGIST,
+    OPHTALMOLOGIST
+>>>>>>> origin/AA81
 }
