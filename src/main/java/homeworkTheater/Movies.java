@@ -1,4 +1,4 @@
-package homework11;
+package homeworkTheater;
 
 public class Movies {
     private String name;

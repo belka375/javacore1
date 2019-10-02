@@ -1,5 +1,7 @@
 package homework;
 
+import lesson16.Shape;
+
 public enum Color {
     BLACK,
     GRAY,

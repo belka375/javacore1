@@ -35,8 +35,8 @@ public class ClassWork {
 //        String[] arrayOfStrings= (String[]) list.toArray();
 
 
-        HashMap<String,String> hm = new HashMap<String, String>();
 
+        HashMap<String,String> hm = new HashMap<String, String>();
         hm.put("apple","green");
         hm.put("peach","red");
         hm.put("strawberry","red");
@@ -55,5 +55,7 @@ public class ClassWork {
         hm1.put(55,"not");
 //        hm1.remove(55);
         hm1.remove(55,"not");
+
+
     }
 }

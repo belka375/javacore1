@@ -1,4 +1,4 @@
-package homework11;
+package homeworkTheater;
 
 public class Paper {
     public static String color;

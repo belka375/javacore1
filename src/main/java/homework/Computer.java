@@ -1,6 +1,6 @@
 package homework;
 
-public class Computer {
+public class Computer  {
     private Keyboard keyboard;
     private Mouse mouse;
     private Monitor mon;

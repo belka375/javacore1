@@ -2,7 +2,7 @@ package homework;
 
 import java.time.LocalDate;
 
-public class Component implements PrintInfo {
+public class Component implements PrintInfo  {
     protected Make make;
     protected String model;
     protected LocalDate yearOfMake;

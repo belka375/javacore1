@@ -1,4 +1,4 @@
-package homework11;
+package homeworkTheater;
 
 public enum MovieGenre {
     DRAMA,
