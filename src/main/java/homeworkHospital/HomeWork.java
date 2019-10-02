@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class HomeWork {
+
+
     public static void main(String[] args) {
         Address adr1 = new Address("100 Green St", "Louisville", "KY", 40204);
         Address adr2 = new Address("200 Red St", "Richmond", "KY", 40204);
@@ -55,6 +57,12 @@ public class HomeWork {
         doc3.add(dc7);
         doc3.add(dc8);
 
+        List<List<Doctors>> alldoctors = new ArrayList<>();
+        alldoctors.add(doc1);
+        alldoctors.add(doc2);
+        alldoctors.add(doc3);
+
+
         List<InsuranceCompanies> ins1 = new ArrayList<InsuranceCompanies>();
         ins1.add(InsuranceCompanies.AETNA);
         ins1.add(InsuranceCompanies.AMERICANHEALTH);
@@ -76,11 +84,42 @@ public class HomeWork {
         Hospital hosp2 = new Hospital("Baptist Health", adr2, doc2, rooms2, ins2);
         Hospital hosp3 = new Hospital("City General", adr3, doc3, rooms3, ins3);
 
-        hosp1.PrintInfo();
-        hosp2.PrintInfo();
-        hosp3.PrintInfo();
+        List<Hospital> hospitals = new ArrayList<Hospital>();
+        hospitals.add(hosp1);
+        hospitals.add(hosp2);
+        hospitals.add(hosp3);
 
-        
+//        hosp1.PrintInfo();
+//        hosp2.PrintInfo();
+//        hosp3.PrintInfo();
+
+        hospitals.forEach(hospital -> hospital.PrintInfo());
+
+        System.out.println("----------------------------------------------------------------");
+
+        alldoctors.forEach(doctors -> {
+            doctors.forEach(doctors1 -> {
+                doctors1.PrintInfo();
+            });
+        });
+
+        System.out.println("----------------------------------------------------------------");
+
+
+        hospitals.forEach(hospital -> {
+            System.out.println();
+            hospital.getRooms().forEach((Integer, String) ->{
+                System.out.println(Integer+": "+String);
+            });
+
+        });
+
+
+//        hosp1.getRooms().forEach((Integer, String) ->{
+//            System.out.println(Integer +": "+ String);
+//        });
+
+
 
 
 
