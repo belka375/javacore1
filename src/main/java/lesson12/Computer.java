@@ -12,4 +12,15 @@ public class Computer {
         this.sb=sb;
         this.mouse=mouse;
     }
+
+    public void printComp() {
+
+        keyboard.printKeyboard();
+        mouse.printMouse();
+        mon.printMonitor();
+        sb.printSystemBlock();
+
+    }
+
+
 }
