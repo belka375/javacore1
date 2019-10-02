@@ -1,4 +1,4 @@
-package homeWork_10;
+package homeWork10;
 
 public class Passenger {
     private String name;
