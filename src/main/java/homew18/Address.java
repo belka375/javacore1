@@ -11,14 +11,11 @@ public class Address {
         this.town = town;
         this.state = state;
         this.zip = zip;
-
     }
 
     public void printInfo(){
-        System.out.println(streetAddress+ "/n"+ " "+state +" "+zip);
-    }
-
-
-    public void printlnInfo() {
+        System.out.println(streetAddress+"\n"+ town+" "+state +" "+ zip);
     }
 }
+
+
