@@ -10,47 +10,27 @@ public class Hospital {
     private HashMap<Integer, String> rooms;
     private ArrayList<InsuranseCompanies> acceptedInsuranses;
 
-    public Hospital(String hospitalName, Address address, ArrayList<Doctor> doctors, ArrayList<InsuranseCompanies> acceptedInsuranses) {
+    public Hospital(String hospitalName, Address address, ArrayList<Doctor> doctors, HashMap<Integer, String> rooms, ArrayList<InsuranseCompanies> acceptedInsuranses) {
         this.hospitalName = hospitalName;
         this.address = address;
         this.doctors = doctors;
+        this.rooms = rooms;
         this.acceptedInsuranses = acceptedInsuranses;
     }
 
     public void printInfo() {
-        System.out.println("address: " + address);
+        System.out.println("Hospital name : " + hospitalName);
 
-        for (int i = 0; i < acceptedInsuranses.size(); i++) {
-            System.out.println(acceptedInsuranses.get(i));
-        }
-    }
+        address.prinInfo();
+        doctors.forEach(doc -> doc.printInfo());
 
-    public void printDoctors() {
-        for (int i = 0; i < doctors.size(); i++) {
-            System.out.println(doctors.get(i));
-        }
-    }
-    public void printNumberOfficeAndName(){
+        rooms.forEach((roomNumber, roomName) -> System.out.println(roomName + "-->" + roomName));
+
+        System.out.println("List of insurances:");
+        acceptedInsuranses.forEach(i -> System.out.println(i));
+
 
     }
 
-    public Address getAddress() {
-        return address;
-    }
 
-    public ArrayList<Doctor> getDoctors() {
-        return doctors;
-    }
-
-    public ArrayList<InsuranseCompanies> getAcceptedInsuranses() {
-        return acceptedInsuranses;
-    }
-
-    public HashMap<Integer, String> getRooms() {
-        return rooms;
-    }
-
-    public String getHospitalName() {
-        return hospitalName;
-    }
 }

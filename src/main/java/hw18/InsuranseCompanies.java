@@ -2,7 +2,7 @@ package hw18;
 
 public enum InsuranseCompanies {
     AETNA,
-    COBRA,
+    EMBLEM,
     Blue_Cros,
-    NGA
+    UHC
 }

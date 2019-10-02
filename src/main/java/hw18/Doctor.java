@@ -11,6 +11,11 @@ public class Doctor {
         this.position = position;
     }
 
+    public void printInfo() {
+        System.out.println(name + " " + lastName + " " + position);
+    }
+
+
     public String getName() {
         return name;
     }
@@ -23,3 +28,7 @@ public class Doctor {
         return position;
     }
 }
+
+
+
+

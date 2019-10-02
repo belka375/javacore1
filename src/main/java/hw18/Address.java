@@ -13,6 +13,10 @@ public class Address {
         this.zip = zip;
     }
 
+    public void prinInfo(){
+        System.out.println(streetAdress+"\n"+town+" "+ state+" "+zip);
+    }
+
     public int getZip() {
         return zip;
     }
