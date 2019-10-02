@@ -15,7 +15,7 @@ public class Address {
         this.zip = zip;
     }
 
-    public void getAddress(){
+    public void getAddressInfo(){
         System.out.println(streetAddress+", "+town+", "+state+", "+zip);
     }
 }

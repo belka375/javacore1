@@ -41,7 +41,7 @@ public class Hospital {
 
     public void printInfo(){
         System.out.println(hospitalName+" Hospital");
-        address.getAddress();
+        address.getAddressInfo();
         System.out.println("Insurance accepted:");
         for (Insurances ins:acceptedInsurances
              ) {
