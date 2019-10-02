@@ -7,7 +7,7 @@ import java.util.Map;
 public class Work {
     public static void main(String[] args) {
         Address adr = new Address("45 Millenia", "Orlando", "FL", 32839);
-        Map<Cattle, Integer> cattle = new HashMap<>();
+        var cattle = new HashMap<Cattle, Integer>();
         cattle.put(Cattle.CHICKENS, 3);
         cattle.put(Cattle.COWS, 10);
         cattle.put(Cattle.PIGS, 18);
@@ -23,7 +23,7 @@ public class Work {
 
 
 
-        Farm farm = new Farm("Romashka", adr, (HashMap<Cattle, Integer>) cattle, agr);
+        Farm farm = new Farm("Romashka", adr, cattle, agr);
         farm.printInfo();
 
 
