@@ -7,7 +7,7 @@ public class Work18 {
     public static void main(String[] args) {
 
         // я подглядывала в подсказки разбора
-        
+
         var address = new Address("5643 South blvd", "Huston", "CO", 87444);
         var doctors = new ArrayList<Doctor>();
         doctors.add(new Doctor("Alex", "River", Position.EMERGENCY_SPECIALIST));
