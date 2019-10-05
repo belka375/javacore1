@@ -1,4 +1,4 @@
-package hwExtra;
+package hwAdd;
 
 public enum Food {
     MEAT,

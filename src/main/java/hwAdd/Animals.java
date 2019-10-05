@@ -1,14 +1,16 @@
-package hwExtra;
+package hwAdd;
 
 public class Animals {
     protected String color;
     protected String location;
 
     public Animals(String color, String location) {
-        this.color=color;
-        this.location=location;
+        this.color= this.color;
+        this.location= this.location;
     }
-
+    protected void printAnimals(){
+        System.out.println(color+", "+location);
+    }
     public String getColor() {
         return color;
     }
@@ -24,8 +26,5 @@ public class Animals {
     public void setLocation(String location) {
         this.location = location;
     }
-    public void printAnimals(){
-        System.out.println(color);
-        System.out.println(location);
-    }
+
 }
