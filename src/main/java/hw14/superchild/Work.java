@@ -13,6 +13,8 @@ public class Work {
         dealership.printDealershipInfo();
         dinasCar.printCarInfo();
         car.printCarInfo();
+        Owner owner=new Owner("Ivan", "Ivanov",LocalDateTime.of(1999,12,10,3,30));
+        Owner owner1=new Car("1","2",LocalDateTime.of(2000,4,5,1,20),maker,"Civic");
 
     }
 }
