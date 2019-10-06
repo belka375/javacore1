@@ -23,7 +23,7 @@ public class Farm {
         System.out.println("Farm's name is " + name);
     address.printAddress();
 
-    agriculture.forEach(agriculture -> System.out.println(agriculture));
+    agriculture.forEach(x -> x.printAgriculture());
 
 
     cattle.forEach((key, value) -> {System.out.println("Cattle " + key + " number of animals " + value);
