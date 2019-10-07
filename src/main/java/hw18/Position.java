@@ -1,0 +1,12 @@
+package hw18;
+
+public enum Position {
+    PHYSICIAN,
+    PEDIATRICIAN,
+    GASTROENTEROLOGIST,
+    ANESTHESIOLOGIST,
+    TRAUMATOLOGIST,
+    DERMATHOLOGIST,
+    SURGEON
+
+}
