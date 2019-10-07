@@ -1,6 +1,6 @@
 package hw20extra;
 
-public class Wolf extends Carnivores{
+public class Wolf extends Carnivores {
     private Area areaoflLife;
     public boolean havelegs;
 
@@ -19,6 +19,16 @@ public class Wolf extends Carnivores{
     }
 
     @Override
+    public void howIMove() {
+
+    }
+
+    @Override
+    public void longOfHair() {
+
+    }
+
+    @Override
     public void myMeals() {
         System.out.println("i love small fresh animals");
     }
@@ -27,9 +37,19 @@ public class Wolf extends Carnivores{
     public void iCanMove() {
         System.out.println(" i can run");
 
-    }
-    public void printInfo(){
-        System.out.println("i live in "+ areaoflLife+" and i have legs - "+havelegs);
+
     }
 
+    @Override
+    public void nervouseSystem() {
+        {
+            System.out.println("I have a spinal cord ");
+        }
+
+
+
+    }
+    public void printInfo(){
+        System.out.println("i live in " + areaoflLife + " and i have legs - " + havelegs);
+    }
 }

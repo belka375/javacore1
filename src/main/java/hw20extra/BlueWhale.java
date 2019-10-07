@@ -27,4 +27,9 @@ public class BlueWhale extends Whales {
     public void printInfo(){
         System.out.println("i live in "+ areaoflLife+" and i have legs - "+havelegs);
     }
+
+    @Override
+    public void howIMove() {
+
+    }
 }
