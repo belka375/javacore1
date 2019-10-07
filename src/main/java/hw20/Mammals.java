@@ -1,6 +1,6 @@
 package hw20;
 
-public interface Mammals {
+public interface Mammals extends Vertebrates {
     abstract class Carnivores{}
     abstract class Primates{}
     abstract class Seals{}
@@ -9,4 +9,5 @@ public interface Mammals {
     abstract class Herbivores{}
 
     void calfDrinksMilk();
+
 }

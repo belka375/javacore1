@@ -1,7 +1,9 @@
 package hw20;
 
-public abstract class Carnivores{
+public abstract class Carnivores implements Mammals {
     class Lion{}
     class Wolf{}
-    class BlueWhale{}
+
+    abstract void canEat();
+
 }

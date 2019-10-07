@@ -1,6 +1,6 @@
 package hw20;
 
-public interface Animals {
+public interface Animals extends Life {
     interface Vertebrates{}
     interface Invertebrates{}
 
