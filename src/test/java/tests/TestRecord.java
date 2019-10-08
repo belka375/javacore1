@@ -8,7 +8,7 @@ public class TestRecord {
     @Test
     public void tryToLogin_TryToOpenPage_TitlePageOpened() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://bing.com");
