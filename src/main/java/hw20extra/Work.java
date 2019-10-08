@@ -13,6 +13,32 @@ public class Work {
         lion.longOfHair();
         lion.howIMove();
         lion.printInfo();
+        System.out.println("***********************");
+
+        System.out.println("guess who i am??????:");
+        BlueWhale blueWhale=new BlueWhale(Area.Ocean, false);
+        blueWhale.iCanMove();
+        blueWhale.myMeals();
+        blueWhale.getAreaoflLife();
+        blueWhale.needOxigen();
+        blueWhale.nervouseSystem();
+        blueWhale.longOfHair();
+        blueWhale.howIMove();
+        blueWhale.printInfo();
+        blueWhale.whaleInfo();
+
+        System.out.println("***********************");
+        System.out.println("guess who i am??????:");
+        Wolf wolf=new Wolf(Area.Forest, true);
+        wolf.iCanMove();
+        wolf.myMeals();
+        wolf.getAreaoflLife();
+        wolf.needOxigen();
+        wolf.nervouseSystem();
+        wolf.longOfHair();
+        wolf.howIMove();
+        wolf.printInfo();
+
 
 
 

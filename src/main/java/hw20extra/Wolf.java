@@ -20,11 +20,13 @@ public class Wolf extends Carnivores {
 
     @Override
     public void howIMove() {
+        System.out.println("For catch rubbits i need run and jump");
 
     }
 
     @Override
     public void longOfHair() {
+        System.out.println("I have hair which protect me on the winter");
 
     }
 
@@ -43,7 +45,7 @@ public class Wolf extends Carnivores {
     @Override
     public void nervouseSystem() {
         {
-            System.out.println("I have a spinal cord ");
+            System.out.println("I have a spinal cord and i am vertebral ");
         }
 
 

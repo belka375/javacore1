@@ -2,7 +2,7 @@ package hw20extra;
 
 public class BlueWhale extends Whales {
     private Area areaoflLife;
-    private boolean havelegs;
+    public boolean havelegs;
 
     public BlueWhale(Area areaoflLife, boolean havelegs) {
         this.areaoflLife = areaoflLife;
@@ -20,8 +20,13 @@ public class BlueWhale extends Whales {
     }
 
     @Override
+    public void whaleInfo() {
+        System.out.println("I am quin of the Ocean");
+    }
+
+    @Override
     public void iCanMove() {
-        System.out.println("i can swim");
+        System.out.println("i can jumping from the water");
 
     }
     public void printInfo(){
@@ -30,6 +35,11 @@ public class BlueWhale extends Whales {
 
     @Override
     public void howIMove() {
+        System.out.println("I can swim for the long distances");
 
+    }
+
+    public Area getAreaoflLife() {
+        return areaoflLife;
     }
 }

@@ -8,14 +8,13 @@ abstract class Whales implements Mammals {
 
     public abstract void myMeals();
 
-    public void whaleInfo() {
-        System.out.println("I am a whale");
-    }
+    public abstract void whaleInfo();
+
 
     @Override
     public void nervouseSystem() {
         {
-            System.out.println("I have a spinal cord ");
+            System.out.println("I have a spinal cord  and i am vertebrate");
         }
     }
 }
