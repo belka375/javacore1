@@ -1,6 +1,14 @@
 package hw20extra;
 
 abstract class Whales implements Mammals {
+    protected Area areaoflLife;
+    protected boolean havelegs;
+
+    public Whales(Area areaoflLife, boolean havelegs) {
+        this.areaoflLife = areaoflLife;
+        this.havelegs = havelegs;
+
+    }
     public void longOfHair() {
         System.out.println("I have hair");
 

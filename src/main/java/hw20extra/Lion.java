@@ -1,12 +1,10 @@
 package hw20extra;
 
 public class Lion extends Carnivores {
-    private Area areaoflLife;
-    public boolean havelegs;
+
 
     public Lion(Area areaoflLife, boolean havelegs) {
-        this.areaoflLife = areaoflLife;
-        this.havelegs = havelegs;
+        super(areaoflLife,havelegs);
     }
 
     public Area getAreaoflLife() {

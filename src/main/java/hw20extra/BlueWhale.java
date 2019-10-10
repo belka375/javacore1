@@ -1,12 +1,9 @@
 package hw20extra;
 
 public class BlueWhale extends Whales {
-    private Area areaoflLife;
-    public boolean havelegs;
 
     public BlueWhale(Area areaoflLife, boolean havelegs) {
-        this.areaoflLife = areaoflLife;
-        this.havelegs = havelegs;
+        super(areaoflLife,havelegs);
     }
 
     @Override
