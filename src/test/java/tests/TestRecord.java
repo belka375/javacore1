@@ -10,9 +10,7 @@ public class TestRecord {
 
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-
-        driver.get("https://bing.com");
-
+        driver.get("https://deens-master.now.sh/");
         Thread.sleep(7000);
         driver.quit();
     }
