@@ -51,4 +51,6 @@ public class TestRecord {
         String text=signupHeader.getText();
         Assert.assertEquals(text, "1Create an account");
     }
+    //Selenium usage tips
+    //https://app.slack.com/client/TLVLP2HSP/CLVLP2RMH/thread/CLVLP2RMH-1569894031.075700
 }
