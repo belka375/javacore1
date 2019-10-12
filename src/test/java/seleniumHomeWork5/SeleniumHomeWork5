@@ -1,0 +1,54 @@
+
+Page size "1385x356"
+
+    // Deens logo (left-top corner)
+
+1. "//*[@aria-label]"
+2. "//*[@src='/logo.svg']"
+3. "//*[@href='/']"
+
+
+
+
+    //"Earn Money" button
+
+1. "//*[@href='/earn-money']"
+2. "//*[@activeclassname='is-active'][1]"
+3. "//*[contains(text(), 'Earn Money')][1]"
+4. "//p[contains(text(), 'Earn Money')]"
+
+
+
+    //"Create Trip" button
+
+1. "//*[@data-testid='createTripHeaderButton']"
+2. "//*[@href='/new/trip'][1]"
+3. "//*[@activeclassname='is-active'][2]"
+
+
+
+    //"Login" button
+
+1. "//*[@href='/login']"
+
+
+
+    // "Sign Up" button
+
+1. "//*[@href='/register']"
+2. "//*[@width='auto'][2]"
+
+
+
+
+    // "Customizable travels created by locals for free" element
+
+1. "//h1[contains(text(),'travels created')]"
+
+
+
+    // Search field- element
+
+1. "//*[@name='search']"
+2. "//*[@placeholder='Type a city or country']"
+3. "//*[@role='combobox']"
