@@ -2,19 +2,29 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class TestRecord {
-    @Test
-    public void tryToLogin_TryToOpenPage_TitlePageOpened() throws InterruptedException {
+    private WebDriver driver;
 
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+    @AfterTest
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.close();
 
-        driver.get("https://bing.com");
-
-        Thread.sleep(7000);
-        driver.quit();
     }
 
+    @Test
+    public void tryToLogin_TryToOpenPage_TitlePageOpened()  {
+
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        driver = new ChromeDriver();
+
+        driver.get("https://deens-master.now.sh/");
+        var title = driver.getTitle();
+        Assert.assertEquals(title, "Deens, plan my trip!", "Expexted titile is wrong!");
+
+    }
 }
