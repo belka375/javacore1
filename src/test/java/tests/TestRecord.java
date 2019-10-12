@@ -1,6 +1,8 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +22,20 @@ public class TestRecord {
     public void tearDown() throws InterruptedException{
         Thread.sleep(7000);
         driver.quit();
+    }
+
+    @Test
+    public void deens_ClickLoginButton_LoginPageOpened() throws InterruptedException {
+        //Arrange
+        driver.get("https://deens-master.now.sh/");
+        //Act
+        WebElement loginButton=driver.findElement(By.xpath("//a[@href='/login']"));
+        loginButton.click();
+        //Assert
+        Thread.sleep(2000);
+        WebElement loginHeader = driver.findElement(By.xpath("//*[@class='login-header']"));
+        String text=loginHeader.getText();
+        Assert.assertEquals(text, "1Log-in to your account");
     }
     @Test
     public void openUrl_tryToOpenDeens_GoogleOpened() {
@@ -48,4 +64,7 @@ public class TestRecord {
         var url = driver.getCurrentUrl();
         Assert.assertEquals(url, "https://deens-master.now.sh/", "Expected URL is wrong");
     }
+    //*[@class='login-img-content']
+    //*[text()="Plan your next trip with us!"]
+    //*[contains(text(), 'next trip')]
 }
