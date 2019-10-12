@@ -1,6 +1,8 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +22,26 @@ public class TestRecord {
         Thread.sleep(7000);
         driver.quit();
     }
+
+    @Test
+    public void deens_ClickLoginButton_LoginPageOpened() throws InterruptedException {
+        //Arrange
+        driver.get("https://deens-master.now.sh/");
+
+        //Act
+        WebElement loginButton = driver.findElement(By.xpath("//a[@href='/login']"));
+        loginButton.click();
+
+        //Assert
+        Thread.sleep(2000);
+        WebElement loginHeader = driver.findElement(By.xpath("//*[@class='login-header']"));
+        String text=loginHeader.getText();
+        Assert.assertEquals(text,"Log-in to your account");
+    }
+
+    // //*[@class='login-img-content']
+    // //*[text()='Plan your next trip with us!']
+    // //*[contains(text(),'next trip')]
 
     @Test
     public void openUrl_TryToOpenDeens_GoogleOpened()  {
