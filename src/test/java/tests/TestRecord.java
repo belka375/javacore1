@@ -1,13 +1,14 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestRecord {
     private WebDriver driver;
@@ -21,6 +22,43 @@ public class TestRecord {
     public void tearDown() throws InterruptedException{
         Thread.sleep(7000);
         driver.quit();
+    }
+
+    @Test
+    public void searchInGoogLe_searchingForACar_CarFound() {
+        driver.get("http://google.com/");
+
+            WebElement searchBox = driver.findElement(By.xpath("//*[@maxlength='2048']"));
+            searchBox.sendKeys("Car");
+
+            Assert.assertEquals(searchBox.getAttribute("value"),"Car");
+
+            WebElement searchButton = driver.findElement(By.xpath("//*[@name='btnK']"));
+
+            Assert.assertTrue(searchButton.isDisplayed());
+
+
+
+//        try{
+//            WebElement searchBox = driver.findElement(By.xpath("//*[@maxlength='2048']"));
+//            searchBox.sendKeys("Car");
+//
+//            List<WebElement> searchButtons = driver.findElements(By.xpath("//*[@name='btnK']"));
+//            searchButtons.forEach(button->{
+//                if(button.isDisplayed()){
+//                    button.click();
+//                }
+//            });
+//        }catch(Exception x){
+//
+//        }
+
+
+//        searchBox.sendKeys(Keys.RETURN);
+
+//        WebElement searchButton = driver.findElement(By.xpath("(//*[@name='btnK'])[1]"));
+//        searchButton.click();
+
     }
 
     @Test
