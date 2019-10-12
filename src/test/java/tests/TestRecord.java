@@ -1,7 +1,9 @@
 package tests;
 
 import net.bytebuddy.implementation.bytecode.Throw;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +27,35 @@ public class TestRecord {
         //destroi the browser
 
         driver.quit();
+    }
+
+    @Test
+    public void deens_ClickLoginButton_LoginPageOpened() throws InterruptedException {
+
+        //Arrange
+
+        //open page deens
+        driver.get("https://deens-master.now.sh/");
+
+        //Act
+
+        //found button "Login"
+        WebElement loginButton = driver.findElement(By.xpath("//a[@href='/login']"));
+        loginButton.click();
+
+        //Assert
+        Thread.sleep(2000);
+
+        //Assert that e are on the good page
+
+        WebElement loginHeader = driver.findElement(By.xpath("//*[@class='login-header']"));
+        //retrive text from the founded previously eb element
+        String text = loginHeader.getText();
+        Assert.assertEquals(text,"Log-in to your account");
+
+
+
+
     }
 
     @Test
@@ -158,6 +189,7 @@ public class TestRecord {
 
         Assert.assertEquals(url, "https://www.homeaway.co.uk/", "Expected url is wrong!");
     }
+
 
 
 }
