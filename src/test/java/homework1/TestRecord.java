@@ -39,7 +39,7 @@ public class TestRecord {
     }
 
     @Test
-    public void deens_ClickSignUpButton_SignUpPageNotOpened() throws InterruptedException {
+    public void deens_ClickSignUpButton_SignUpPageWrongName() throws InterruptedException {
         //Arrange
         driver.get("https://deens-master.now.sh/");
         //Act
