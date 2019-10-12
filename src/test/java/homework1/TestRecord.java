@@ -33,7 +33,7 @@ public class TestRecord {
         signupButton.click();
         //Assert
         Thread.sleep(2000);
-        WebElement signupHeader=driver.findElement(By.xpath("//div[@class='login-header']"));
+        WebElement signupHeader=driver.findElement(By.xpath("//*[@class='login-header']"));
         String text=signupHeader.getText();
         Assert.assertEquals(text, "Create an account");
     }
