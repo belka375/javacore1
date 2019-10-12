@@ -37,4 +37,18 @@ public class TestRecord {
         String text=signupHeader.getText();
         Assert.assertEquals(text, "Create an account");
     }
+
+    @Test
+    public void deens_ClickSignUpButton_SignUpPageNotOpened() throws InterruptedException {
+        //Arrange
+        driver.get("https://deens-master.now.sh/");
+        //Act
+        WebElement signupButton=driver.findElement(By.xpath("//a[@href='/register']"));
+        signupButton.click();
+        //Assert
+        Thread.sleep(2000);
+        WebElement signupHeader=driver.findElement(By.xpath("//*[@class='login-header']"));
+        String text=signupHeader.getText();
+        Assert.assertEquals(text, "1Create an account");
+    }
 }
