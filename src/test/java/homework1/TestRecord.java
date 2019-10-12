@@ -32,7 +32,7 @@ public class TestRecord {
         WebElement signupButton=driver.findElement(By.xpath("//a[@href='/register']"));
         signupButton.click();
         //Assert
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement signupHeader=driver.findElement(By.xpath("//*[@class='login-header']"));
         String text=signupHeader.getText();
         Assert.assertEquals(text, "Create an account");
@@ -46,7 +46,7 @@ public class TestRecord {
         WebElement signupButton=driver.findElement(By.xpath("//a[@href='/register']"));
         signupButton.click();
         //Assert
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement signupHeader=driver.findElement(By.xpath("//*[@class='login-header']"));
         String text=signupHeader.getText();
         Assert.assertEquals(text, "1Create an account");
