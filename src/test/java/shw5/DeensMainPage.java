@@ -30,7 +30,14 @@ public class DeensMainPage {
         driver.get("https://deens-master.now.sh/");
         var deensLogo=driver.findElement(By.xpath("//*[@class='Logo__LogoLink-cfYNaB bdaxic']"));
         deensLogo.isDisplayed();
-        Assert.assertEquals(deensLogo.isDisplayed(),deensLogo.isDisplayed());
+        Assert.assertTrue(deensLogo.isDisplayed());
+    }
+    @Test
+    public void mainPage_welcomeLogo_welcomeLogoIsPresent(){
+        driver.get("https://deens-master.now.sh/");
+        var welcomeLogo=driver.findElement(By.xpath("//*[@class='Home__WorldWrapper-AIdBX flOFfn']"));
+        welcomeLogo.isDisplayed();
+        Assert.assertTrue(welcomeLogo.isDisplayed());
     }
     @Test
     public void mainPage_logInButton_logInPageOpened() throws InterruptedException {
@@ -102,7 +109,7 @@ public class DeensMainPage {
         driver.get("https://deens-master.now.sh/login");
         var text=driver.findElement(By.xpath("//*[@class='login-img-content']"));
         text.getTagName();
-        Assert.assertEquals(text.isDisplayed(),text.isDisplayed());
+        Assert.assertTrue(text.isDisplayed());
         }
         @Test
         public void loginPage_welcomeImage_imageIsVisible(){
