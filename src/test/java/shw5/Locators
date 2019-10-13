@@ -1,0 +1,50 @@
+Home page Deens (1.png)
+1- logo Deens
+//*[@src='/logo.svg']
+
+2-Earn Money
+//*[contains(text(),'Earn Money')][1]
+
+3- Create Trip
+//*[contains(text(),'Create Trip')]
+
+4- Login button
+//*[@href='/login']
+
+4- Login Sign Up
+//*[@href='/register']
+
+5-Customizable travels created by locals for free
+//*[contains(text(),'Customizable')]
+
+6-Body Seach field
+//div[starts-with(@class,'HomeSearch__SearchBg')]
+
+7-Button "Go" on search field
+//span[starts-with(@class,'LocationAuto')]
+
+***********************************
+
+Login page Deens (2.png)
+1-Image
+//*[@class='login-img']
+
+2-Play your next trip message
+//*[contains(text(),'next trip')]
+
+3-User email  field
+//*[@id='email']
+
+4-User passord field
+//*[@id='password']
+
+5-Login gray button
+//button - думаю что это слабый локатор - так как со временем может
+появится еще один такой же тег на странице и потом тест упадет
+//button[contains(text(),'Login')]
+
+6-Sign-up link
+//div[@class='login-q-text']//a[@href='/register']
+
+7-Forgot password link
+//*[@href='/recover-password']

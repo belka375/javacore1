@@ -1,6 +1,7 @@
 package hw1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class SignIn {
     private WebDriver driver;
@@ -25,6 +28,43 @@ public class SignIn {
         //destroi the browser
 
         driver.quit();
+    }
+
+    @Test
+    public void searchInGoogle_searchingForACar_CarFouded () {
+        try{
+
+        //founf the field
+        WebElement searchBox = driver.findElement(By.xpath("//*[@maxlength='2048']"));
+
+        //input ord to this field
+
+        searchBox.sendKeys("Car");
+        Assert.assertEquals(searchBox.getAttribute("value"),"Car");
+        //found search buttom
+
+        //WebElement seachButton = driver.findElement(By.xpath("(//*name='btnK'])[1]"));
+
+        //click to the buttom search
+        //seachButton.click();
+
+        //click to the enter
+        // searchBox.sendKeys(Keys.RETURN);
+
+        List<WebElement> searchButtons = driver.findElements(By.xpath("//*name='btnK']"));
+        searchButtons.forEach(button -> {
+            if (button.isDisplayed()) {
+                button.click();
+            }
+        });
+    }catch(Exception x)
+
+    {
+    }
+
+
+
+
     }
 
     @Test
