@@ -125,7 +125,8 @@ public class DeensMainPage {
             var email=driver.findElement(By.xpath("//*[@name='email']"));
             var password=driver.findElement(By.xpath("//*[@name='password']"));
             var register=driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']"));
-            Thread.sleep(6000);
+//            driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+//            Thread.sleep(5000);
             username.click();
             username.sendKeys("test");
             email.click();
