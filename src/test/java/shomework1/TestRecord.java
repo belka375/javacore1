@@ -1,4 +1,4 @@
-package homework1;
+package shomework1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
