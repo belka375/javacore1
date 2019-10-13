@@ -71,6 +71,7 @@ public class TestRecord {
         loginButton.click();
 
         //Assert
+
         Thread.sleep(2000);
         WebElement loginHeader = driver.findElement(By.xpath("//*[@class='login-header']"));
         String text=loginHeader.getText();
