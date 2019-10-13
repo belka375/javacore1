@@ -1,4 +1,4 @@
-package hw7;
+package javaCoreHomeWork.hw7;
 
 public class HomeWork_7_3 {
     public static void main(String[] args) {
