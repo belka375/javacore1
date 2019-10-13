@@ -1,6 +1,8 @@
 
 Page size "1385x356"
 
+    //Home page
+
     // Deens logo (left-top corner)
 
 1. "//*[@aria-label]"
@@ -52,3 +54,55 @@ Page size "1385x356"
 1. "//*[@name='search']"
 2. "//*[@placeholder='Type a city or country']"
 3. "//*[@role='combobox']"
+
+
+
+
+
+
+    //Login page
+
+    //Username
+
+1. "//*[@name='email']"
+2. "//*[@id='email']"
+3. "//*[@data-testid='loginEmail']"
+
+
+    //Password
+
+ 1. "//*[@id='password']"
+ 2. "//*[@name='password']"
+ 3. "//*[@placeholder='Password']"
+ 4. "//*[@data-testid='loginPassword']"
+
+
+    // "Login" button(not header)
+
+1. "//*[@data-testid='loginSubmit']"
+2. "//button"
+
+
+    // "Forgot password"
+
+1. "//*[@href='/recover-password']"
+2. "//*[contains(text(),'Forgot password')]"
+
+
+    // "Plan your next trip with us!" - element
+
+1. "//*[@class='login-img-content']"
+2. "//*[contains(text(),'us!')]"
+
+
+
+    // "Sign up" button under "Login"
+
+1. "//*[@class='login-q-text']/*[1]"
+
+
+
+    // "Welcome img" - element
+
+1. "//*[@class='login-img']"
+2. "//*[@alt='welcomeImage']"
