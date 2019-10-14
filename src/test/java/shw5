@@ -1,0 +1,58 @@
+// this is "deens" button in the right top corner of homepage
+xpath = //*[@src="/logo.svg"];
+
+
+// this is the text on home page "Customizable travels created by locals for free"
+xpath = //h1;
+
+
+//this is searchbox on home page
+
+
+____________________________
+
+//this is "Go" button in the searchbox on home page
+
+xpath = //span[text() = "Go"]
+
+
+
+// this is "Earn Money" button on home page
+xpath =  //p[text() = "Earn Money"];
+
+
+// this is "Create Trip" button on home page
+xpath =  //p[text() = "Create Trip"];
+
+
+//this is Login button on home page
+xpath = //*[@ href="/login"];
+
+//this is SignUp button on home page:
+xpath = //*[@href="/register"];
+
+
+// This is a picture on Login Page
+xpath = //*[@alt = "welcomeImage"]
+
+// "Plan your trip with us!" text on Login page
+xpath = //*[text() = "Plan your next trip with us!"]
+or xpath = //*[@class = "login-img-content"]
+
+//"Email address" field on Login page
+xpath = //*[@id = "email"]
+
+
+//Password field on Login page
+xpath = //*[@id = "password"]
+
+
+//Login button on Login page
+xpath = //*[@data-testid = "loginSubmit"]
+
+//SignUp button on Login page
+xpath = //*[@href="/register"]
+
+
+//Recover password button on Login page
+xpath = //*[@href = "/recover-password"]
