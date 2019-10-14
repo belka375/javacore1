@@ -1,0 +1,75 @@
+Login button
+//*[contains(text(),'Login')]
+//*[contains(@href,'login')]
+
+
+Earn Money button
+//*[contains(@href,'earn-money')]
+//*[@class='DesktopNav__NavLink-jaHxZZ bucRAW' and contains(@href,'earn-money')]
+//p[contains(text(),'Earn Money')]
+
+
+Create Trip button
+//*[contains(@href,'new/trip') and @class='DesktopNav__NavLink-jaHxZZ bucRAW']
+//*[@data-testid='createTripHeaderButton']
+
+
+Sign up button
+//*[contains(@href,'register')]
+//*[contains(text(),'Sign up')]
+
+
+Deens logo (home button)
+logo
+//*[contains(@src,'logo')]
+Home Button
+//*[@class='Logo__LogoLink-cfYNaB bdaxic']
+
+
+Customizable travels created by locals for free
+//*[contains(text(),' travels created by locals for ')]
+
+
+Whole Search Line
+//*[@class='LocationAutoSuggest__Wrapper-fksqNf fZlCeV']
+Text Before Go Button
+//*[@style='overflow: hidden; padding: 2px 0px;']
+Text 'Search Trips in'
+//*[@class='LocationAutoSuggest__ExternalText-hftSbt daTrDm']
+Go Button
+//*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']
+
+
+Login Page
+
+Welcom Image
+//*[@alt='welcomeImage']
+
+Text 'Plan your next trip with us!'
+//*[@class='login-img-content']
+
+
+Email Insert
+//*[@placeholder='E-mail address']
+Email Whole Field
+//*[@class='ui fluid left icon input'][.//@placeholder='E-mail address']
+
+Password Insert
+//*[@placeholder='Password']
+//*[@id='password']
+Password Whole Field
+//*[@class='ui fluid left icon input'][.//@placeholder='Password']
+
+Login Button
+//*[@class='ui large fluid button green-btn pl-btn']
+
+Sign up button
+//*[@class='login-q-text']/*[1]
+
+
+Forgot Password Button
+//*[contains(text(),'Forgot password')]
+//*[@class='LoginForm__RecoverPassword-Akhtv eIKSHH']/*[1]
+
+
+

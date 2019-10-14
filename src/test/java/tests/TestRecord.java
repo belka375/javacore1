@@ -7,6 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.text.RuleBasedCollator;
+
 public class TestRecord {
     private WebDriver driver;
 
@@ -48,5 +50,13 @@ public class TestRecord {
         var url = driver.getCurrentUrl();
         Assert.assertEquals(url,"https://deens-master.now.sh/", "Expected URL is wrong");
     }
+
+    @Test
+    public void openUrl_TryToOpenHabr_HabrOpened(){
+        driver.get("https://habr.com");
+        var url = driver.getCurrentUrl();
+        Assert.assertEquals(url,"https://habr.com", "Exp is oK");
+    }
+
 
 }
