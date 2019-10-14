@@ -3,6 +3,7 @@ package shw_Practice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -50,8 +51,9 @@ public class DeensMainFooter {
     public void deensFooter_networkMenu_menuBlogPresent()  {
         driver.get("https://deens-master.now.sh/");
         var menuBlog = driver.findElement(By.xpath("//*[@href='https://deens.com/blog/']"));
-        menuBlog.click();
-        Assert.assertTrue(menuBlog.isDisplayed());
+        if (menuBlog.isDisplayed()) menuBlog.isEnabled();{
+            menuBlog.click();
+        }
     }
     @Test
     public void deensFooter_networkMenu_menuPartnersIsPresent() {
@@ -64,15 +66,14 @@ public class DeensMainFooter {
     public void deensFooter_networkMenu_menuPressPresent(){
         driver.get("https://deens-master.now.sh/");
         var menuPress=driver.findElement(By.xpath("//*[@href='/about/press']"));
-        menuPress.click();
-        Assert.assertEquals("https://deens.com/about/press","https://deens.com/about/press");
+        Assert.assertTrue(menuPress.isDisplayed());
     }
     @Test
-    public void deensFooter_legalMenu_cookiesMenuIsPresent(){
+    public void deensFooter_legalMenu_cookiesMenuIsPresent()throws  InterruptedException{
         driver.get("https://deens-master.now.sh/");
         var cookieMenu=driver.findElement(By.xpath("//*[@href='/legal/cookies']"));
-        cookieMenu.click();
-        Assert.assertEquals("https://deens.com/legal/cookies","https://deens.com/legal/cookies");
+        cookieMenu.isDisplayed();
+        Assert.assertTrue(cookieMenu.isDisplayed());
     }
     @Test
     public void deensFooter_legalMenu_termsAndConditionsPresent(){

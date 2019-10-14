@@ -70,8 +70,7 @@ public class DeensMainPage {
         driver.get("https://deens-master.now.sh/");
         var signUpButton=driver.findElement(By.xpath("//*[@href='/register']"));
         signUpButton.click();
-        String text=signUpButton.getText();
-        Assert.assertEquals(text,"Sign up");
+        Assert.assertTrue(signUpButton.isDisplayed());
     }
     @Test
     public void mainPage_whereDoyouWantToGoText_textPresentOnMainPage(){
