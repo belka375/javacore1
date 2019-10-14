@@ -1,0 +1,18 @@
+Page 1
+1 Element: Logo "Deens" //a[@aria-label="Deens"]
+2 Element: Text "Customizable travels created by locals for free"  //*[@class="Home__HomeTagLine-iRolTP bAczAY"]
+3 Element: Field "Search Trips in"  //*[@class="LocationAutoSuggest__ExternalText-hftSbt daTrDm"]
+4 Element: Button "Go" //*[text()="Go"]
+5 Element: Button "Earn Money"  ('//a[@class="DesktopNav__NavLink-jaHxZZ bucRAW"])[0]
+6 Element: Button "Create Trip" ('//a[@class="DesktopNav__NavLink-jaHxZZ bucRAW"]')[1]
+7 Element: Button "Login"  //*[@class="DesktopDropDownMenu__Wrap-fpLuoG gjsHQW"]/div[@class="Button__Wrap-BDtom jCnmoC"]
+8 Element: Button "Sign Up"  //*[@class="DesktopDropDownMenu__Wrap-fpLuoG gjsHQW"]/div[@class="Button__Wrap-BDtom dFxgZF"]
+
+Page 2
+1 Element: Image   //*[@alt="welcomeImage"]
+2 Element: Field "Login"  //input[@placeholder="E-mail address"]
+3 Element: Field "Password"  //input[@placeholder="Password"]
+4 Element: Button "LoginSubmit"  //button[@data-testid="loginSubmit"
+5 Element: Text "Plan your next trip with us!"  //div[@class="login-img-content" and text()="Plan your next trip with us!"]
+6 Element: Link "Sign Up"  //*[@class="login-q-text"]
+7 Ele,emt: Link "Forgot password"  //*[@rel="nofollow"]')[0]
