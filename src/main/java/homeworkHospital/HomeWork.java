@@ -70,8 +70,8 @@ public class HomeWork {
 
         List<InsuranceCompanies> ins2 = new ArrayList<InsuranceCompanies>();
         ins2.add(InsuranceCompanies.UNITEDHEALTH);
-        nies.GENERAL);
-        ins2.add(InsuranceCompa
+
+        ins2.add(InsuranceCompanies.GENERAL);
 
         List<InsuranceCompanies> ins3 = new ArrayList<InsuranceCompanies>();
         ins3.add(InsuranceCompanies.UNITEDHEALTH);
