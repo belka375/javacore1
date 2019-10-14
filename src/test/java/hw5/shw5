@@ -1,0 +1,44 @@
+//shw5-1 xpath page #1
+***************************
+Deen  xpath :  //a[@ aria-label="Deens"]
+
+
+text Customizable travels created  by locals for free:
+/h1[span[text()='Customizable'] and text()=' travels created by locals for ' and span[text()='free']]
+
+ another option: //h1[contains(@class,'Home__HomeTagLine')]
+
+btn Go: absolute xpath> /html/body/div[1]/div/div/div/div[1]/div/div/div/div[2]/div[2]/span
+
+ relative: //span[contains(@class,'GoButton')]
+
+San Francisco,CA,USA:  //span[text()='San Francisco, CA, USA']
+
+Earn Money: //a[@href='/earn-money']
+
+Create Trip: //a[@data-testid= 'createTripHeaderButton']
+
+Login: //a[@href = "/login"]
+
+Sign Up: //a[@href = "/register"]
+
+//shw5-2  x-path page #2
+*******************************
+photo : //*[@class='login-img']
+
+Plan your next trip with us!: //*[@class='login-img-content']
+
+E-mail address text box: //*[@id= 'email']
+
+Password  text box :  //*[@id='password']
+
+Login btn: //button[@data-testid='loginSubmit'],
+ better way: //*[@id='password'] //following ::button[@data-testid='loginSubmit']
+
+
+Sign up:  //*[@class = 'login-q-text']//following::a[contains(@href,'/register')]
+
+Forgot Password :   //a[@href = '/recover-password']:
+
+
+
