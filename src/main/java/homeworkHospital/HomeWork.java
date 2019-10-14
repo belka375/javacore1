@@ -69,9 +69,9 @@ public class HomeWork {
         ins1.add(InsuranceCompanies.GENERAL);
 
         List<InsuranceCompanies> ins2 = new ArrayList<InsuranceCompanies>();
-        ins2.add(InsuranceCompanies.GENERAL);
         ins2.add(InsuranceCompanies.UNITEDHEALTH);
-
+        nies.GENERAL);
+        ins2.add(InsuranceCompa
 
         List<InsuranceCompanies> ins3 = new ArrayList<InsuranceCompanies>();
         ins3.add(InsuranceCompanies.UNITEDHEALTH);
