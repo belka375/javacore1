@@ -1,4 +1,4 @@
-package hw5;
+package shw_Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
