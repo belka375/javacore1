@@ -1,4 +1,4 @@
-package shw5;
+package hw5;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -55,7 +55,7 @@ public class DeensMainPage {
         var  earnMoneyButton=driver.findElement(By.xpath("//*[@href='/earn-money']"));
         earnMoneyButton.click();
         String text=earnMoneyButton.getText();
-        Assert.assertEquals(text,"Earn Money","Earn Money Button");
+        Assert.assertEquals(text,"Earn Money");
     }
     @Test
     public void mainPage_createTripButton_createTripPageOpened(){
@@ -63,7 +63,7 @@ public class DeensMainPage {
         var createTripButton=driver.findElement(By.xpath("//*[@activeclassname='is-active'][2]"));
         createTripButton.click();
         String text=createTripButton.getText();
-        Assert.assertEquals(text,"Create Trip","Trip Button");
+        Assert.assertEquals(text,"Create Trip");
     }
     @Test
     public void mainPage_signUpButton_sighUpPageOpened() throws InterruptedException{
@@ -71,14 +71,14 @@ public class DeensMainPage {
         var signUpButton=driver.findElement(By.xpath("//*[@href='/register']"));
         signUpButton.click();
         String text=signUpButton.getText();
-        Assert.assertEquals(text,"Sign up","Signup Button");
+        Assert.assertEquals(text,"Sign up");
     }
     @Test
     public void mainPage_whereDoyouWantToGoText_textPresentOnMainPage(){
         driver.get("https://deens-master.now.sh/");
         var whereToGo=driver.findElement(By.xpath("//*[text()='Where do you want to go?' ]"));
         String text=whereToGo.getText();
-        Assert.assertEquals(text,"Where do you want to go?","Where do you want to go");
+        Assert.assertEquals(text,"Where do you want to go?");
     }
     @Test
     public void mainPage_searchBox_searchBoxIsFunctional(){
@@ -95,17 +95,17 @@ public class DeensMainPage {
         @Test
     public void loginPage_logInForm_loginIsSuccessful(){
         driver.get("https://deens-master.now.sh/login");
-            var username=driver.findElement(By.xpath("//*[@name='email']"));
-            var password=driver.findElement(By.xpath("//*[@name='password']"));
-            var logInSubmit=driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']"));
-            username.click();
-            username.sendKeys("cola260790@gmail.com");
-            password.sendKeys("123456789");
-            logInSubmit.click();
+          driver.findElement(By.xpath("//*[@name='email']")).sendKeys("cola260790@gmail.com");
+            driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123456789");
+            driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']")).click();
+//            username.click();
+//            username.sendKeys("cola260790@gmail.com");
+//            password.sendKeys("123456789");
+//            logInSubmit.click();
             Assert.assertEquals("Login Successful","Login Successful");
         }
         @Test
-        public void loginPage_planTripText_textIsPresent() throws InterruptedException {
+        public void loginPage_planTripText_textIsPresent() {
         driver.get("https://deens-master.now.sh/login");
         var text=driver.findElement(By.xpath("//*[@class='login-img-content']"));
         text.getTagName();
@@ -116,7 +116,7 @@ public class DeensMainPage {
         driver.get("https://deens-master.now.sh/login");
         var image=driver.findElement(By.xpath("//*[@class='login-img']"));
         image.isDisplayed();
-        Assert.assertEquals(image.isDisplayed(),image.isDisplayed());
+        Assert.assertTrue(image.isDisplayed());
         }
         @Test
         public void loginPage_forgotPasswordButton_buttonIsFunctional(){
@@ -126,7 +126,7 @@ public class DeensMainPage {
         Assert.assertEquals("Recover your password","Recover your password");
         }
         @Test
-        public void signUpPage_signUpButton_signUpSuccessful() throws InterruptedException {
+        public void signUpPage_signUpButton_signUpSuccessful(){
         driver.get("https://deens-master.now.sh/register");
             var username=driver.findElement(By.xpath("//*[@name='username']"));
             var email=driver.findElement(By.xpath("//*[@name='email']"));
@@ -141,7 +141,7 @@ public class DeensMainPage {
             password.click();
             password.sendKeys("123456789");
             register.click();
-            Assert.assertEquals("Sign up Successful","Sign up Successful");
+            Assert.assertEquals("Signup Successful","Signup Successful");
         }
         }
 

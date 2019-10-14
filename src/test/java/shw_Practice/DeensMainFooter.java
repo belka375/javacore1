@@ -1,8 +1,7 @@
-package hw5_1;
+package shw_Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -48,18 +47,18 @@ public class DeensMainFooter {
 //
 //    }
     @Test
-    public void deensFooter_networkMenu_menuBlogPresent() throws InterruptedException {
+    public void deensFooter_networkMenu_menuBlogPresent()  {
         driver.get("https://deens-master.now.sh/");
         var menuBlog = driver.findElement(By.xpath("//*[@href='https://deens.com/blog/']"));
         menuBlog.click();
-        Assert.assertEquals("https://deens.com/blog/","https://deens.com/blog/");
+        Assert.assertTrue(menuBlog.isDisplayed());
     }
     @Test
-    public void deensFooter_networkMenu_menuPartnersIsPresent() throws InterruptedException {
+    public void deensFooter_networkMenu_menuPartnersIsPresent() {
         driver.get("https://deens-master.now.sh/");
         var menuPartners=driver.findElement(By.xpath("//*[@href='/about/partners']"));
         menuPartners.click();
-        Assert.assertEquals("https://deens.com/about/partners","https://deens.com/about/partners");
+        Assert.assertEquals("Partners","Partners");
     }
     @Test
     public void deensFooter_networkMenu_menuPressPresent(){
@@ -78,9 +77,10 @@ public class DeensMainFooter {
     @Test
     public void deensFooter_legalMenu_termsAndConditionsPresent(){
         driver.get("https://deens-master.now.sh/");
-        var termAndConditions=driver.findElement(By.xpath("//*[@href='/legal/terms']"));
-        termAndConditions.click();
-        Assert.assertEquals("https://deens.com/legal/terms","https://deens.com/legal/terms");
+        driver.findElement(By.xpath("//*[@href='/legal/terms']")).click();
+        Assert.assertTrue(true,"True");
+
+
     }
     @Test
     public void deensFooter_legalMenu_privacyPolicyIsPresent(){
@@ -96,5 +96,5 @@ public class DeensMainFooter {
         helpCenter.click();
         Assert.assertEquals("https://pleaseassist.freshdesk.com/support/home","https://pleaseassist.freshdesk.com/support/home");
     }
-    
+
 }
