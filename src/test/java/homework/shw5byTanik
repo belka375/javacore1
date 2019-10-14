@@ -1,0 +1,50 @@
+Page 1:
+
+image Deens (logo)
+//*[@src="/logo.svg"]
+
+Customizable... (header) ->
+//*[contains(@class, 'HomeTagLine')]
+*Text -> 2 elements with text in between
+
+Search Trips in San Francisco, CA, USA
+//span[contains(text(), 'San Francisco')]
+
+Go
+//span[contains(@class, 'LocationAuto')]
+
+Earn Money
+//*[@href='/earn-money']
+
+Create Trip
+//*[@href='/new/trip'][1]
+
+Login
+//*[@href='/login']
+
+Sign Up
+//*[@href='/register']
+
+Page 2:
+
+image:
+//*[@class='login-img']
+
+Plan your next trip
+//*[@class='login-img-content']
+
+email
+//*[@id='email']
+
+password
+//*[@id='password']
+
+Login
+//button[contains(text(), 'Login')]
+
+Sign up
+//*[@href='/register'][2]
+
+Forgot password
+//*[@href='/recover-password']
+
