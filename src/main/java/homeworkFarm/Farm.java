@@ -49,15 +49,25 @@ public class Farm implements PrintInfo{
         this.agreeCulturals = agreeCulturals;
     }
 
+
+
+
     @Override
     public void PrintInfo() {
         System.out.println(name);
         address.PrintInfo();
-        cattle.forEach((cattle, integer) -> {
-            System.out.println(cattle +": "+integer);
-        });
+        System.out.println();
         agreeCulturals.forEach(agreeCultural -> {
             agreeCultural.PrintInfo();
         });
+        cattle.forEach((key, value) -> {
+            System.out.println(key + ": " +value);
+        });
+
+
+
+
+
+
     }
 }

@@ -1,9 +1,15 @@
 package homeworkFarm;
 
-public enum Cattle {
+public enum Cattle implements PrintInfo {
     COWS,
     SHEEP,
     CHICKENS,
-    TURKEYS,
+    TURKEYS;
 
+
+    @Override
+    public void PrintInfo() {
+        System.out.println();
+
+    }
 }

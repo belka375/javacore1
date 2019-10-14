@@ -16,14 +16,14 @@ public class HomeWork {
         cat1.put(Cattle.TURKEYS, 20);
 
         HashMap<Cattle, Integer> cat2 = new HashMap<>();
-        cat1.put(Cattle.CHICKENS, 10);
-        cat1.put(Cattle.COWS, 2);
-        cat1.put(Cattle.SHEEP, 15);
-        cat1.put(Cattle.TURKEYS, 10);
+        cat2.put(Cattle.CHICKENS, 10);
+        cat2.put(Cattle.COWS, 2);
+        cat2.put(Cattle.SHEEP, 15);
+        cat2.put(Cattle.TURKEYS, 10);
 
         HashMap<Cattle, Integer> cat3 = new HashMap<>();
-        cat1.put(Cattle.CHICKENS, 12456);
-        cat1.put(Cattle.TURKEYS, 3457);
+        cat3.put(Cattle.CHICKENS, 12456);
+        cat3.put(Cattle.TURKEYS, 3457);
 
         AgreeCultural agr1 = new AgreeCultural("Rye", 54);
         AgreeCultural agr2 = new AgreeCultural("Carrots", 40);
@@ -64,7 +64,7 @@ public class HomeWork {
 
         allFarms.forEach(farm -> {
             farm.PrintInfo();
-            System.out.println();
+            System.out.println("-------------------------------------------------------");
         });
 
 
