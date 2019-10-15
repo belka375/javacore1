@@ -25,6 +25,38 @@ public class TestRecord {
     }
 
     @Test
+    public void deens_TryToLoginUsingWrongCredentials_LoginFailedErrorMessageAppear() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(5000);
+        WebElement loginButton = driver.findElement(By.linkText("Login"));
+        loginButton.click();
+
+        Thread.sleep(4000);
+
+        WebElement id = driver.findElement(By.id("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        WebElement login = driver.findElement(By.className("pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+
+        Thread.sleep(2000);
+
+        Assert.assertTrue(driver.findElements(By.className("header")).size()==1);
+        Assert.assertEquals(driver.findElements(By.className("header")).size(),1);
+
+        var present = false;
+        try {
+            var x=driver.findElement(By.className("header"));
+            present=true;
+        }catch (Exception x){
+            present=false;
+        }
+        Assert.assertTrue(present,"Custom error message");
+    }
+
+    @Test
     public void searchInGoogLe_searchingForACar_CarFound() {
         driver.get("http://google.com/");
 
