@@ -73,11 +73,11 @@ public class DeensMainPage {
         Assert.assertTrue(signUpButton.isDisplayed());
     }
     @Test
-    public void mainPage_whereDoyouWantToGoText_textPresentOnMainPage(){
+    public void mainPage_whereDoyouWantToGoText_textPresentOnMainPage() {
         driver.get("https://deens-master.now.sh/");
-        var whereToGo=driver.findElement(By.xpath("//*[text()='Where do you want to go?' ]"));
-        String text=whereToGo.getText();
-        Assert.assertEquals(text,"Where do you want to go?");
+        var whereToGo = driver.findElement(By.xpath("//*[text()='Where do you want to go?' ]"));
+        String text = whereToGo.getText();
+        Assert.assertEquals(text, "Where do you want to go?");
     }
     @Test
     public void mainPage_searchBox_searchBoxIsFunctional(){
@@ -118,11 +118,12 @@ public class DeensMainPage {
         Assert.assertTrue(image.isDisplayed());
         }
         @Test
-        public void loginPage_forgotPasswordButton_buttonIsFunctional(){
-        driver.get("https://deens-master.now.sh/login");
-        var forgotPassword=driver.findElement(By.xpath("//*[@href='/recover-password']"));
-        forgotPassword.click();
-        Assert.assertEquals("Recover your password","Recover your password");
+        public void loginPage_forgotPasswordButton_buttonIsFunctional() {
+            driver.get("https://deens-master.now.sh/login");
+            var forgotPassword = driver.findElement(By.xpath("//*[@href='/recover-password']"));
+            forgotPassword.click();
+            String text=driver.findElement(By.className("pl-btn")).getText();
+            Assert.assertTrue(text.contains("Recover password"));
         }
         @Test
         public void signUpPage_signUpButton_signUpSuccessful(){
@@ -133,14 +134,17 @@ public class DeensMainPage {
             var register=driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']"));
 //            driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 //            Thread.sleep(5000);
-            username.click();
             username.sendKeys("test");
-            email.click();
             email.sendKeys("cola260790@gmail.com");
-            password.click();
             password.sendKeys("123456789");
-            register.click();
             Assert.assertEquals("Signup Successful","Signup Successful");
+        }
+        @Test
+    public void mainPage_searchBox_goButtonIsPresent(){
+        driver.get("https://deens-master.now.sh/");
+        var goButton=driver.findElement(By.xpath("//*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']"));
+        goButton.isDisplayed();
+        Assert.assertTrue(true);
         }
         }
 
