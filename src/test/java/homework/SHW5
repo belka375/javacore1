@@ -1,0 +1,43 @@
+HomePage
+
+Logo deens = //*[@src='/logo.svg']
+
+“GO’ button in search bar = //*[contains(@class,'GoButton')]
+
+“Earn Money” button = //*[@href='/earn-money']
+
+“Create trip” = //*[@data-testid='createTripHeaderButton']
+
+Login button = //*[@href='/login']
+
+SignUp button = //*[@href='/register']
+
+
+Search bar:
+//*[@for='search']
+//*[@class = 'LocationAutoSuggest__ExternalText-hftSbt daTrDm']
+//*[@class = 'LocationAutoSuggest__ExternalWrapper-bcULNf XcPvh']
+//*[@class = 'HomeSearch__Input-kuDdmy dEnusz']
+
+“Customizable travels created by locals for free” =//*[contains(@class,'Home__HomeTagLine')]
+
+
+Login Page
+
+picture on a login page = //*[@class='login-img']
+
+email credentials window = //*[@data-testid='loginEmail']
+Password credentials window = //*[@data-testid='loginPassword']
+
+Sign up button under the  Log In windows = (//*[@href='/register'])[2]
+
+Forgot Password = //*[@href='/recover-password']
+
+Plan your next trip with us = //*[@class='login-img-content']
+
+
+
+
+
+
+
