@@ -1,13 +1,20 @@
-////img[@src='/logo.svg'] - Logo "deens";
+////*[@src='/logo.svg'] - Logo "deens";
+////*[@aria-label='Deens']
+////*[@href='/']
+////*[contains(@class, 'Logo_LogoLink')]
+
 
 ////h1[@class='Home__HomeTagLine-iRolTP bAczAY'] - field "Customizable travels created by locals for free";
 ////*[contains(text(),'travels created')]
+////*[contains(@class, 'Home__HomeTagLine')]
 
 ////*[@style='overflow: hidden; padding: 2px 0px;'] - "Search Trips in San Francisco, CA, USA";
+
 
 ////span[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ'] - button "Go";
 ////*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']
 ////*[text()='Go']
+////*[contains(@class, 'GoButton')]
 
 ////p[@class='commonStyles__PStrong-dyAKls fcjYkY' and @style='color: rgb(217, 117, 110);'] - "Earn Money" navigation link;
 ////*[@class='commonStyles__PStrong-dyAKls fcjYkY' and @style='color: rgb(217, 117, 110);']
@@ -45,6 +52,7 @@
 
 ////*[@data-testid='loginPassword'] - field "Password";
 //(//*[@class='ui fluid left icon input'])[2]
+////*[@id='password']
 
 ////button[@data-testid='loginSubmit'] - "Login" submit button
 ////*[@data-testid='loginSubmit']
@@ -55,6 +63,9 @@
 ////a[@href='/recover-password'] - "Forgot password" navigation link
 //(//a[@rel='nofollow'])[1]
 ////*[text()='Forgot password']
+
+//*[text()='Go']/preceding-subling:div
+//*[text()='Go']/parent::*/parent::*/parent::*
 
 
 
