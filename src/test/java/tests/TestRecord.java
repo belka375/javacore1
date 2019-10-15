@@ -30,6 +30,38 @@ public class TestRecord {
     }
 
     @Test
+    public void deens_TryToLoginUsingrongCredentials_LoginFailed() throws InterruptedException {
+        //login ith wrong credentials
+
+        driver.get("https://deens-master.now.sh/");
+
+        Thread.sleep(2000);
+        WebElement loginButtom = driver.findElement(By.linkText("Login"));
+        loginButtom.click();
+
+        Thread.sleep(4000);
+        WebElement id=driver.findElement(By.id("email"));
+        WebElement password = driver.findElement((By.name("password")));
+        //указываем частичное название класса
+        WebElement login = driver.findElement(By.className("pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+
+        Thread.sleep(2000);
+
+        //проверяем если на странице есть сообщение об ошибке
+
+       // Assert.assertTrue(driver.findElements(By.className("header")).size()!=0);
+        Assert.assertEquals(driver.findElements(By.className("header")).size(),1);
+
+
+
+
+    }
+
+    @Test
     public void deens_ClickLoginButton_LoginPageOpened() throws InterruptedException {
 
         //Arrange
