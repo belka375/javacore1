@@ -5,19 +5,20 @@ Home page:
 // SignUp button:         By.xpath(//a[@href='/register']);
 // Create Trip link:      By.xpath(//a[@href='/new/trip'])  or   var2: (//*[@data-testid='createTripHeaderButton']);
 // Earn Money link:       By.xpath(//a[@href='/earn-money']) or  var2: (//*[@class='DesktopNav__NavLink-jaHxZZ bucRAW'][1]);
-// Deens logo:            By.xpath(//*[@class='Logo__LogoLink-cfYNaB bdaxic']
-// Customizable... title: By.xpath(//*[self::h1]);
+// Deens logo:            By.xpath(//*[@class='Logo__LogoLink-cfYNaB bdaxic'] or var2: (//*[@src='/logo.svg']) or (//*[@area-label=''deens'])
+(//*[contains(@class,'Logo_LogoLink')])
+// Customizable... title: By.xpath(//*[self::h1]); var2 (//*[contains(@class, Home__HomeTagLine)]) var3:
 // Search box:            By.xpath(//*[@class='HomeSearch__Wrapper-cwtYqw fWlxBQ']);
 // Placeholder text:      By.xpath(//*[@type='text']); or var2: (//*[@name='search']);
-// GO button:             By.xpath(//*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']) or var2: (//*[text()='Go'])
+// GO button:             By.xpath(//*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']) or var2: (//*[text()='Go']); var3: (//*[contains(@class, 'GoButton')])
 
 Login page: https://deens-master.now.sh/login
 
 // E-mail address field:  By.xpath (//*[@id='email'] );
 // Password box:          By.xpath (//*[@id='password'] )
 // Login button:          By.xpath (//*[@data-testid='loginSubmit'] );
-// Sign Up button:        By.xpath (//*[@class='login-q-text'] and ); ?????????? //*[@class='login-q-text' and text()='sign up']
+// Sign Up button:        By.xpath (//*[@class='login-q-text'] and ); vat2: (//*[text()='sign up'])[2]
 // Forgot Password:       By.xpath (//*[@class= 'LoginForm__RecoverPassword-Akhtv eIKSHH']);
-// Image:                 By.xpath (//*[@class='login-img']);
+// Image:                 By.xpath (//*[@class='login-img']); var2: //*[@alt='welcomeImage'];
 // Welcome image:         By.xpath (//*[@class='login-img-content']);
 

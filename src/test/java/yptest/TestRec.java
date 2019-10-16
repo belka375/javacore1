@@ -28,6 +28,40 @@ public class TestRec {
         Thread.sleep(7000);
         driver.quit();
     }
+    @Test
+    public void deens_TryToLoginUsingWrongCredentials_LoginFailed_ErrorMessageAppear() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+        WebElement loginButton = driver.findElement(By.linkText("Login"));
+        loginButton.click();
+
+        Thread.sleep(5000);
+
+// Находим элементы для теста (login field, password field and Login button
+        WebElement id=driver.findElement(By.id("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        WebElement login = driver.findElement(By.className("pl-btn"));
+// Вводим неверные данные для логина
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+// надо убедиться что появится сообщение  can't login
+        Thread.sleep(2000);
+// через array асертаем, что элемент есть на сранице.
+        Assert.assertTrue(driver.findElements(By.className("header")).size()==1);
+        Assert.assertEquals(driver.findElements(By.className("header")).size(),1);
+
+  /*    Можно сипользовать try catch: (но лучше использовать assert, а не exception)
+        var present= false;
+        try{
+            var x=driver.findElement(By.className("header"));
+            present=true;
+        } catch(Exception x){
+            present=false;
+        }
+        Assert.assertTrue(present); */
+    }
+
 
      @Test
      public  void searchInGoogle_searchForAcar_carIsFound(){
@@ -74,6 +108,7 @@ public class TestRec {
     // //*[text()='Plan your next trip with us!']
     //  поиск через частичный текст //*[contains(text(),'next trip')]
 
+//    failing tests:
     @Test
     public void openUrl_TryToOpenDeens_GoogleOpened() {
         driver.get("https://www.google.com");
