@@ -8,8 +8,8 @@ public class Work {
         ProtoPhone bundle = new Accessories("iPhone", 1200);
 
         ptintPhone(samsung);
-        ptintPhone(iPhone);
         ptintPhone(headset);
+        ptintPhone(iPhone);
         ptintPhone(bundle);
 
 

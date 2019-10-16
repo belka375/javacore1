@@ -15,7 +15,7 @@ public class Phone implements ProtoPhone {
 
     public void printInfo() {
         System.out.println(brand);
-        System.out.println(price);
+        System.out.println("it's price: "+price+"USD");
 
 
     }
