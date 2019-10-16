@@ -4,23 +4,19 @@
 ////*[contains(@class, 'Logo_LogoLink')]
 
 
-////h1[@class='Home__HomeTagLine-iRolTP bAczAY'] - field "Customizable travels created by locals for free";
+////*[contains(@class, 'Home__HomeTagLine')] - field "Customizable travels created by locals for free";
 ////*[contains(text(),'travels created')]
-////*[contains(@class, 'Home__HomeTagLine')]
 
 ////*[@style='overflow: hidden; padding: 2px 0px;'] - "Search Trips in San Francisco, CA, USA";
 
-
-////span[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ'] - button "Go";
-////*[@class='LocationAutoSuggest__GoButton-kHhUpD dNFeJQ']
+////*[contains(@class, 'LocationAutoSuggest__GoButton')]- button "Go";
 ////*[text()='Go']
 ////*[contains(@class, 'GoButton')]
 
-////p[@class='commonStyles__PStrong-dyAKls fcjYkY' and @style='color: rgb(217, 117, 110);'] - "Earn Money" navigation link;
-////*[@class='commonStyles__PStrong-dyAKls fcjYkY' and @style='color: rgb(217, 117, 110);']
+////*[contains(@class, 'commonStyles__PStrong') and @style='color: rgb(217, 117, 110);'] - "Earn Money" navigation link;
 //(//*[contains(text(), 'Earn')])[1]
 
-////p[@class='commonStyles__PStrong-dyAKls fcjYkY' and text()='Create Trip'] - "Create trip" navigation link;
+////*[contains(@class, 'commonStyles') and text()='Create Trip'] - "Create trip" navigation link;
 ////*[text()='Create Trip']
 //(//*[contains(text(), 'Create')])[1]
 
@@ -63,11 +59,6 @@
 ////a[@href='/recover-password'] - "Forgot password" navigation link
 //(//a[@rel='nofollow'])[1]
 ////*[text()='Forgot password']
-
-//*[text()='Go']/preceding-subling:div
-//*[text()='Go']/parent::*/parent::*/parent::*
-
-
 
 
 
