@@ -1,0 +1,8 @@
+////*[@id='email'] - E-mail address
+
+////*[@id='email']/parent::*/parent::*/following-sibling::*/*/input  - Password
+//*[@id='email']/parent::*/parent::*/following-sibling::*/*/*[@id='password']
+
+////*[@id='email']/parent::*/parent::*/following-sibling::*/following-sibling::*[@data-testid='loginSubmit'] - "Login" submit button
+////*[@id='email']/parent::*/parent::*/following-sibling::*/following-sibling::button
+////*[@id='email']/parent::*/parent::*/following-sibling::*/following-sibling::*
