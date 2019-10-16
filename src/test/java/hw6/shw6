@@ -1,0 +1,9 @@
+//xpath
+******************
+//*[@id='email'] ---- email
+
+//*[@id='email']//following::input[@id='password']  --Password
+//*[@id='email']/parent::*/parent::*/following-sibling::*/*/input  ----- Password
+//*[@id='email']//following::button[@data-testid='loginSubmit']    ----- button Login
+//*[@id='email']//following::button[text()='Login']   ---- button Login
+//*[@id='email']/parent::*/parent::*/following-sibling::*/following-sibling::button ---button Login
