@@ -54,7 +54,7 @@
 ////*[contains(@class, 'pl-btn')]
 
 
-////*[contains(text(), 'Sign')] - "Sign up" button
+////*[contains(text(), 'Sign')] - "Sign up" navigation link
 ////a[@href='/register']
 
 ////a[@href='/recover-password'] - "Forgot password" navigation link
