@@ -38,8 +38,7 @@
 ////*[contains(text(), 'Plan')]
 
 ////*[@data-testid='loginEmail'] - field "E-mail address";
-////*[@class='ui fluid left icon input']
-
+///(//*[contains(@class, 'left')])[2]
 
 ////*[@id='email'] - "E-mail address";
 ////*[@placeholder='E-mail address']
@@ -47,14 +46,16 @@
 //(//*[@required=''])[1]
 
 ////*[@data-testid='loginPassword'] - field "Password";
-//(//*[@class='ui fluid left icon input'])[2]
+//(//*[contains(@class, 'input')])[2]
 ////*[@id='password']
 
 ////button[@data-testid='loginSubmit'] - "Login" submit button
 ////*[@data-testid='loginSubmit']
-////*[@class='ui large fluid button green-btn pl-btn']
-//(//a[@href='/register'])[2]
-//(//*[contains(text(), 'Sign')])[2]
+////*[contains(@class, 'pl-btn')]
+
+
+////*[contains(text(), 'Sign')] - "Sign up" button
+////a[@href='/register']
 
 ////a[@href='/recover-password'] - "Forgot password" navigation link
 //(//a[@rel='nofollow'])[1]
