@@ -24,8 +24,8 @@ public class Work19 {
         agriCultural.add(new AgriCultural("Carrot", 10));
         agriCultural.add(new AgriCultural("Onion", 13));
 
-        var farm = new Farm("Barkley Farm", address1, cattle, agriCultural);
-        farm.printInfo();
+//        var farm = new Farm("Barkley Farm", address1, cattle, agriCultural);
+//        farm.printInfo();
 
     }
 }
