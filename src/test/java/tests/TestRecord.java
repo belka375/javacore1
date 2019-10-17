@@ -15,7 +15,7 @@ public class TestRecord {
 
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -23,6 +23,23 @@ public class TestRecord {
         Thread.sleep(7000);
         driver.quit();
     }
+
+    @Test
+
+    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+        WebElement loginButton = driver.findElement(By.cssSelector("[href='/login']"));
+        loginButton.click();
+        Thread.sleep(4000);
+        WebElement id = driver.findElement(By.cssSelector("#email"));
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        WebElement login = driver.findElement(By.cssSelector(".ui.large.fluid.button.green-btn.pl-btn"));
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+    }
+
 
     @Test
     public void deens_TryToLoginUsingWrongCredentials_LoginFailedErrorMessageAppear() throws InterruptedException {
