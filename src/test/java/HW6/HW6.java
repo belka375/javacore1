@@ -1,3 +1,5 @@
+package HW6;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,9 +36,8 @@ public class HW6 {
         password.sendKeys("Irina256");
 
         var buttonLogin = driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
-        //var messageCannotLogin = driver.findElement(By.xpath("//*[text()='Cannot login']"));
         buttonLogin.click();
-        Assert.assertEquals("CannotLogin","CannotLogin");
+        Assert.assertTrue(true , "Cannot Login");
 
 
     }
