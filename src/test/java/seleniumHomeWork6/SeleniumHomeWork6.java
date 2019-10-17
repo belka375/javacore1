@@ -54,8 +54,8 @@ public class SeleniumHomeWork6 {
         WebElement loginButton = driver.findElement(By.xpath("//*[@data-testid='loginEmail']/following::button"));
         loginButton.click();
 
-        // sleep for 2 seconds
-        Thread.sleep(2000);
+// sleep for 5 seconds
+        Thread.sleep(5000);
 
 // error message is displayed
         WebElement errorMessage = driver.findElement(By.xpath("//*[@data-testid='loginEmail']/following::div[3]"));
