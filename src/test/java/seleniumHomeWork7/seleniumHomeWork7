@@ -1,0 +1,100 @@
+Page size "1385x356"
+
+    //Home page
+
+    // Deens logo (left-top corner)
+
+1. "a[href='/']"
+2. "a[aria-label]"
+3. "img[src^='/l']"
+
+
+
+
+    //"Earn Money" button
+
+1. "p[style]"
+2. "[style^=c]"
+3. "[href|='/earn']"
+
+
+
+
+    //"Create Trip" button
+
+1. "data-testid"
+2. "a:nth-of-type(2)"
+
+
+
+
+    //"Login" button
+
+1. "[href='/login']"
+2. ".Button__Wrap-BDtom.jCnmoC"
+
+
+    // "Sign Up" button
+
+1. "[href='/register']"
+2. ".Button__Wrap-BDtom.dFxgZF"
+
+
+
+
+    // "Customizable travels created by locals for free" element
+
+1. "h1[class^='H']"
+2. "h1>span:nth-child(1)"
+
+
+
+    // Search field- element
+
+1. "input[type]"
+2. "[role=combobox]"
+
+
+
+
+
+    //Login page
+
+    //Username
+
+1. "#email"
+2. "input[placeholder^='E']"
+
+
+    //Password
+
+ 1. "#password"
+
+
+    // "Login" button(not header)
+
+1. "button[data-testid]"
+2. "pl-btn"
+
+
+    // "Forgot password"
+
+1. "[href='/recover-password']"
+2. "span>a"
+
+
+    // "Plan your next trip with us!" - element
+
+1. "[class='login-img-content']"
+
+
+
+    // "Sign up" button under "Login"
+
+1. "div.login-q-text>a"
+
+
+
+    // "Welcome img" - element
+
+1. "[alt=welcomeImage]"
