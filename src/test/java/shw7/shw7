@@ -1,0 +1,67 @@
+Login button
+a[href*='login']
+
+
+Earn Money button
+a[href*='earn-money']
+
+
+Create Trip button
+a[data-testid='createTripHeaderButton'] p
+
+
+
+Sign up button
+a[href*='register']
+
+
+Deens logo (home button)
+logo
+img[src*='logo']
+Home Button
+a[aria-label*='Deens']
+
+
+Customizable travels created by locals for free
+.Home__HomeTagLine-iRolTP.bAczAY
+
+
+Whole Search Line
+.HomeSearch__SearchBg-kqoZLk.fYCMbu
+Text Before Go Button
+.LocationAutoSuggest__Wrapper-fksqNf.fZlCeV
+Text 'Search Trips in'
+.LocationAutoSuggest__ExternalText-hftSbt.daTrDm
+Go Button
+.LocationAutoSuggest__GoButton-kHhUpD.dNFeJQ
+
+
+Login Page
+
+Welcom Image
+img[alt*='welcomeImage']
+
+Text 'Plan your next trip with us!'
+.login-img-content
+
+Email Insert
+#email
+Email Whole Field
+div[data-testid*='loginEmail']
+
+Password Insert
+#password
+Password Whole Field
+div[data-testid*='loginPassword']
+
+Login Button
+.ui.large.fluid.button.green-btn.pl-btn
+
+Sign up button
+div.Button__Wrap-BDtom.dFxgZF > a[href*='register']
+
+Forgot Password Button
+a[href*='recover-password']
+
+
+
