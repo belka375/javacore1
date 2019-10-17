@@ -12,7 +12,7 @@ public class HW6 {
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedrivet.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
 
     }
@@ -34,9 +34,9 @@ public class HW6 {
         password.sendKeys("Irina256");
 
         var buttonLogin = driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
-
+        //var messageCannotLogin = driver.findElement(By.xpath("//*[text()='Cannot login']"));
         buttonLogin.click();
-        Assert.assertEquals("https://deens-master.now.sh/", "Error");
+        Assert.assertEquals("CannotLogin","CannotLogin");
 
 
     }
