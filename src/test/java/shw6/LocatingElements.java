@@ -26,15 +26,15 @@ public class LocatingElements {
 
     @Test
     public void deens_TryToLoginUsingWrongCredentials_LoginFailedErrorMessageAppear() throws InterruptedException {
-        driver.get("https://deens.com/");
+        driver.get("https://deens-master.now.sh/");
     WebElement loginButton = driver.findElement(By.linkText("Login"));
     loginButton.click();
 
     Thread.sleep(5000);
 
-    WebElement id = driver.findElement(By.xpath ("//*[@class = 'required field']"));
-    WebElement password = driver.findElement(By.xpath("//*[@class = 'required field']/following-sibling::div"));
-    WebElement loginButton1 = driver.findElement(By.xpath("//*[@class = 'required field']/following-sibling:: button"));
+    WebElement id = driver.findElement(By.xpath ("//*[@id = 'email']"));
+    WebElement password = driver.findElement(By.xpath("//*[@id = 'password'] "));
+    WebElement loginButton1 = driver.findElement(By.xpath("//*[@class = 'ui large fluid button green-btn pl-btn']"));
 
     Thread.sleep(5000);
 
