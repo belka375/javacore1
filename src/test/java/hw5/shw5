@@ -1,5 +1,5 @@
 1/Main Page-"Deens Logo"://*[@class='Logo__LogoLink-cfYNaB bdaxic']
-2/Main Page-"Welcome Logo"://*[@class='Home__WorldWrapper-AIdBX flOFfn']
+2/Main Page-"Welcome Logo"://*[@alt='Customizable holidays']
 3/Main Page-"Login Button"://a[@href='/login']
 4/Main Page-"Earn Money"://*[@href='/earn-money']
 5/Main Page-"Create Trip"://*[@activeclassname='is-active'][2]

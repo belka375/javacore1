@@ -21,13 +21,11 @@ public class DeensMainFooter {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
     }
-
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(1000);
         driver.quit();
     }
-
     @Test
     public void deensFooter_languageSelector_selectorIsPresent() throws InterruptedException {
         driver.get("https://deens-master.now.sh/");
@@ -81,8 +79,6 @@ public class DeensMainFooter {
         driver.get("https://deens-master.now.sh/");
         driver.findElement(By.xpath("//*[@href='/legal/terms']")).click();
         Assert.assertTrue(true,"True");
-
-
     }
     @Test
     public void deensFooter_legalMenu_privacyPolicyIsPresent(){
@@ -96,7 +92,6 @@ public class DeensMainFooter {
         driver.get("https://deens-master.now.sh/");
         var helpCenter=driver.findElement(By.xpath("//*[text()='Help Center']"));
         helpCenter.click();
-        
     }
 
 }
