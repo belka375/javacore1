@@ -25,6 +25,26 @@ public class Sel_hw1 {
     }
 
     @Test
+    public void deens_findElementsBy_cssSlector() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+
+        WebElement loginButton = driver.findElement(By.cssSelector("[href='/login']"));
+        loginButton.click();
+        Thread.sleep(4000);
+
+        WebElement id = driver.findElement(By.cssSelector("[#email"));
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        WebElement login = driver.findElement(By.cssSelector("ui.large.fluid.button.green-btn.pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+    }
+
+
+
+    @Test
     public void deens_OpenURL_TrYToOpenDeens_HomePageOpened(){
         driver.get("https://deens-master.now.sh/");
         var url = driver.getCurrentUrl();

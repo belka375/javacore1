@@ -1,0 +1,24 @@
+Locate by ID == tag#id (or) #id
+Locate by class ==Tag.className
+Locate by Name or any attribute==tagName[attribute=‘attribute_Value’] (or) [attribute=‘attribute_Value’]
+
+
+ // Login button:          By.cssSelector ([href='/login']);
+ // SignUp button:         By.cssSelector ([href='/register']);
+ // Create Trip link:      By.cssSelector (href='/new/trip']);
+ // Earn Money link:       By.cssSelector (href='/earn-money');  Var2  [style='color: rgb(217, 117, 110);']
+ // Deens logo:            By.cssSelector  [aria-label='Deens'] ;
+ // Customizable... title: By.cssSelector  (h1.Home__HomeTagLine-iRolTP.bAczAY)
+ // Search box:            By.cssSelector  (div.HomeSearch__SearchBg-kqoZLk.fYCMbu)
+ // Placeholder text:      By.cssSelector   (label.LocationAutoSuggest__ExternalText-hftSbt.daTrDm)   Var2: (input[name='search'])
+ // GO button:             By.cssSelector   ( span.LocationAutoSuggest__GoButton-kHhUpD.dNFeJQ )
+
+ Login page: https://deens-master.now.sh/login
+
+ // E-mail address field:  By.cssSelector (input#email )             Var2: input.E-mail.address      Var3: input[name='email']
+ // Password box:          By.cssSelector (input#password] )         Var2:  div.loginPassword
+ // Login button:          By.cssSelector ([data-testid='loginSubmit'] );
+ // Sign Up button:        By.cssSelector (div.login-q-tex)           Var2: ([href='/register'])
+ // Forgot Password:       By.cssSelector (span.LoginForm__RecoverPassword-Akhtv.eIKSHH)        Var2: [href='/recover-password']
+ // Image:                 By.cssSelector ([alt='welcomeImage'];
+ // Welcome image title:   By.cssSelector (div.login-img-content);

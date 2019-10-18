@@ -28,6 +28,7 @@ public class Locators {
         driver.quit();
     }
 
+
     @Test
     public void deens_OpenURL_TryToOpenLoginPage_LoginPageOpened() throws InterruptedException {
         driver.get("https://deens-master.now.sh/login");
