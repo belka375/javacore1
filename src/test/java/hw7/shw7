@@ -1,0 +1,29 @@
+//shw7
+*************************************
+Deens:        [aria-label='Deens']
+              .Logo__LogoLink-cfYNaB.bdaxic
+             div>a>img
+Customizable travels created by locals for free: [class*='Home__HomeTagLine']
+
+Search Trips in San Francisco, CA, USA: //[style='overflow: hidden; padding: 2px 0px;']
+button Go: //[class*='GoButton']
+link ""Earn Money" :   color: rgb(217, 117, 110)
+Link "Create trip" :  a~a>p
+btn Login: [href='/login']
+btn Sign up : [href='/register']
+
+//page #2 /login
+
+//Plan your next trip with us! :img~div  or
+[class='login-img-content']
+
+Welcome image/picture: [class='login-img'] or [src='/static/media/login.881f9686.svg']
+E-mail address field: [placeholder='E-mail address']  or [type='email']
+Password field: [type='password'] or [name='password']
+btn Submit "Login":.ui.large.fluid.button.green-btn.pl-btn  or [data-testid='loginSubmit']
+link Forgot password : span>a   or   [href='/recover-password']
+
+
+
+
+
