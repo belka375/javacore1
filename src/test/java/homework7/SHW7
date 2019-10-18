@@ -1,0 +1,67 @@
+//[src='/logo.svg'] - Logo "deens";
+//[aria-label='Deens']
+//[href='/']
+//[class*='Logo__LogoLink']
+//.Logo__LogoLink-cfYNaB.bdaxic
+//div>a>img
+
+
+//[class*='Home__HomeTagLine'] - field "Customizable travels created by locals for free";
+//.Home__HomeTagLine-iRolTP.bAczAY
+
+//[style='overflow: hidden; padding: 2px 0px;'] - "Search Trips in San Francisco, CA, USA";
+//overflow: hidden; padding: 2px 0px;
+
+//[class*='LocationAutoSuggest__GoButton'] - button "Go";
+//[class*='GoButton']
+//.LocationAutoSuggest__GoButton-kHhUpD.dNFeJQ
+
+//[class*='commonStyles__PStrong'] - "Earn Money" navigation link;
+//.commonStyles__PStrong-dyAKls.fcjYkY
+//color: rgb(217, 117, 110);
+
+
+//.commonStyles__PStrong-dyAKls.fcjYkY - "Create trip" navigation link;
+//a~a>p
+
+//[href='/login'] - "Login" button;
+
+//[href='/register'] - "Sign up" button;
+
+//[src='/static/media/login.881f9686.svg'] - welcome image picture;
+//div>img
+//[alt='welcomeImage']
+//[class='login-img']
+
+//[class='login-img-content'] - "Plan your next trip with us!";
+//img~div
+
+//[data-testid='loginEmail'] - field "E-mail address";
+
+//#email - "E-mail address";
+//[placeholder='E-mail address']
+//[name='email']
+//[type='email']
+//form>*>*>input[type='email']
+
+
+//[data-testid='loginPassword'] - field "Password";
+
+//[placeholder='Password'] - "Password"
+//[name='password']
+//[type='password']
+//[minlength='6']
+//[type='password']
+//form>*>*>input[type='password']
+
+
+//[data-testid='loginSubmit'] - "Login" submit button
+//[class*='pl-btn']
+//.ui.large.fluid.button.green-btn.pl-btn
+//div~button
+
+
+//div[class="login-q-text"] [href="/register"] - "Sign up" navigation link
+
+//[href='/recover-password'] - "Forgot password" navigation link
+//span>a

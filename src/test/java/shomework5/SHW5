@@ -1,7 +1,7 @@
 ////*[@src='/logo.svg'] - Logo "deens";
 ////*[@aria-label='Deens']
 ////*[@href='/']
-////*[contains(@class, 'Logo_LogoLink')]
+////*[contains(@class, 'Logo__LogoLink')]
 
 
 ////*[contains(@class, 'Home__HomeTagLine')] - field "Customizable travels created by locals for free";
@@ -13,7 +13,7 @@
 ////*[text()='Go']
 ////*[contains(@class, 'GoButton')]
 
-////*[contains(@class, 'commonStyles__PStrong') and @style='color: rgb(217, 117, 110);'] - "Earn Money" navigation link;
+////*[contains(@class, 'commonStyles__PStrong')] - "Earn Money" navigation link;
 //(//*[contains(text(), 'Earn')])[1]
 
 ////*[contains(@class, 'commonStyles') and text()='Create Trip'] - "Create trip" navigation link;

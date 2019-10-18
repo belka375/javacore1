@@ -15,7 +15,7 @@ public class TestRecord {
 
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -33,7 +33,7 @@ public class TestRecord {
         loginButton.click();
         Thread.sleep(4000);
 
-        WebElement id = driver.findElement(By.cssSelector("[#email"));
+        WebElement id = driver.findElement(By.cssSelector("#email"));
         WebElement password = driver.findElement(By.cssSelector("#password"));
         WebElement login = driver.findElement(By.cssSelector(".ui.large.fluid.button.green-btn.pl-btn"));
 
