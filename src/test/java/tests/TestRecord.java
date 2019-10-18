@@ -2,6 +2,7 @@ package tests;
 
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,6 +28,40 @@ public class TestRecord {
         //destroi the browser
 
         driver.quit();
+    }
+
+    @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+
+        Thread.sleep(2000);
+        WebElement loginbutton=driver.findElement(By.cssSelector("[href='/login']"));
+        loginbutton.click();
+
+        Thread.sleep(4000);
+
+        WebElement id=driver.findElement(By.cssSelector("#email"));
+        WebElement password = driver.findElement((By.cssSelector("#password")));
+        //указываем частичное название класса
+        WebElement login = driver.findElement(By.cssSelector("ui.large.fluid.button.green-btn.pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+
+    }
+
+    @Test
+    public void searchTreepIn() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+
+        Thread.sleep(2000);
+        //находим родителя и потом какого угодно его ребенка
+        WebElement searchTTrip = driver.findElement(By.xpath("//*[style=\'overflow: hidden; padding: 2px 0px;\']/*"));
+        //находим поле, чистим, посылаем туда значение, и нажимаем энтер
+        searchTTrip.clear();
+        searchTTrip.sendKeys("New York, New York");
+        searchTTrip.sendKeys((Keys.ENTER));
     }
 
     @Test

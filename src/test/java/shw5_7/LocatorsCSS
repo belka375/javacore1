@@ -1,0 +1,49 @@
+Home page Deens (1.png)
+1- logo Deens
+[@src='/logo.svg']
+
+2-Earn Money
+[href='/earn-money']
+
+3- Create Trip
+[href='/new/trip']
+
+4- Login button
+[href='/login']
+
+4- Login Sign Up
+[href='/register']
+
+5-Customizable travels created by locals for free
+[class*='Home__HomeTagL']
+
+6-Body Seach field
+[class*='HomeSearch__Se']
+
+7-Button "Go" on search field
+[class*='GoButton']
+
+***********************************
+
+Login page Deens (2.png)
+1-Image
+[alt='welcomeImage']
+
+2-Play your next trip message
+[class='login-img-content']
+
+3-User email  field
+#email
+
+4-User passord field
+#password
+
+5-Login gray button
+[class*='pl-btn']
+
+6-Sign-up link
+.login-q-text a
+
+7-Forgot password link
+span a
+[href='/recover-password']
