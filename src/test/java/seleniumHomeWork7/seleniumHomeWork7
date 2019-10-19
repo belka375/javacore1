@@ -22,7 +22,7 @@ Page size "1385x356"
 
     //"Create Trip" button
 
-1. "data-testid"
+1. "[data-testid]"
 2. "a:nth-of-type(2)"
 
 
@@ -74,7 +74,7 @@ Page size "1385x356"
     // "Login" button(not header)
 
 1. "button[data-testid]"
-2. "pl-btn"
+2. "[pl-btn]"
 
 
     // "Forgot password"
@@ -85,7 +85,7 @@ Page size "1385x356"
 
     // "Plan your next trip with us!" - element
 
-1. "[class='login-img-content']"
+1. ".login-img-content"
 
 
 
