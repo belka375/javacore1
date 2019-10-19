@@ -8,7 +8,8 @@ Customizable... (header) ->
 *Text -> 2 elements with text in between
 
 Search Trips in San Francisco, CA, USA
-//span[contains(text(), 'San Francisco')]
+-----//span[contains(text(), 'San Francisco')]------wrong
+correct -> //*[
 
 Go
 //span[contains(@class, 'LocationAuto')]
@@ -43,7 +44,7 @@ Login
 //button[contains(text(), 'Login')]
 
 Sign up
-//*[@href='/register'][2]
+(//*[@href='/register'])[2]
 
 Forgot password
 //*[@href='/recover-password']
