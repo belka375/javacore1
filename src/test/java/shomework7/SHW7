@@ -61,7 +61,8 @@
 //div~button
 
 
-//div[class="login-q-text"] [href="/register"] - "Sign up" navigation link
+//[class="login-q-text"] [href="/register"] - "Sign up" navigation link
+//.login-q-text>:first-child
 
 //[href='/recover-password'] - "Forgot password" navigation link
 //span>a
