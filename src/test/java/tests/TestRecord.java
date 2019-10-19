@@ -2,6 +2,9 @@ package tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,15 +12,23 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class TestRecord {
     private WebDriver driver;
+    WebDriverWait wait;
+    WebDriverWait longwait;
 
     @BeforeMethod
-    public void startUp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver");
+    public void startUp() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 20);
+        longwait = new WebDriverWait(driver, 200);
     }
+
+
     @AfterMethod
     public void tearDown() throws InterruptedException{
         Thread.sleep(7000);
@@ -26,19 +37,18 @@ public class TestRecord {
 
     @Test
     public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+ //       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://deens-master.now.sh/");
-        Thread.sleep(2000);
+        ;
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[href='/login']"))));
+        driver.findElement(By.cssSelector("[href='/login']")).click();
 
-        WebElement loginButton = driver.findElement(By.cssSelector("[href='/login']"));
-        loginButton.click();
-        Thread.sleep(4000);
-
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#email")));
         WebElement id = driver.findElement(By.cssSelector("#email"));
-        WebElement password = driver.findElement(By.cssSelector("#password"));
-        WebElement login = driver.findElement(By.cssSelector(".ui.large.fluid.button.green-btn.pl-btn"));
-
         id.sendKeys("user");
+        WebElement password = driver.findElement(By.cssSelector("#password"));
         password.sendKeys("password");
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
         login.click();
     }
 

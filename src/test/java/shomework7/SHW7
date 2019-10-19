@@ -19,6 +19,7 @@
 //[class*='commonStyles__PStrong'] - "Earn Money" navigation link;
 //.commonStyles__PStrong-dyAKls.fcjYkY
 //color: rgb(217, 117, 110);
+//[href='/earn-money']
 
 
 //.commonStyles__PStrong-dyAKls.fcjYkY - "Create trip" navigation link;
@@ -26,14 +27,15 @@
 
 //[href='/login'] - "Login" button;
 
+
 //[href='/register'] - "Sign up" button;
 
 //[src='/static/media/login.881f9686.svg'] - welcome image picture;
 //div>img
 //[alt='welcomeImage']
-//[class='login-img']
+//.login-img
 
-//[class='login-img-content'] - "Plan your next trip with us!";
+//.login-img-content - "Plan your next trip with us!";
 //img~div
 
 //[data-testid='loginEmail'] - field "E-mail address";
@@ -47,7 +49,8 @@
 
 //[data-testid='loginPassword'] - field "Password";
 
-//[placeholder='Password'] - "Password"
+//#password - "Password"
+//[placeholder='Password']
 //[name='password']
 //[type='password']
 //[minlength='6']
@@ -57,7 +60,7 @@
 
 //[data-testid='loginSubmit'] - "Login" submit button
 //[class*='pl-btn']
-//.ui.large.fluid.button.green-btn.pl-btn
+//.green-btn.pl-btn
 //div~button
 
 
