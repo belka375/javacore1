@@ -25,6 +25,65 @@ public class TestRecord {
     }
 
     @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+
+        WebElement loginButton = driver.findElement(By.cssSelector("[href='/login']"));
+        loginButton.click();
+        Thread.sleep(4000);
+
+        WebElement id = driver.findElement(By.cssSelector("[#email"));
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        WebElement login = driver.findElement(By.cssSelector(".ui.large.fluid.button.green-btn.pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+    }
+
+    @Test
+    public void deens_TryToLoginUsingWrongCredentials_LoginFailedErrorMessageAppear() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(5000);
+        WebElement loginButton = driver.findElement(By.xpath("//*[@href='/login']"));
+        loginButton.click();
+
+        Thread.sleep(4000);
+
+        WebElement id = driver.findElement(By.id("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        WebElement login = driver.findElement(By.className("pl-btn"));
+
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+
+        Thread.sleep(2000);
+
+        Assert.assertTrue(driver.findElements(By.className("header")).size()==1);
+        Assert.assertEquals(driver.findElements(By.className("header")).size(),1);
+
+        var present = false;
+        try {
+            var x=driver.findElement(By.className("header"));
+            present=true;
+        }catch (Exception x){
+            present=false;
+        }
+        Assert.assertTrue(present,"Custom error message");
+    }
+
+    @Test
+    public void searchTripIn() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+        WebElement searchTrip = driver.findElement(By.xpath("//*[@style='overflow: hidden; padding: 2px 0px;']/*"));
+        searchTrip.clear();
+        searchTrip.sendKeys("New York,  New York");
+        searchTrip.sendKeys(Keys.ENTER);
+    }
+    @Test
     public void searchInGoogLe_searchingForACar_CarFound() {
         driver.get("http://google.com/");
 
