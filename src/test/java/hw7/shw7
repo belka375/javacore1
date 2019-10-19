@@ -7,10 +7,10 @@
 7/Main Page-"Where do you want to go?"text:[class*='HomeTagSubtitle']
 8/Main Page-"Search Box"-:[for='search']
 9/Main Page-"Customizable"text-:[class*='Home__HomeTagLine']
-10/Login Page->Login Form="Email address":[id='email']
-11/Login Page->Login Form="Password":[id='password']
+10/Login Page->Login Form="Email address":#email
+11/Login Page->Login Form="Password":#password
 12/Login Page->Login Form="Login Submit Button":[data-testid='loginSubmit']
 13/Login Page->Login Form="Sign up Button":.login-q-text>:first-child
 14/Login Page-"Forgot password":[href='/recover-password']
 15/Login Page-"Welcome Image":[alt='welcomeImage']
-16/Login Page-"Plan your next trip with us"text:[class='login-img-content']
+16/Login Page-"Plan your next trip with us"text:.login-img-content
