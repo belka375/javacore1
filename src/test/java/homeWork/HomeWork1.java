@@ -17,7 +17,7 @@ public class HomeWork1 {
 
     @BeforeMethod
     public void openLandingPage() {
-        System.setProperty("webdriver.chrome.driver", "src/test/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://deens-master.now.sh/");
     }
@@ -28,7 +28,17 @@ public class HomeWork1 {
         driver.quit();
     }
 
+    @Test
+    public void searchTripIn() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement searchTrip = driver.findElement(By.xpath("//*[@autocomplete='off']"));
+        Thread.sleep(3000);
+        searchTrip.clear();
+        searchTrip.sendKeys("New York,  New York");
+        Thread.sleep(3000);
+        searchTrip.sendKeys(Keys.ENTER);
 
+    }
     @Test
     public void deens_ClickLoginButton_LoginPageOpened() throws InterruptedException {
         //Arrange
@@ -126,18 +136,6 @@ public class HomeWork1 {
         Assert.assertEquals(text, "Earn Money");
 
     }
-    @Test
-    public void searchTripIn() throws InterruptedException {
-        WebElement searchTrip = driver.findElement(By.xpath("//*[@placeholder='Type a city or country']"));
-        searchTrip.clear();
-        searchTrip.sendKeys("New York,  New York");
-        searchTrip.sendKeys(Keys.ENTER);
 
-        Thread.sleep(3000);
-
-
-        String url = driver.getCurrentUrl();
-        Assert.assertEquals(url, "https://deens-master.now.sh/search/trip?address=New%20York%2C%20New%20York%2C%20USA&city=New%20York&countryCode=US&lat=40.7127753&limit=25&lng=-74.0059728&locationSearchType=placeData&page=1&state=New%20York");
-    }
 
 }
