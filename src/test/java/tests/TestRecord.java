@@ -54,6 +54,26 @@ public class TestRecord {
     }
 
     @Test
+    public void deens_TryToLoginUsingWrongCredentials_LoginFailed() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        WebElement loginButton = driver.findElement(By.linkText("Login"));
+        loginButton.click();
+
+        Thread.sleep(5000);
+
+        WebElement id = driver.findElement(By.id("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        WebElement login = driver.findElement(By.className("pl-btn"));
+        id.sendKeys("user");
+        password.sendKeys("password");
+        login.click();
+
+        Thread.sleep(2000);
+
+        Assert.assertTrue(driver.findElements(By.className("header")).size()!=0);
+    }
+
+    @Test
     public void tryToLogin_TryToOpenBing_BingPageOpened(){
         driver.get("https://bing.com/");
         var title = driver.getTitle();

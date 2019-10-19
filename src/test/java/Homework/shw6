@@ -1,0 +1,13 @@
+login deens: [src='/logo.svg']
+Customizable travels created by locals for free: [class~='Home__Secondary-dyIHIG']
+Earn Money: [style='color: rgb(217, 117, 110);']
+Create Trip: [data-testid='createTripHeaderButton']
+Login: [href='/login']
+Sign up: [href='/register']
+Picture on Login Page: .login-img
+Text under the picture: [class='login-img-content']
+Email field: #email
+Password field: #password
+Login button: [data-testid='loginSubmit']
+Sign up: [href='/register'][2]
+Forgot password: [href='/recover-password']
