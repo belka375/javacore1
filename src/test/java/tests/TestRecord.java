@@ -2,21 +2,44 @@ package tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class TestRecord {
     private WebDriver driver;
+    WebDriverWait wait;
+    WebDriverWait longWait;
+    Wait<WebDriver> fluentWait;
 
     @BeforeMethod
     public void startUp(){
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 20);
+        longWait = new WebDriverWait(driver, 200);
+
+        fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofMillis(100))
+                .ignoring(NoSuchElementException.class);
+
+//        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+//        driver.manage().timeouts().setScriptTimeout(25,TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+
     }
     @AfterMethod
     public void tearDown() throws InterruptedException{
@@ -25,10 +48,74 @@ public class TestRecord {
     }
 
     @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailedUsingFluentWait() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+
+//        fluentWait.until(new Function<WebDriver, WebElement>() {
+//            public WebElement apply(WebDriver driver) {
+//                return driver.findElement(By.xpath("//*[@href='/login']"));
+//            }
+//        });
+
+        fluentWait.until(x->x.findElement(By.xpath("//*[@href='/login']")).isEnabled());
+
+        driver.findElement(By.cssSelector("[href='/login']")).click();
+
+        fluentWait.until(x->x.findElement(By.cssSelector("#email")).isDisplayed());
+        WebElement id = driver.findElement(By.cssSelector("#email"));
+        id.sendKeys("user");
+
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("password");
+
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
+        login.click();
+    }
+    @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get("https://deens-master.now.sh/");
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[href='/login']"))));
+        driver.findElement(By.cssSelector("[href='/login']")).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#email")));
+        WebElement id = driver.findElement(By.cssSelector("#email"));
+        id.sendKeys("user");
+
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("password");
+
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
+        login.click();
+    }
+
+    /*
+    * alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()*/
+
+
+    @Test
     public void deens_TryToLoginUsingWrongCredentials_LoginFailedErrorMessageAppear() throws InterruptedException {
         driver.get("https://deens-master.now.sh/");
         Thread.sleep(5000);
-        WebElement loginButton = driver.findElement(By.linkText("Login"));
+        WebElement loginButton = driver.findElement(By.xpath("//*[@href='/login']"));
         loginButton.click();
 
         Thread.sleep(4000);
@@ -56,6 +143,15 @@ public class TestRecord {
         Assert.assertTrue(present,"Custom error message");
     }
 
+    @Test
+    public void searchTripIn() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+        Thread.sleep(2000);
+        WebElement searchTrip = driver.findElement(By.xpath("//*[@style='overflow: hidden; padding: 2px 0px;']/*"));
+        searchTrip.clear();
+        searchTrip.sendKeys("New York,  New York");
+        searchTrip.sendKeys(Keys.ENTER);
+    }
     @Test
     public void searchInGoogLe_searchingForACar_CarFound() {
         driver.get("http://google.com/");
