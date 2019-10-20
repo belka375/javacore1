@@ -2,23 +2,25 @@ package tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class TestRecord {
     private WebDriver driver;
     WebDriverWait wait;
     WebDriverWait longwait;
+    Wait<WebDriver> fluentWait;
 
     @BeforeMethod
     public void startUp() {
@@ -26,6 +28,17 @@ public class TestRecord {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 20);
         longwait = new WebDriverWait(driver, 200);
+
+        fluentWait=new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofMillis(200))
+                .ignoring(NoSuchElementException.class);
+
+
+//        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+//        driver.manage().timeouts().setScriptTimeout(25,TimeUnit.SECONDS);
+//       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
     }
 
 
@@ -34,12 +47,33 @@ public class TestRecord {
         Thread.sleep(7000);
         driver.quit();
     }
+    @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailedFluentWait() throws InterruptedException {
+        driver.get("https://deens-master.now.sh/");
+
+//        fluentWait.until(new Function<WebDriver, WebElement>() {
+//                             public WebElement apply(WebElement driver) {
+//                                 return driver.findElement(By.xpath("//*[href='/login']"));
+//                             }
+//                         });
+        fluentWait.until(x->x.findElement(By.xpath("//*[@href='/login']")).isEnabled());
+
+ //       wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[href='/login']"))));
+        driver.findElement(By.cssSelector("[href='/login']")).click();
+        fluentWait.until(x->x.findElement(By.cssSelector("#email")).isDisplayed());
+
+ //       wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#email")));
+        WebElement id = driver.findElement(By.cssSelector("#email"));
+        id.sendKeys("user");
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("password");
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
+        login.click();
+    }
 
     @Test
     public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
- //       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("https://deens-master.now.sh/");
-        ;
+         driver.get("https://deens-master.now.sh/");
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[href='/login']"))));
         driver.findElement(By.cssSelector("[href='/login']")).click();
 
