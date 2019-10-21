@@ -35,7 +35,7 @@ public class shw7 {
         WebElement picture = driver.findElement(By.cssSelector(".login-img"));
         WebElement text1 = driver.findElement(By.cssSelector(".login-img-content"));
         WebElement forgotPassword = driver.findElement(By.cssSelector("a[href*='password']"));
-        // WebElement signUp = driver.findElement(By.cssSelector("a[href* ='register']"));
+        WebElement signUp = driver.findElement(By.cssSelector("[href ='/register']"));
 
 
     }
@@ -43,8 +43,11 @@ public class shw7 {
     @Test
     public void findElements1() {
         driver.get("https://deens-master.now.sh/");
-//  WebElement deensLogo = driver.findElement(By.cssSelector(".Logo__LogoLink-cfYNaB bdaxic"));
-//   WebElement text1 = driver.findElement(By.cssSelector("span[class* = 'Secondary'"));
-      
-    }
+WebElement deensLogo = driver.findElement(By.cssSelector("[data-testid=\"createTripHeaderButton\"]"));
+WebElement text1 = driver.findElement(By.cssSelector(".Home__Secondary-dyIHIG.hcHCEV"));
+WebElement earnMoney = driver.findElement(By.cssSelector("[href='/earn-money']"));
+WebElement loginButton = driver.findElement(By.cssSelector(" [href = '/login']"));
+WebElement signUp = driver.findElement(By.cssSelector(" [href = '/register']"));
+WebElement createTrip = driver.findElement(By.cssSelector("[data-testid='createTripHeaderButton']"));
+}
 }
