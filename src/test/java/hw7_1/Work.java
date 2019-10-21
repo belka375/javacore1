@@ -1,13 +1,29 @@
 package hw7_1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Work {
 
+    private WebDriver driver;
+
+    @BeforeMethod
+    public void startUp() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        driver = new ChromeDriver();
+    }
+
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(4000);
+        driver.quit();
+    }
 
 
     WebElement logo =driver.findElement(By.cssSelector("[src='/logo.svg']"));
