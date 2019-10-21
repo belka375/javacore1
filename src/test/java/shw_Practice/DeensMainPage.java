@@ -92,16 +92,13 @@ public class DeensMainPage {
         }
         }
         @Test
-    public void loginPage_logInForm_loginIsSuccessful(){
+    public void loginPage_logInForm_loginIsSuccessful() throws InterruptedException {
         driver.get("https://deens-master.now.sh/login");
-          driver.findElement(By.xpath("//*[@name='email']")).sendKeys("cola260790@gmail.com");
+          driver.findElement(By.xpath("//*[@name='email']")).sendKeys("arlis.judson@thtt.us");
             driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123456789");
             driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']")).click();
-//            username.click();
-//            username.sendKeys("cola260790@gmail.com");
-//            password.sendKeys("123456789");
-//            logInSubmit.click();
-            Assert.assertEquals("Login Successful","Login Successful");
+            Thread.sleep(10000);
+            Assert.assertTrue(driver.findElement(By.xpath("//*[@alt='user avatar']")).isEnabled());
         }
         @Test
         public void loginPage_planTripText_textIsPresent() {
@@ -125,20 +122,20 @@ public class DeensMainPage {
             String text=driver.findElement(By.className("pl-btn")).getText();
             Assert.assertTrue(text.contains("Recover password"));
         }
-        @Test
-        public void signUpPage_signUpButton_signUpSuccessful(){
-        driver.get("https://deens-master.now.sh/register");
-            var username=driver.findElement(By.xpath("//*[@name='username']"));
-            var email=driver.findElement(By.xpath("//*[@name='email']"));
-            var password=driver.findElement(By.xpath("//*[@name='password']"));
-            var register=driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']"));
-//            driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
-//            Thread.sleep(5000);
-            username.sendKeys("test");
-            email.sendKeys("cola260790@gmail.com");
-            password.sendKeys("123456789");
-            Assert.assertEquals("Signup Successful","Signup Successful");
-        }
+//        @Test
+//        public void signUpPage_signUpButton_signUpSuccessful()  {
+//        driver.get("https://deens-master.now.sh/register");
+//            var username=driver.findElement(By.xpath("//*[@name='username']"));
+//            var email=driver.findElement(By.xpath("//*[@name='email']"));
+//            var password=driver.findElement(By.xpath("//*[@name='password']"));
+//            var register=driver.findElement(By.xpath("//*[@class='ui large fluid button green-btn pl-btn']"));
+////            driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+////            Thread.sleep(5000);
+//            username.sendKeys("test");
+//            email.sendKeys("cola260690@gmail.com");
+//            password.sendKeys("123456789");
+//            register.click();
+//            Assert.assertTrue(driver.getCurrentUrl().contains("my account"));
         @Test
     public void mainPage_searchBox_goButtonIsPresent(){
         driver.get("https://deens-master.now.sh/");
