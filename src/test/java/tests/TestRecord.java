@@ -1,25 +1,60 @@
 package tests;
 
 import net.bytebuddy.implementation.bytecode.Throw;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 public class TestRecord {
     private WebDriver driver;
+
+    //this we create variable for explicit wait
+    WebDriverWait wait;
+    WebDriverWait longWait;
+    //Wait it s interface generic - work with WebDriver and can work with AppiumDriver and others
+    Wait<WebDriver> fluentWait;
+
 
     @BeforeMethod
     public void sratUp(){
         System.setProperty("webdriver.chrome.driver", "chromedriver 2");
 
         driver = new ChromeDriver();
+        // ***** on some companies put ons implisit wait there *******
+        // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        //разновидности implisit wait
+        //ждем пока загрузится вся страница - максимум 20 сек
+        //driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
+        //это для асинхронного кода ждем опка загрузится скрипт(джава скрипт или Си шарп)
+        //driver.manage().timeouts().setScriptTimeout(20,TimeUnit.SECONDS);
+
+        //explisit wait
+        //after we need put it only on place where we need it
+        wait = new WebDriverWait(driver,20);
+        //можно использовать несколько вейтов разных по продолжительности и использовать их в зависимости от ситуации
+        //например более длительный для загрузки файлов
+        longWait = new WebDriverWait(driver,200);
+        //initialization of one Interface Wait
+        fluentWait = new FluentWait<WebDriver>(driver)
+                //настройки ожиданий
+                .withTimeout(Duration.ofSeconds(30))
+                //оплределяем сколько миллисекунт между поисками
+                .pollingEvery(Duration.ofMillis(200))
+                // в течении 30 секунд игнорируем сообщения об ошибках
+                .ignoring(NoSuchElementException.class);
+        //можно игнорировать несколько ошибок - сделать несколько игнорингов
+
     }
 
     @AfterMethod
@@ -29,32 +64,84 @@ public class TestRecord {
 
         driver.quit();
     }
-
     @Test
-    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+    public void deens_TryToLoginUsingCssSelectors_loginFailedUsingFluentWait() throws InterruptedException {
         driver.get("https://deens-master.now.sh/");
 
-        Thread.sleep(2000);
-        WebElement loginbutton=driver.findElement(By.cssSelector("[href='/login']"));
-        loginbutton.click();
+        //fluent Wait
+        fluentWait.until(x->x.findElement(By.xpath("//*[@href='/login']")).isEnabled());
 
-        Thread.sleep(4000);
+        driver.findElement(By.cssSelector("[href='/login']")).click();
 
-        WebElement id=driver.findElement(By.cssSelector("#email"));
+        fluentWait.until(x->x.findElement(By.cssSelector("#email")).isDisplayed());
+
+
+        driver.findElement(By.cssSelector("#email")).sendKeys("user");
+
+
         WebElement password = driver.findElement((By.cssSelector("#password")));
-        //указываем частичное название класса
-        WebElement login = driver.findElement(By.cssSelector("ui.large.fluid.button.green-btn.pl-btn"));
-
-        id.sendKeys("user");
         password.sendKeys("password");
+        //указываем частичное название класса
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
         login.click();
 
     }
 
     @Test
+    public void deens_TryToLoginUsingCssSelectors_loginFailed() throws InterruptedException {
+
+        //implicit wait не явный
+        //запускается после запуска драйвера но перед открытием страницы
+        //между запросами у него проходит полсекунды перед каждым поиском элемента
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get("https://deens-master.now.sh/");
+
+
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[href='/login']"))));
+        driver.findElement(By.cssSelector("[href='/login']")).click();
+
+
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("#email"))));
+        driver.findElement(By.cssSelector("#email")).sendKeys("user");
+
+
+        WebElement password = driver.findElement((By.cssSelector("#password")));
+        password.sendKeys("password");
+        //указываем частичное название класса
+        WebElement login = driver.findElement(By.cssSelector(".green-btn.pl-btn"));
+        login.click();
+
+    }
+    /*
+    Expected conditions : https://www.guru99.com/implicit-explicit-waits-selenium.html
+    alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+     */
+
+    @Test
     public void searchTreepIn() throws InterruptedException {
         driver.get("https://deens-master.now.sh/");
 
+        //explicit ait - контретное место для конкретного элемента
         Thread.sleep(2000);
         //находим родителя и потом какого угодно его ребенка
         WebElement searchTTrip = driver.findElement(By.xpath("//*[style=\'overflow: hidden; padding: 2px 0px;\']/*"));
