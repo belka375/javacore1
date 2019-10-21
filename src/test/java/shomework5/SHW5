@@ -23,10 +23,10 @@
 ////a[@href='/login'] - "Login" button;
 ////*[text()='Login']
 
-//(//a[@href='/register'])[1] - "Sign up" button;
-//(//*[text()='Sign up'])[1]
+////*[@href='/register'] - "Sign up" button;
+////*[text()='Sign up']
 //(//*[contains(text(), 'up')])[3]
-//(//*[contains(text(), 'Sign')])[1]
+////*[contains(text(), 'Sign')]
 
 ////img[@src='/static/media/login.881f9686.svg'] - welcome image picture;
 //*[@src='/static/media/login.881f9686.svg']
