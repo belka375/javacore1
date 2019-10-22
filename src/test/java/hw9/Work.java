@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Work {
 
-    private WebDriver driver;
     Wait<WebDriver> fluentWait;
     WebDriverWait wait;
+    private WebDriver driver;
 
     @BeforeTest
 
@@ -28,14 +28,14 @@ public class Work {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
-         wait = new WebDriverWait(driver, 30 );
+        wait = new WebDriverWait(driver, 30);
 
         fluentWait = new FluentWait<WebDriver>(driver)
-               .withTimeout(Duration.ofSeconds(30))
+                .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(70))
                 .ignoring(NoSuchElementException.class);
 
-driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 
@@ -53,30 +53,30 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         driver.get("https://deens-master.now.sh/");
 
-
-        WebElement login = driver.findElement(By.cssSelector("[href='/register']"));
         fluentWait.until(driver -> driver.findElement(By.cssSelector("[href='/register']")).isEnabled());
+        WebElement login = driver.findElement(By.cssSelector("[href='/register']"));
+
         login.click();
 
         fluentWait.until(driver -> driver.findElement(By.cssSelector("#username")).isEnabled());
         WebElement username = driver.findElement(By.cssSelector("#username"));
-        username.sendKeys("Tatiana9");
+        username.sendKeys("Tatiana13");
 
-        WebElement email = driver.findElement(By.cssSelector("#email"));
         fluentWait.until(driver -> driver.findElement(By.cssSelector("#email")).isEnabled());
-        email.sendKeys("t9@gmail.com");
+        WebElement email = driver.findElement(By.cssSelector("#email"));
+        email.sendKeys("t13@gmail.com");
 
-        WebElement password = driver.findElement(By.cssSelector("#password"));
         fluentWait.until(driver -> driver.findElement(By.cssSelector("#password")).isEnabled());
-        password.sendKeys("Tatiana9");
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("Tatiana13");
 
-        WebElement register = driver.findElement(By.cssSelector(".pl-btn"));
         fluentWait.until(driver -> driver.findElement(By.cssSelector(".pl-btn")).isEnabled());
+        WebElement register = driver.findElement(By.cssSelector(".pl-btn"));
         register.click();
 
-        WebElement createTripButton =driver.findElement(By.cssSelector("[href = '/new/trip']"));
+        WebElement image = driver.findElement(By.cssSelector("[data-src='/world.png]"));
 
-Assert.assertTrue(createTripButton.isDisplayed());
+        Assert.assertTrue(image.isDisplayed());
 
 
     }
@@ -93,13 +93,13 @@ Assert.assertTrue(createTripButton.isDisplayed());
 
 
         WebElement username = driver.findElement(By.cssSelector("#username"));
-        username.sendKeys("Tatiana10");
+        username.sendKeys("Tatiana13");
 
         WebElement email = driver.findElement(By.cssSelector("#email"));
-        email.sendKeys("t10@gmail.com");
+        email.sendKeys("t13@gmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("#password"));
-        password.sendKeys("Tatiana10");
+        password.sendKeys("Tatiana13");
 
         WebElement register = driver.findElement(By.cssSelector(".pl-btn"));
         register.click();
@@ -108,5 +108,6 @@ Assert.assertTrue(createTripButton.isDisplayed());
         WebElement createTrip = driver.findElement(By.cssSelector("[href = '/new/trip']"));
         createTrip.click();
 
- }}
+    }
+}
 
