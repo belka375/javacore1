@@ -1,5 +1,5 @@
 Locate by ID == tag#id (or) #id
-Locate by class ==Tag.className
+Locate by class ==Tag.className // .className
 Locate by Name or any attribute==tagName[attribute=‘attribute_Value’] (or) [attribute=‘attribute_Value’]
 
 
