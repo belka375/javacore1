@@ -13,13 +13,10 @@ public class LoginPage {
     private WebDriver driver;
     Wait<WebDriver> wait;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class);
-    }
+
+
+
+}
 
     public void login(String user, String password) {
         System.out.println("in the login method");
