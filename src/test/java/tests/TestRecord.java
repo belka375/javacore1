@@ -33,7 +33,8 @@ public class TestRecord {
         fluentWait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(100))
-                .ignoring(NoSuchElementException.class);
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class);
 
 //        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 //        driver.manage().timeouts().setScriptTimeout(25,TimeUnit.SECONDS);
