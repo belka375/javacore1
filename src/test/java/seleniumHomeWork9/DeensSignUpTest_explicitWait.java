@@ -11,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Random;
+
 public class DeensSignUpTest_explicitWait {
     private WebDriver driver;
 
@@ -53,13 +55,15 @@ public class DeensSignUpTest_explicitWait {
         wait2.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='username']")));
 
 //enter username
+        Random randomSelector = new Random();
+        var randomNumber = randomSelector.nextInt(10000);
         WebElement username = driver.findElement(By.xpath("//*[@id='username']"));
-        username.sendKeys("randomUser");
+        username.sendKeys("randomUser"+randomNumber);
         System.out.println("Username is entered");
 
 //enter email
         WebElement emailAddress = driver.findElement(By.xpath("//*[@id='email']"));
-        emailAddress.sendKeys("randomuser@grr.la");
+        emailAddress.sendKeys("randomuser" +randomNumber+"@grr.la");
         System.out.println("Email is entered");
 
 //enter passwords
@@ -76,7 +80,7 @@ public class DeensSignUpTest_explicitWait {
 //verifications
         //explicit wait
         WebDriverWait wait3 = new WebDriverWait(driver, 7);
-        Assert.assertTrue(wait3.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'This email')]"))).isDisplayed());
+        Assert.assertTrue(wait3.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@role='listbox']/div[1]"))).isEnabled(), "User avatar button is not visible");
 
     }
 }

@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DeensSignUpTest_implicitWait {
@@ -21,7 +22,7 @@ public class DeensSignUpTest_implicitWait {
         System.setProperty("wbdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
 //implicit wait
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //maximize browser window
         driver.manage().window().maximize();
     }
@@ -49,12 +50,14 @@ public class DeensSignUpTest_implicitWait {
 
 //enter username
         WebElement username = driver.findElement(By.cssSelector("#username"));
-        username.sendKeys("randomUser");
+        Random randomSelector = new Random();
+        var randomNumber = randomSelector.nextInt(10000);
+        username.sendKeys("randomUser" + randomNumber);
         System.out.println("Username is entered");
 
 //enter email
         WebElement emailAddress = driver.findElement(By.cssSelector("#email"));
-        emailAddress.sendKeys("randomuser@grr.la");
+        emailAddress.sendKeys("randomuser" + randomNumber + "@grr.la");
         System.out.println("Email is entered");
 
 //enter passwords
@@ -68,8 +71,10 @@ public class DeensSignUpTest_implicitWait {
 
 //verifications
 
-        WebElement errorMessage = driver.findElement(By.cssSelector("[class$='message']"));
-        Assert.assertTrue(errorMessage.isDisplayed());
+        WebElement userAvatarButton = driver.findElement(By.xpath("//*[@role='listbox']/div[1]"));
+        Assert.assertTrue(userAvatarButton.isDisplayed(), "User avatar button is not displayed");
+
+//      Assert.assertTrue(driver.findElement(By.xpath("//*[@role='listbox']/div[1]")).isEnabled(), "User avatar button is not displayed");
 
     }
 }
