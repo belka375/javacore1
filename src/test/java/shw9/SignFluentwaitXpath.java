@@ -12,9 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
+
 
 public class SignFluentwaitXpath {
 
@@ -29,22 +28,25 @@ public class SignFluentwaitXpath {
         fluentWait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(40))
                 .pollingEvery(Duration.ofMillis(200))
-                .ignoring(NoSuchElementException.class);
+                .ignoring(Exception.class);
+        driver.manage().window().maximize();
     }
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        Thread.sleep(7000);
-
 
         driver.quit();
     }
 
     @Test
     public void deens_TryToSignUpUsingGoodCredentials_SignUpPassed() throws InterruptedException {
+        Random randomSelector = new Random();
+        var randomNumber = randomSelector.nextInt(10000);
 
 
         driver.get("https://deens-master.now.sh/");
+
+
 
         fluentWait.until(x->x.findElement(By.xpath("//*[@href='/register']")).isEnabled());
         driver.findElement(By.xpath("//*[@href='/register']")).click();
@@ -53,20 +55,18 @@ public class SignFluentwaitXpath {
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://deens-master.now.sh/register");
 
-        fluentWait.until(x->x.findElement(By.xpath("//*[@class='login-img-content']")));
+
+        fluentWait.until(x->driver.findElement(By.xpath("//*[@class='login-img-content']")).isEnabled());
         WebElement signUpMessage = driver.findElement(By.xpath("//*[@class='login-img-content']"));
 
         String text = signUpMessage.getText();
        Assert.assertEquals(text, "Plan your next trip with us!");
 
-        fluentWait.until(x->x.findElement(By.xpath("//*[@id='username']")));
-
-
         WebElement userName = driver.findElement(By.xpath("//*[@id='username']"));
-        userName.sendKeys("katarina89");
+        userName.sendKeys("katrina" + randomNumber);
 
         WebElement email = driver.findElement(By.xpath("//*[@id='email']"));
-        email.sendKeys("889@mailinator.com");
+        email.sendKeys("817" +randomNumber+"@mailinator.com");
 
         WebElement passord = driver.findElement(By.xpath("//*[@id='password']"));
         passord.sendKeys("88888888");
@@ -75,8 +75,8 @@ public class SignFluentwaitXpath {
         registerButton.click();
 
 
-        fluentWait.until(x->x.findElement(By.cssSelector(".ls-is-cached")));
-        Assert.assertTrue(driver.findElements(By.cssSelector(".ls-is-cached")).size() != 0);
-        Assert.assertEquals(driver.getCurrentUrl(), "https://deens-master.now.sh/register");
+        fluentWait.until(x->x.findElement(By.xpath("//*[@role='listbox']")).isEnabled());
+        Assert.assertTrue(driver.findElements(By.xpath("//*[@role='listbox']")).size() != 0);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://deens-master.now.sh/");
     }
 }
