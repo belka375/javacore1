@@ -47,10 +47,10 @@ public class SignUpWithFluentWait {
 
             fluentWait.until(x->driver.findElement(By.xpath("//*[@id='username']")).isDisplayed());
             WebElement username = driver.findElement(By.xpath("//*[@id='username']"));
-            username.sendKeys("TanikTester7");
+            username.sendKeys("TanikTester9");
 
             WebElement email = driver.findElement(By.xpath("//*[@id='email']"));
-            email.sendKeys("tanik7@mailinator.com");
+            email.sendKeys("tanik9@mailinator.com");
 
             WebElement password = driver.findElement(By.xpath("//*[@id='password']"));
             password.sendKeys("helloFromTanik");
