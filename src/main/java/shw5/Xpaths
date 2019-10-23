@@ -1,0 +1,94 @@
+Screenshot 1:
+
+1) Logo image
+
+   a) //*[@src='/logo.svg']
+   b) //*[@href='/' ]
+   c) //*[contains(@class,'Logo__LogoLink')]
+   d) //*[@aria-label ='Deens']
+
+
+2) "Customizable travels created by locals for free" text
+
+    a)//*[contains(@class,'Home__HomeTagLine')]
+
+
+3) "Search Trips in San Francisco, CA, USA"
+
+    a)//span[contains(text(),'CA')]
+    b)//span[contains(text(),'San Francisco')]
+
+4) Go button
+
+    a)//*[contains(@class,'GoButton')]
+    b)//span[contains(text(),'Go')]
+
+5) Earn money link
+
+    a)//*[contains(text(),'Earn Money')]
+    b)//*[@href='/earn-money']
+
+
+6)  Create trip link
+
+    a)//*[contains(text(),'Create Trip')]
+    b)//*[@href='/new/trip']
+
+
+7) Log In button
+
+    a)//*[@href='/login']
+    b)//*[contains(text(),'Login')]
+
+
+8) Sign up button
+
+    a)//*[contains(text(),'Sign up')]
+    b)//*[@href='/register']
+
+
+Screenshot 2:
+
+1) Picture
+
+    a)//*[@class='login-img']
+    b)//*[@src='/static/media/login.881f9686.svg']
+    c)//*[contains(@src,'login.881f9686.svg')]
+
+
+2) "Plan your next trip"
+
+    a)//*[contains(@class, 'content')]
+    b)//*[contains(text(), 'Plan')]
+
+
+3) Email field
+
+    a)//*[@id='email']
+
+
+4) Password field
+
+    a)//*[@id='password']
+
+
+5) Login button
+
+    a)(//*[contains(text(),'Login')])[2]
+
+
+6) Sign up link
+
+    a)(//a[@href='/register'])[2]
+
+
+7) Forgot password link
+
+    a)//*[@href ='/recover-password']
+
+
+
+
+
+
+
