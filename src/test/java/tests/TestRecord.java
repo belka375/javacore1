@@ -25,7 +25,7 @@ public class TestRecord {
 
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 20);
         longWait = new WebDriverWait(driver, 200);

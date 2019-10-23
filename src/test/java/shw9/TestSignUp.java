@@ -1,11 +1,13 @@
 package shw9;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,10 +25,22 @@ public class TestSignUp {
     Random rand = new Random();
     int value = rand.nextInt(20);
 
+
+    @BeforeMethod
+    public void startUp() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        driver = new ChromeDriver();
+    }
+
+        @AfterMethod
+        public void tearDown() throws InterruptedException{
+            Thread.sleep(7000);
+            driver.quit();
+        }
+
     @Test
     public void TryToSignUpUsingImplicitWait () throws InterruptedException{
-        System.setProperty("webdriver.chrom.driver", "chromdriver");
-        driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         driver.get("https://deens-master.now.sh/");
@@ -49,18 +63,17 @@ public class TestSignUp {
 
         Assert.assertTrue(createTripButton.isDisplayed());
 
-        driver.quit();
 
     }
 
     @Test
   public void TryToSignUpUsingFluentWait () throws InterruptedException {
-       System.setProperty("webdriver.chrom.driver", "chromdriver");
-        driver = new ChromeDriver();
+       
       fluentWait = new FluentWait<WebDriver>(driver)
        .withTimeout(Duration.ofSeconds(20))
            .pollingEvery(Duration.ofMillis(100))
-           .ignoring(NoSuchElementException.class);
+           .ignoring(NoSuchElementException.class)
+           .ignoring(StaleElementReferenceException.class);
 
            driver.get("https://deens-master.now.sh/");
            fluentWait.until(driver -> driver.findElement(By.xpath("//*[@href = '/register']")).isDisplayed());
@@ -70,22 +83,22 @@ public class TestSignUp {
 
             WebElement userField = driver.findElement(By.xpath("//*[@id ='username']"));
             fluentWait.until(driver->driver.findElement(By.xpath("//*[@id ='username']")));
-        Thread.sleep(3000);
+
             userField.sendKeys("PetrPetrov9578" + value);
 
             WebElement emailField = driver.findElement(By.xpath("//*[@id ='email']"));
             fluentWait.until(driver-> driver.findElement(By.xpath("//*[@id ='email']")).isEnabled());
-        Thread.sleep(3000);
+
             emailField.sendKeys("petr896615@inbox" +value +".ru");
 
             WebElement passwordField = driver.findElement(By.xpath("//*[@id ='password']"));
            fluentWait.until(driver-> driver.findElement(By.xpath("//*[@id ='email']")).isEnabled());
-        Thread.sleep(3000);
+
             passwordField.sendKeys("8715uy0uiHG%$" + value);
 
             WebElement registerButton = driver.findElement(By.xpath("//*[text() = 'Register']"));
             fluentWait.until(driver->driver.findElement(By.xpath("//*[text() = 'Register']")).isEnabled());
-        Thread.sleep(3000);
+
             registerButton.click();
 
             WebElement createTripButton = driver.findElement(By.xpath("//*[text() = 'Create Trip']"));
