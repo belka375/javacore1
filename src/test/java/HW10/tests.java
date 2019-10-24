@@ -49,6 +49,8 @@ public class tests {
        SignUpPage signUpPage = landingPage.openSignUpPage();
        Thread.sleep(3000);
        signUpPage.signup("user","email","password");
+        var customazibleTravelsText = driver.findElement(By.xpath("//*[contains(@style,'color')]"));
+        Assert.assertTrue(true, String.valueOf(customazibleTravelsText));
 
 
     }
