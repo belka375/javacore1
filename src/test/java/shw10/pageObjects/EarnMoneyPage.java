@@ -27,9 +27,7 @@ public class EarnMoneyPage {
     public void referal() throws InterruptedException {
         var ref = getReferralCode();
         Actions act = new Actions(driver);
-        Thread.sleep(500);
         act.moveToElement(ref).doubleClick().build().perform();
-        Thread.sleep(500);
         ref.sendKeys(Keys.chord(Keys.CONTROL, "c"));
     }
 }
