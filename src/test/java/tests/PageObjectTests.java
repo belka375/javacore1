@@ -1,8 +1,8 @@
 package tests;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,6 +10,9 @@ import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 
 import java.time.Duration;
+
+import static helpers.RandomStringGenerator.randomEmail;
+import static helpers.RandomStringGenerator.randomString;
 
 public class PageObjectTests {
     WebDriver driver;
@@ -26,7 +29,7 @@ public class PageObjectTests {
     }
 
     @Test
-    public void openLoginPage(){
+    public void openLandingPage(){
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
     }
@@ -34,9 +37,25 @@ public class PageObjectTests {
     public void loginToApp() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();
-        LoginPage loginPage = landingPage.openLoginPage();
+        var loginPage = landingPage.openLoginPage();
 
         loginPage.login("user","password");
     }
+    @Test
+    public void registerNewUser_LoggedAsNewUser(){
 
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+
+        var signUpPage = landingPage.openSingUpPage();
+
+        String username = randomString(10);
+        String password = randomString(12);
+        String email = randomEmail();
+
+        landingPage = signUpPage.registerNewUser(username,email,password);
+        var logged = landingPage.isLogged();
+
+        Assert.assertTrue(logged);
+    }
 }
