@@ -15,7 +15,7 @@ public class MainPage {
     public MainPage(WebDriver driver) {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(20))
+                .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(Exception.class);
     }
@@ -24,19 +24,18 @@ public class MainPage {
 
     }
     public WebElement getSignUpButton(){
-        var getSignButton=wait.until(x->driver.findElement(By.xpath("//*[@href='/register']")));
-        return driver.findElement(By.xpath("//*[@href='/register']"));
+//        var getSignButton=wait.until(x->driver.findElement(By.xpath("//*[@href='/register']")));
+//        return driver.findElement(By.xpath("//*[@href='/register']"));
+
+        return wait.until(x->driver.findElement(By.xpath("//*[@href='/register']")));
     }
 
     public SignUpPage openSignUpPage() {
         getSignUpButton().click();
-        SignUpPage signUpPage =new SignUpPage(driver);
-        return  signUpPage;
-
-
-
-
+        SignUpPage signUpPage = new SignUpPage(driver);
+        return signUpPage;
 
 
     }
+
 }

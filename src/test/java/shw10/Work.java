@@ -16,6 +16,9 @@ import tests.LoginPage;
 import java.time.Duration;
 import java.util.function.Function;
 
+import static helpers.RandomStringGenerator.randomEmail;
+import static helpers.RandomStringGenerator.randomString;
+
 public class Work {
     WebDriver driver;
 
@@ -36,19 +39,19 @@ public class Work {
 
     }
     @Test
-    public void SignUpPage(){
+    public void SignUpPage() {
 
-        driver.get("https://deens-master.now.sh/");
         MainPage mainPage = new MainPage(driver);
         mainPage.open();
-        SignUpPage signUpPage = (SignUpPage) mainPage.openSignUpPage();
-       signUpPage.signUp("user8", "a8@a.com", "qwertyqwerty8");
+        var signUpPage = mainPage.openSignUpPage();
+        String username = randomString(10);
+        String password = randomString(8);
+        String email = randomEmail();
 
-        WebElement searchBox = driver.findElement(By.xpath("//*[@role='combobox']"));
+        mainPage = signUpPage.signUpPage(username, email, password);
 
-        Assert.assertTrue(true, String.valueOf(searchBox.isDisplayed()));
-
-
+        Assert.assertTrue(true, "Avatar is Present");
+    }
     }
 
-}
+
