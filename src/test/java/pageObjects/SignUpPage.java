@@ -20,14 +20,22 @@ public class SignUpPage {
                 .ignoring(Exception.class);
     }
 
-    public void signUp(String user, String email, String passord21) {
-        //fill the field and click to the button register
-        getUserField().sendKeys(user);
+//    public LandingPage signUp(String user, String email, String password21) {
+//        //fill the field and click to the button register
+//        getUserField().sendKeys(user);
+//
+//        getEmailField().sendKeys(email);
+//
+//        getPasswordField().sendKeys(password21);
+//        getRegisterButton().click();
+//        return new LandingPage(driver);
+//    }
 
-        getEmailField().sendKeys(email);
-
-        getPassordField().sendKeys(passord21);
-        getRegisterButton().click();
+//    private WebElement getUserField() {
+//        return wait.until(x->driver.findElement(By.id("username")));
+//    }
+    private WebElement getUserNameField(){
+        return wait.until(x->driver.findElement(By.id("username")));
     }
 
     private WebElement getRegisterButton() {
@@ -35,17 +43,20 @@ public class SignUpPage {
 
     }
 
-    private WebElement getPassordField() {
-        return wait.until(x->driver.findElement(By.id("password")));
+    private WebElement getPasswordField() {
+        return driver.findElement(By.id("password"));
     }
 
     private WebElement getEmailField() {
-        return wait.until(x->driver.findElement(By.id("email")));
+        return driver.findElement(By.id("email"));
     }
 
-    private WebElement getUserField() {
-        return wait.until(x->driver.findElement(By.id("username")));
+    public LandingPage registerNewUser(String username, String email, String password) {
+        getUserNameField().sendKeys(username);
+        getEmailField().sendKeys(email);
+        getPasswordField().sendKeys();
+        getRegisterButton().click();
+        return new LandingPage(driver);
     }
-
 
 }

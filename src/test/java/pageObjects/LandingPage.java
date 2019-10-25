@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import javax.security.auth.login.LoginContext;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.time.Duration;
 
 public class LandingPage {
@@ -42,12 +44,12 @@ public class LandingPage {
 
     }
     //search for signUn button
-    public WebElement getSignUpButton(){
+    private WebElement getSignUpButton(){
         var signUpButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/register']")));
         return signUpButton;
     }
 //click to ligin button
-    public LoginPage openLoginPage() {
+public LoginPage openLoginPage() {
         getLoginButton().click();
         LoginPage loginPage = new LoginPage(driver);
         return loginPage;
@@ -58,5 +60,24 @@ public class LandingPage {
         getSignUpButton().click();
         SignUpPage signUpPage = new SignUpPage(driver);
         return signUpPage;
+    }
+  //wait till the moment that avatar be displeed
+    private boolean getUserAvatar(){
+        return wait.until(x->driver.findElement(By.cssSelector("[alt='user avatar']")).isDisplayed());
+    }
+
+    public boolean isLogged() {
+        return getUserAvatar();
+
+    }
+    private WebElement getEarnMoneyLink(){
+        var earnMoneyLink = wait.until(x->driver.findElement(By.xpath("//*[text()='Earn Money']")));
+        return earnMoneyLink;
+    }
+
+    public EarnMoneyPage openEarnMoneyPage() throws IOException, UnsupportedFlavorException {
+        getEarnMoneyLink().click();
+        EarnMoneyPage earnMoneyPage = new EarnMoneyPage(driver);
+        return earnMoneyPage;
     }
 }

@@ -34,7 +34,7 @@ public class LoginPage {
     }
 
     private WebElement getPassordField() {
-        return driver.findElement(By.id("passord"));
+        return driver.findElement(By.id("password"));
     }
 
     private WebElement getEmailField() {
@@ -42,5 +42,13 @@ public class LoginPage {
 
     }
 
-    ;
+    public LandingPage loginGood(String user, String password) {
+        getEmailField().sendKeys("useras");
+        getPassordField().sendKeys("mailinator");
+        getButton().click();
+        return new LandingPage(driver);
+    }
+
+
+
 }
