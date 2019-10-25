@@ -37,6 +37,7 @@ public class SeleniumHomework_10 {
         }
 
         @Test
+        //FIXME Make Code Nice Again
         public void loginInOpenEarnMoneyPage() throws Exception {
             var landingPage = new LandingPage(driver);
             landingPage.open();
