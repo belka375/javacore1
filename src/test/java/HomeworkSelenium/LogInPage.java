@@ -1,4 +1,4 @@
-package Hw10SeleniumPOM;
+package HomeworkSelenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class SignUpPage {
+public class LogInPage {
 
     private WebDriver driver;
     Wait<WebDriver> wait;
 
-    public SignUpPage(WebDriver driver) {
+    public LogInPage(WebDriver driver) {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
@@ -21,20 +21,17 @@ public class SignUpPage {
                 .ignoring(Exception.class);
     }
 
-    public void signUp(String username, String email, String password) {
-
-        getUsernameField().sendKeys(username);
-        getEmailField().sendKeys(email);
+    public HomePage login(String user, String password) {
+        System.out.println("in the login method");
+        getEmailField().sendKeys(user);
+        System.out.println("send username");
         getPasswordField().sendKeys(password);
-        getRegisterButton().click();
+        getButton().click();
+        return new HomePage(driver);
     }
 
-    private WebElement getRegisterButton() {
-        return driver.findElement(By.xpath("//button[contains(text(),'Register')]"));
-    }
-
-    private WebElement getUsernameField() {
-        return driver.findElement(By.id("username"));
+    private WebElement getButton() {
+        return driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
     }
 
     private WebElement getPasswordField() {
@@ -44,4 +41,7 @@ public class SignUpPage {
     private WebElement getEmailField() {
         return wait.until(x->x.findElement(By.id("email")));
     }
+
+
 }
+

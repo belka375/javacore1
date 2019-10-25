@@ -1,13 +1,10 @@
-package Hw10SeleniumPOM;
+package HomeworkSelenium;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.LandingPage;
 
 public class TestSignUp {
 
@@ -32,7 +29,7 @@ public class TestSignUp {
         HomePage homePage = new HomePage(driver);
         homePage.open();
         SignUpPage signUpPage = homePage.openSignUpPage();
-        signUpPage.signUp("tanik10", "tanik10@gmail.com", "password");
+        signUpPage.signUp("tanik11", "tanik11@gmail.com", "password");
         //waiting for the page to update after clicking "Register"
         homePage.worldImgDisplayed();
         //asserting that avatar is displayed. Not sure how to write that assert using POM

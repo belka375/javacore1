@@ -40,4 +40,5 @@ public class LoginPage {
     private WebElement getEmailField() {
         return wait.until(x->x.findElement(By.id("email")));
     }
+
 }
