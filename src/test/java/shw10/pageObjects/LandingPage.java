@@ -11,11 +11,12 @@ import java.time.Duration;
 public class LandingPage {
     private WebDriver driver;
     Wait<WebDriver> wait;
+
     public LandingPage(WebDriver driver){
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(100))
+                .pollingEvery(Duration.ofMillis(200))
                 .ignoring(Exception.class);
     }
 
@@ -42,5 +43,16 @@ public class LandingPage {
         getSignUpButton().click();
         SignUpPage signUpPage = new SignUpPage(driver);
         return signUpPage;
+    }
+
+    public WebElement getEarnMoneyPageButton(){ return wait.until(x->driver.findElement(By.cssSelector("a[href*='earn-money']"))); }
+
+
+    public EarnMoneyPage openEarnMoneyPage(){
+        wait.until(x->x.findElements(By.cssSelector(".DesktopDropDownMenu__AvatarWrapper-gadyKq.gCRuJP")).size()==1);
+        getEarnMoneyPageButton().click();
+        EarnMoneyPage earnMoneyPage = new EarnMoneyPage(driver);
+        wait.until(x->x.findElement(By.xpath("//*[@id='root']/div/div[1]/div[2]/main/div[1]/div/div/div/div/div[1]/div/input")));
+        return earnMoneyPage;
     }
 }

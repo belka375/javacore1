@@ -36,10 +36,6 @@
             <version>3.141.59</version>
         </dependency>
 
-    </dependencies>
-
-    <dependencies>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>

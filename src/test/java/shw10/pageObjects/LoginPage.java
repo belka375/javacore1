@@ -11,24 +11,24 @@ import java.time.Duration;
 public class LoginPage {
     private WebDriver driver;
     Wait<WebDriver> wait;
-
-
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(100))
+                .pollingEvery(Duration.ofMillis(200))
                 .ignoring(Exception.class);
     }
 
-    public void loginManualInput(String Username, String Password) {
+    public LandingPage loginManualInput(String Username, String Password) {
         getEmailField().sendKeys(Username);
         getPasswordField().sendKeys(Password);
-        getButton().click();
+        getLoginButton().click();
+        LandingPage landingPage = new LandingPage(driver);
+        return landingPage;
     }
 
-    private WebElement getButton() {
-        return driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
+    private WebElement getLoginButton() {
+        return wait.until(x->driver.findElement(By.xpath("//*[@data-testid='loginSubmit']")));
     }
 
     private WebElement getPasswordField() {

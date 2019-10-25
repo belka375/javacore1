@@ -18,7 +18,7 @@ public class SignUpPage {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(100))
+                .pollingEvery(Duration.ofMillis(200))
                 .ignoring(Exception.class);
     }
 
