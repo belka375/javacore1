@@ -19,6 +19,9 @@ public class SignUpPage {
         getPassword().clear();
         getPassword().sendKeys(password);
         getRegisterButton().click();
+        //Assert
+        getIcon().isDisplayed();
+
     }
 
     public WebElement getUserName(){
@@ -32,5 +35,8 @@ public class SignUpPage {
     }
     public WebElement getRegisterButton(){
         return driver.findElement(By.xpath("//*[contains (text(), 'Register')]"));
+    }
+    public WebElement getIcon(){
+        return  driver.findElement(By.xpath("//*[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div[1]/img"));
     }
 }
