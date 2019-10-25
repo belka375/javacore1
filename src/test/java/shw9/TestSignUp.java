@@ -68,7 +68,7 @@ public class TestSignUp {
 
     @Test
   public void TryToSignUpUsingFluentWait () throws InterruptedException {
-       
+
       fluentWait = new FluentWait<WebDriver>(driver)
        .withTimeout(Duration.ofSeconds(20))
            .pollingEvery(Duration.ofMillis(100))
