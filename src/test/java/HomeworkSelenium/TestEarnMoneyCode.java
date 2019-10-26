@@ -33,9 +33,13 @@ public class TestEarnMoneyCode {
 
         HomePage homePage = new HomePage(driver);
         homePage.open();
+        Thread.sleep(3000);
         var logInPage = homePage.openLoginPage();
         homePage=logInPage.login("tanik10", "password");
+        homePage.worldImgDisplayed();
+        homePage.assertAvatar();
         var earnMoneyPage = homePage.openEarnMoneyPage();
+        Thread.sleep(4000);
         System.out.println("opened Earn Money Page");
         var codeInputField = earnMoneyPage.getCode();
         System.out.println("Code from Input = " + codeInputField);
