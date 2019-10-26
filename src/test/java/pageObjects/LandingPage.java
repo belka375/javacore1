@@ -1,37 +1,51 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import shw10.SignupPage;
+import org.openqa.selenium.*;
 
-import java.time.Duration;
-
-public class LandingPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
+public class LandingPage extends BasePage{
     public LandingPage(WebDriver driver){
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class);
+        super(driver);
     }
 
     public void open() {
         driver.get("https://deens-master.now.sh/");
     }
 
-    public WebElement getLoginButton(){
+    private WebElement getLoginButton(){
         var loginButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/login']")));
         return loginButton;
+    }
+
+    private WebElement getEarnMoney(){
+        return driver.findElement(By.linkText("Earn Money"));
     }
     public LoginPage openLoginPage() {
 
         getLoginButton().click();
         LoginPage loginPage = new LoginPage(driver);
         return loginPage;
+    }
+
+    private WebElement getSignUpButton(){
+        var signUpButton = wait.until(x->driver.findElement(By.cssSelector("[href='/register']")));
+        return signUpButton;
+    }
+    public SignUpPage openSingUpPage() {
+        getSignUpButton().click();
+        SignUpPage signUpPage = new SignUpPage(driver);
+        return signUpPage;
+    }
+
+    private boolean getUserAvatar(){
+        return wait.until(x->driver.findElement(By.cssSelector("[alt = 'user avatar']")).isDisplayed());
+    }
+
+    public boolean isLogged() {
+        return getUserAvatar();
+    }
+
+    public EarnMoneyPage openEarnMoneyPage() {
+        getEarnMoney().click();
+        return new EarnMoneyPage(driver);
     }
 }
