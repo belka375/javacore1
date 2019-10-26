@@ -1,4 +1,4 @@
-package pageObjects;
+package hw10;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -7,14 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
+
 import java.time.Duration;
 
-public class SignUpPage {
+public class SignUp {
     WebDriver driver;
 
     Wait<WebDriver> wait;
 
-    public SignUpPage(WebDriver driver) {
+    public SignUp(WebDriver driver) {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
@@ -22,23 +23,25 @@ public class SignUpPage {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(Exception.class);
     }
-    private WebElement getUsernameField() {
+    public WebElement getUsername(){
         return wait.until(x->driver.findElement(By.id("username")));
     }
-    private WebElement getEmailField(){
+    public WebElement getEmail(){
         return driver.findElement(By.id("email"));
     }
-    private WebElement getPasswordField(){
+    private WebElement getPassword(){
         return driver.findElement(By.id("password"));
     }
     private WebElement getRegisterButton(){
         return driver.findElement(By.xpath("//*[text()='Register']"));
     }
-    public LandingPage registerNewUser(String username, String email, String password) {
-        getUsernameField().sendKeys(username);
-        getEmailField().sendKeys(email);
-        getPasswordField().sendKeys(password);
+
+    public MainPage registerUser(String username, String email, String password) {
+        getUsername().sendKeys(username);
+        getEmail().sendKeys(email);
+        getPassword().sendKeys(password);
         getRegisterButton().click();
-        return new LandingPage(driver);
+        return new MainPage(driver);
     }
 }
+

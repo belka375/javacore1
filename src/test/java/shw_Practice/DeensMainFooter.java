@@ -33,18 +33,7 @@ public class DeensMainFooter {
         language.click();
         Assert.assertTrue(language.isDisplayed());
     }
-//
-//    @Test
-//    public void deendFooter_languageChange_languageIsChanged() throws InterruptedException {
-//        driver.get("https://deens-master.now.sh/");
-//         var languageMenu=driver.findElement(By.xpath("//*[@class='BrandFooter__OptionSelector-qfoWf bYuWWM']"));
-//         languageMenu.click();
-//         var suomi= driver.findElement(By.xpath("//*[@value='fi']"));
-//         suomi.isDisplayed();
-//         suomi.click();
-//         Assert.assertTrue(suomi.isDisplayed());
-//
-//    }
+
     @Test
     public void deensFooter_networkMenu_menuBlogPresent() {
         driver.get("https://deens-master.now.sh/");

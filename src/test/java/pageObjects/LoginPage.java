@@ -13,10 +13,8 @@ public class LoginPage {
     private WebDriver driver;
     Wait<WebDriver> wait;
 
-
-
-
-}
+    public LoginPage(WebDriver driver) {
+    }
 
     public void login(String user, String password) {
         System.out.println("in the login method");
