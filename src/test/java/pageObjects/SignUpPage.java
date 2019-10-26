@@ -10,6 +10,22 @@ public class SignUpPage {
     public SignUpPage(WebDriver driver) {
         this.driver = driver;
     }
+    private WebElement getUserName(){
+        return driver.findElement(By.cssSelector("[id='username']"));
+    }
+    private WebElement getEmail(){
+        return  driver.findElement(By.cssSelector("[id='email']"));
+    }
+    private WebElement getPassword(){
+        return  driver.findElement(By.cssSelector("[id='password']"));
+    }
+    private WebElement getRegisterButton(){
+        return driver.findElement(By.xpath("//*[contains (text(), 'Register')]"));
+    }
+    //Assert
+    private WebElement getIcon(){
+        return  driver.findElement(By.xpath("//*[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div[1]/img"));
+    }
 
     public void signUp(String userName, String email, String password) {
         getUserName().clear();
@@ -24,19 +40,5 @@ public class SignUpPage {
 
     }
 
-    public WebElement getUserName(){
-        return driver.findElement(By.cssSelector("[id='username']"));
-    }
-    public WebElement getEmail(){
-        return  driver.findElement(By.cssSelector("[id='email']"));
-    }
-    public WebElement getPassword(){
-        return  driver.findElement(By.cssSelector("[id='password']"));
-    }
-    public WebElement getRegisterButton(){
-        return driver.findElement(By.xpath("//*[contains (text(), 'Register')]"));
-    }
-    public WebElement getIcon(){
-        return  driver.findElement(By.xpath("//*[@id='root']/div/header/div/div/div[2]/div/div/div[2]/div[1]/img"));
-    }
+
 }

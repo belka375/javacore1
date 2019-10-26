@@ -37,10 +37,4 @@ public class LandingPage {
     }
 
 
-    /*public WebElement getEarnMoney() {
-        return earnMoney;
-    }
-    public void clickEarnMoney(){
-        getEarnMoney().click();
-    }*/
 }
