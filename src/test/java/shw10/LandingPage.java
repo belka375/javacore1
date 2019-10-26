@@ -1,11 +1,10 @@
-package pageObjects;
+package shw10;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import shw10.SignupPage;
 
 import java.time.Duration;
 
@@ -24,14 +23,16 @@ public class LandingPage {
         driver.get("https://deens-master.now.sh/");
     }
 
-    public WebElement getLoginButton(){
-        var loginButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/login']")));
-        return loginButton;
+    public WebElement getSignupButton(){
+        var signupButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/register']")));
+        return signupButton;
     }
-    public LoginPage openLoginPage() {
 
-        getLoginButton().click();
-        LoginPage loginPage = new LoginPage(driver);
-        return loginPage;
+    public SignupPage openSignupPage() {
+
+        getSignupButton().click();
+        SignupPage signupPage = new SignupPage(driver);
+        return signupPage;
     }
+
 }
