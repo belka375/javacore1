@@ -1,0 +1,18 @@
+Logo Element:
+//*[@src='/logo.svg']
+
+"Login" button:
+//*[@href='/login']
+
+"Sign up" button:
+//*[@href='/register']
+
+"Create trip" button:
+//*[@href='/new/trip']
+
+"Customizable travels created by locals for free":
+//*[contains(@class, 'Home__HomeTagLine')]
+
+Search box:
+//*[contains(@class, 'HomeSearch__Input')]
+

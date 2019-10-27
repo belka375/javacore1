@@ -32,9 +32,7 @@ public class TestRecord {
             searchBox.sendKeys("Car");
 
             Assert.assertEquals(searchBox.getAttribute("value"),"Car");
-
             WebElement searchButton = driver.findElement(By.xpath("//*[@name='btnK']"));
-
             Assert.assertTrue(searchButton.isDisplayed());
 
 
@@ -108,5 +106,4 @@ public class TestRecord {
         var url = driver.getCurrentUrl();
         Assert.assertEquals(url,"https://deens-master.now.sh/", "Expected URL is wrong");
     }
-
 }
