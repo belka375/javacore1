@@ -2,8 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 
-public class LandingPage extends BasePage{
-    public LandingPage(WebDriver driver){
+public class LandingPage extends BasePage {
+
+
+    public LandingPage(WebDriver driver) {
         super(driver);
     }
 
@@ -11,14 +13,15 @@ public class LandingPage extends BasePage{
         driver.get("https://deens-master.now.sh/");
     }
 
-    private WebElement getLoginButton(){
-        var loginButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/login']")));
+    private WebElement getLoginButton() {
+        var loginButton = wait.until(x -> driver.findElement(By.xpath("//*[@href='/login']")));
         return loginButton;
     }
 
-    private WebElement getEarnMoney(){
+    private WebElement getEarnMoney() {
         return driver.findElement(By.linkText("Earn Money"));
     }
+
     public LoginPage openLoginPage() {
 
         getLoginButton().click();
@@ -26,18 +29,19 @@ public class LandingPage extends BasePage{
         return loginPage;
     }
 
-    private WebElement getSignUpButton(){
-        var signUpButton = wait.until(x->driver.findElement(By.cssSelector("[href='/register']")));
+    private WebElement getSignUpButton() {
+        var signUpButton = wait.until(x -> driver.findElement(By.cssSelector("[href='/register']")));
         return signUpButton;
     }
+
     public SignUpPage openSingUpPage() {
         getSignUpButton().click();
         SignUpPage signUpPage = new SignUpPage(driver);
         return signUpPage;
     }
 
-    private boolean getUserAvatar(){
-        return wait.until(x->driver.findElement(By.cssSelector("[alt = 'user avatar']")).isDisplayed());
+    private boolean getUserAvatar() {
+        return wait.until(x -> driver.findElement(By.cssSelector("[alt = 'user avatar']")).isDisplayed());
     }
 
     public boolean isLogged() {
@@ -48,4 +52,9 @@ public class LandingPage extends BasePage{
         getEarnMoney().click();
         return new EarnMoneyPage(driver);
     }
+
+
+
+
+
 }

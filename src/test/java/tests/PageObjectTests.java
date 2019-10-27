@@ -54,4 +54,7 @@ public class PageObjectTests extends BaseTest{
 
         Assert.assertTrue(logged);
     }
+
+
+
 }
