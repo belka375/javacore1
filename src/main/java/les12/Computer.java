@@ -8,7 +8,7 @@ public class Computer {
 
     public Computer(Keyboard k, Monitor monic, Mouse mouse, SystemBlock sb){
         this.keyboard=k;
-        this.monitor=monic;
+//        this.monitor=monic;
 
 
     }

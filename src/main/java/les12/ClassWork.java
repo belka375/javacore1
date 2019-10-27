@@ -7,8 +7,8 @@ public class ClassWork {
         Student alex= new Student("Alexey", "Kozlov", 104);
         Student[] sds=new Student[]{dina, boris, alex};
 
-        School mathSchool = new School("Mathimatic School", sds);
-        mathSchool.printSchool();
+//        School mathSchool = new School("Mathimatic School", sds);
+//        mathSchool.printSchool();
 
     }
 }
