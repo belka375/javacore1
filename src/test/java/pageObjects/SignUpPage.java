@@ -1,26 +1,16 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
+
 
 import java.time.Duration;
 
-public class SignUpPage {
-    WebDriver driver;
-
-    Wait<WebDriver> wait;
+public class SignUpPage extends BasePage{
 
     public SignUpPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(250))
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(Exception.class);
+        super(driver);
     }
 
     private WebElement getUsernameField() {
