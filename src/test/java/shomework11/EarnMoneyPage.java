@@ -34,7 +34,6 @@ public class EarnMoneyPage {
     }
 
     public void openEarnMoneyPage() throws InterruptedException {
-    //   Thread.sleep(2000);
         getEarnMoneyButton().click();
     }
         public WebElement getCopyButton () {
@@ -45,11 +44,7 @@ public class EarnMoneyPage {
             getCopyButton().click();
         }
         public String getTextFromClipboard () throws IOException, UnsupportedFlavorException {
-//            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-//            Transferable contents = clipboard.getContents(null);
-//            String textClipboard = (String) contents.getTransferData(DataFlavor.stringFlavor);
-            String textClipboard = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor).toString();
-
+        String textClipboard = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
             return textClipboard;
         }
         public String getReferralCode () {
