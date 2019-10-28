@@ -1,48 +1,15 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
+
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.LandingPage;
-import pageObjects.LoginPage;
-import pageObjects.SignUpPage;
-
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
-import java.time.Duration;
-import java.util.Random;
-
 import static helpers.RandomStringGenerator.randomEmail;
 import static helpers.RandomStringGenerator.randomString;
 
-public class PageObjectTests {
-
-    //there e have only tests
-    private WebDriver driver;
-
-
-    @BeforeMethod
-    public void sratUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver 2");
-
-        driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-    }
-
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        //Thread.sleep(3000);
-
-        driver.quit();
-    }
+public class PageObjectTests extends BaseTest {
 
     @Test
     public void clickEarnMoney() {
@@ -97,25 +64,40 @@ public class PageObjectTests {
     }
 
     @Test
-    public void liginUser_copyReferralLink() throws IOException, UnsupportedFlavorException {
-        var landingPage = new LandingPage(driver);
+    public void loginUser_copyReferralLink() throws IOException, UnsupportedFlavorException {
+        var landingPage = logintoApp("useras","mailinator");
 
-        landingPage.open();
+        Assert.assertTrue(landingPage.isLogged());
 
-        //user is redirected to the login page
-
-        var loginPage = landingPage.openLoginPage();
-
-        //fill the field and login
-        loginPage.loginGood("user", "password");
-        var logged = landingPage.isLogged();
-        Assert.assertTrue(logged);
+        //open page Earn money
 
         var earnMoneyPage = landingPage.openEarnMoneyPage();
 
-
+        //вытаскиваем значение атрибута валуе
+        String textFromField = earnMoneyPage.getCodeField().getAttribute("value");
+        //нажать кнопку и вытащить инфо из клипборда
+        //разбиваем стринг по = и берет вторую часть
+        var textFromClipBoard = earnMoneyPage.getTextFromClipBoard().split("=")[1];
+        //сравниваем текст валуе и из клипборда
+        Assert.assertEquals(textFromField,textFromClipBoard);
 
     }
+    @Test
+    public void searchNYK_sixWrapperFounded(){
+       // var landingPage = logintoApp("useras","mailinator");
+        var landingPage = new LandingPage(driver);
+        //open landing page
+        landingPage.open();
+        Assert.assertTrue(landingPage.isLanded());
+
+
+        //search element Thumbs NYC and go to search page
+        var searchNYCPage = landingPage.openSearchNYCPage();
+        Assert.assertEquals(searchNYCPage.getNYCTumbs(),6);
+
+    }
+
+
 }
 
 

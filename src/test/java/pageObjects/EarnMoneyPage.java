@@ -1,39 +1,42 @@
 package pageObjects;
 
+import helpers.GetClipBoard;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.testng.Assert;
-
-import java.awt.*;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
-import java.time.Duration;
 
-public class EarnMoneyPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
 
-    public EarnMoneyPage(WebDriver driver) throws IOException, UnsupportedFlavorException {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(40))
-                .pollingEvery(Duration.ofMillis(200))
-                .ignoring(Exception.class);
+public class EarnMoneyPage extends BasePage{
+
+
+    public EarnMoneyPage(WebDriver driver)  {
+        super (driver);
     }
     private WebElement getCopyButton(){
         return wait.until(x->driver.findElement(By.xpath("//*[@type='submit']")));
     }
-    public void copyReferralLink() {
-        getCopyButton().click();
+    //get atribut value java - search in Google
+    public WebElement getCodeField(){
+        return wait.until(x->driver.findElement(By.xpath("(//input)[2]")));
     }
-//extract text from clipboard
-    String myText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
-    String copiedText = driver.findElement(By.xpath("//*[@type='submit']")).getAttribute("value").toString();
-    Assert.assertEquals(copiedText, myText);
+
+    private WebElement getButtonCopy(){
+        return driver.findElement(By.tagName("button"));
+    }
+
+
+    //extract text from clipboard
+
+
+    public String getTextFromClipBoard() throws IOException, UnsupportedFlavorException {
+       //see helper - getclipboard
+        getButtonCopy().click();
+        return GetClipBoard.GetStrintFromClipBoard();
+
+    }
+
 
 
 }

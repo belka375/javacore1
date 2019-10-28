@@ -3,21 +3,13 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
-import java.time.Duration;
 
-public class SignUpPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
+public class SignUpPage extends BasePage{
+
 
     public SignUpPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(40))
-                .pollingEvery(Duration.ofMillis(200))
-                .ignoring(Exception.class);
+        super(driver);
     }
 
 //    public LandingPage signUp(String user, String email, String password21) {
