@@ -53,6 +53,16 @@ public class LandingPage extends BasePage {
         return new EarnMoneyPage(driver);
     }
 
+    public WebElement getSearchTripField() {
+        var createTrip = driver.findElement(By.name("search"));
+        return createTrip;
+
+    }
+
+    public void openCreateTripPage() {
+        getSearchTripField().sendKeys("New York");
+        getSearchTripField().sendKeys(Keys.ENTER);
+    }
 
 
 

@@ -8,7 +8,8 @@ import org.testng.annotations.BeforeMethod;
 import pageObjects.LandingPage;
 
 public class BaseTest {
-    WebDriver driver;
+    public WebDriver driver;
+
     @BeforeMethod
     public void startUp() throws NoSuchMethodException {
         var factory = new BrowserFactory();
