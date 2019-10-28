@@ -2,21 +2,44 @@ package tests;
 
 import browserFactory.BrowserFactory;
 import enums.BrowserType;
+import helpers.GetScreenshot;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import pageObjects.LandingPage;
+
+import java.lang.reflect.Method;
+
 
 public class BaseTest {
     WebDriver driver;
+    protected Logger logger;
     @BeforeMethod
-    public void startUp() throws NoSuchMethodException {
+    @Parameters({"browser"})
+    public void startUp(String browserName) throws NoSuchMethodException {
+        logger = LogManager.getLogger();
         var factory = new BrowserFactory();
-        driver = factory.createWebDriver(BrowserType.FIREFOX);
+        BrowserType browserType;
+        switch (browserName){
+            case "FIREFOX": browserType = BrowserType.FIREFOX;
+            break;
+            case "CHROME": browserType =BrowserType.CHROME;
+            break;
+            default: throw new NoSuchFieldError(" NO such browser ");
+        }
+        driver = factory.createWebDriver(browserType);
     }
     @AfterMethod
-    public void tearDown() throws InterruptedException{
-        Thread.sleep(7000);
+    public void tearDown(ITestResult result){
+        if(result.getStatus()==ITestResult.FAILURE){
+            GetScreenshot.capture(driver, result.getName());
+
+            logger.error("Test "+result.getName()+ " failed with status "+result.getStatus());
+        }
         driver.quit();
     }
 

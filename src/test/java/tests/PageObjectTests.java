@@ -15,13 +15,13 @@ public class PageObjectTests extends BaseTest{
     @Test
     public void getReferenceCode() throws IOException, UnsupportedFlavorException, InterruptedException {
         var landingPage = loginToApp("smarot10","Password_10");
+        logger.info("hi");
         Thread.sleep(3000);
         var earnMoney = landingPage.openEarnMoneyPage();
         var textFromField = earnMoney.getCodeField().getAttribute("value");
         var textFromClipboard = earnMoney.getTextFromClipboard().split("=")[1];
 
         Assert.assertEquals(textFromField,textFromClipboard);
-//        Assert.assertEquals("https://deens-master.now.sh/register?ref="+textFromField,textFromClipboard);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class PageObjectTests extends BaseTest{
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
     }
-    @Test
+    @Test(retryAnalyzer = listeners.RetryAnalyzer.class)
     public void loginToApp() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();
