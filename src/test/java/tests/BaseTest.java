@@ -11,9 +11,8 @@ public class BaseTest {
     WebDriver driver;
     @BeforeMethod
     public void startUp() throws NoSuchMethodException {
-     var factory=new BrowserFactory();
-     driver = factory.createWebDriver(BrowserType.FIREFOX);
-
+        var factory = new BrowserFactory();
+        driver = factory.createWebDriver(BrowserType.FIREFOX);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException{

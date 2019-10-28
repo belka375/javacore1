@@ -1,13 +1,13 @@
 package browserFactory;
 
-import org.openqa.selenium.WebDriver;
 import enums.BrowserType;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
     public WebDriver createWebDriver(BrowserType browser) throws NoSuchMethodException {
-        switch (browser) {
+        switch (browser){
             case CHROME:
                 return GetChromeDriver();
             case FIREFOX:
@@ -18,12 +18,12 @@ public class BrowserFactory {
     }
 
     private WebDriver GetFirefoxDriver() {
-        System.setProperty("webdriver.gecko.driver", "geckodriver");
+        System.setProperty("webdriver.gecko.driver","geckodriver.exe");
         return new FirefoxDriver();
     }
 
     private WebDriver GetChromeDriver() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         return new ChromeDriver();
     }
 }
