@@ -1,4 +1,4 @@
-package shw10.helpers;
+package seleniumHomework.helpers;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -6,12 +6,11 @@ import java.awt.datatransfer.DataFlavor;
 
 public class GetStringFromClipboard {
 
-    public static String ololo() throws Exception {
+    public static String doit() throws Exception {
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Clipboard clipboard = toolkit.getSystemClipboard();
         String result = (String) clipboard.getData(DataFlavor.stringFlavor);
-        //System.out.println("String from Clipboard:" + result);
         return result;
     }
 

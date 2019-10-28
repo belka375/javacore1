@@ -1,25 +1,16 @@
-package shw10.pageObjects;
+package seleniumHomework.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
 import java.security.SecureRandom;
-import java.time.Duration;
 
-public class SignUpPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
+public class SignUpPage extends BasePage{
 
     public SignUpPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(200))
-                .ignoring(Exception.class);
+        super(driver);
     }
 
     static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

@@ -1,22 +1,12 @@
-package shw10.pageObjects;
+package seleniumHomework.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
-import java.time.Duration;
-
-public class LoginPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
+public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(200))
-                .ignoring(Exception.class);
+        super(driver);
     }
 
     public LandingPage loginManualInput(String Username, String Password) {
