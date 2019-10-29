@@ -1,4 +1,4 @@
-package shw10;
+package Homework.shw10;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -9,7 +9,7 @@ public class RandomStringGenerator {
         return generatedString;
     }
 
-    public static String randomEmail(){
+   public static String randomEmail(){
         return randomString(8)+"@"+randomString(8)+".com";
     }
 }
