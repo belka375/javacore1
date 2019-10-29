@@ -7,9 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
-
-
 public class BaseTests {
     protected WebDriver driver;
     @BeforeMethod
@@ -17,13 +14,11 @@ public class BaseTests {
         var factory = new BrowserFactory();
         driver = factory.createWebDriver(BrowserType.CHROME);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException{
         driver.quit();
     }
-
     protected MainPage Login(String username, String password) {
         MainPage mainPage = new MainPage(driver);
         mainPage.open();

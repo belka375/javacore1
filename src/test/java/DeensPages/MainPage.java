@@ -3,11 +3,16 @@ package DeensPages;
 import hw10.SignUp;
 import hw11.EarnMoney;
 import hw13.SearchDestination;
+import hw14.CreateTripFooter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.w3c.dom.Document;
 import pageObjects.LoginPage;
+
 import java.time.Duration;
+
+import static org.openqa.selenium.By.*;
 
 public class MainPage  {
     private WebDriver driver;
@@ -24,7 +29,7 @@ public class MainPage  {
         driver.get("https://deens-master.now.sh/");
     }
     private WebElement getLoginButton(){
-        var loginButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/login']")));
+        var loginButton = wait.until(x->driver.findElement(xpath("//*[@href='/login']")));
         return loginButton;
     }
     public LoginPage openLoginPage() {
@@ -33,7 +38,7 @@ public class MainPage  {
         return loginPage;
     }
     private WebElement getSignUpButton(){
-        var signUpButton = wait.until(x->driver.findElement(By.cssSelector("[href='/register']")));
+        var signUpButton = wait.until(x->driver.findElement(cssSelector("[href='/register']")));
         return signUpButton;
     }
     public SignUp openSingUp() {
@@ -42,14 +47,14 @@ public class MainPage  {
         return signUp;
     }
     private boolean getUserAvatar(){
-        return wait.until(x->driver.findElement(By.cssSelector("[alt = 'user avatar']")).isDisplayed());
+        return wait.until(x->driver.findElement(cssSelector("[alt = 'user avatar']")).isDisplayed());
     }
     public boolean isLogged() {
         return getUserAvatar();
     }
 
     public WebElement openEarnMoneyPage() {
-        return wait.until(x->driver.findElement(By.xpath("//*[@href='/earn-money']")));
+        return wait.until(x->driver.findElement(xpath("//*[@href='/earn-money']")));
     }
     public MainPage login(String user, String password) {
         getEmail().sendKeys(user);
@@ -58,24 +63,24 @@ public class MainPage  {
         return new MainPage(driver);
     }
     private WebElement getEmail() {
-        return wait.until(x->x.findElement(By.id("email")));
+        return wait.until(x->x.findElement(id("email")));
     }
-    private WebElement getButton() {
-        return driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
+    public WebElement getButton() {
+        return driver.findElement(xpath("//*[@data-testid='loginSubmit']"));
     }
     private WebElement getPassword() {
-        return driver.findElement(By.id("password"));
+        return driver.findElement(id("password"));
     }
     public EarnMoney openEarnMoney() {
         getEarnMoney().click();
         return new EarnMoney(driver);
     }
     private WebElement getEarnMoney() {
-        return driver.findElement(By.linkText("Earn Money"));
+        return driver.findElement(linkText("Earn Money"));
     }
     public SearchDestination open(String new_york) {
-        var searchNewYork=driver.findElement(By.name("search"));
+        var searchNewYork=driver.findElement(name("search"));
         searchNewYork.sendKeys("New York", Keys.RETURN);
         return new SearchDestination(driver);
     }
-    }
+}

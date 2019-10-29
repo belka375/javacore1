@@ -12,7 +12,7 @@ public class Test extends BaseTests {
     public void checkNumberOfTrips() throws InterruptedException {
         MainPage mainPage=new MainPage(driver);
         mainPage.open();
-        SearchDestination searchDestination=mainPage.open(" ");
+        SearchDestination searchDestination=mainPage.open("");
         var newYork=searchDestination.getNewYork();
         Thread.sleep(5000);
         Assert.assertEquals(newYork.size(),6);

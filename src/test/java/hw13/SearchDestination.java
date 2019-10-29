@@ -8,13 +8,10 @@ import java.util.List;
 
 public class SearchDestination extends BasePage {
 
-
     public SearchDestination(WebDriver driver){
         super(driver);
     }
     public List<WebElement> getNewYork(){
         return wait.until(x->driver.findElements(By.xpath("//*[contains(@class,'Trip__LinkWrapper')]")));
     }
-
-
 }
