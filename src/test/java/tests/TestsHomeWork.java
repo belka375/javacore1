@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjectsHomeWork.LandingPageHomeWork;
+import pageObjectsHomeWork.SearchPageHomeWork;
 
 import static helpers.CreatingRandomUserCredentials.*;
 
@@ -72,12 +73,8 @@ public class TestsHomeWork extends BaseTest {
     public void searchForNewYorkTripTest() {
         var landingPage = new LandingPageHomeWork(driver);
         landingPage.openTestingPage();
-        var loginPage = landingPage.openLogInPage();
-        loginPage.logInRegisteredUser("randomuser5327@grr.la", "secretPassword");
-        var loggedInUser = landingPage.isLogged();
-        Assert.assertTrue(loggedInUser, "User is not logged in!");
-        loginPage.searchForTrip("New York");
-        var searchPage = loginPage.openSearchPage(driver);
-
+        SearchPageHomeWork searchPage = landingPage.openSearchPage("New York");
+        var results = searchPage.getTrips();
+        Assert.assertEquals(results.size(), 6);
     }
 }

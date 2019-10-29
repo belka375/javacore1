@@ -64,4 +64,10 @@ public class LandingPageHomeWork extends BasePage {
         EarnMoneyPageHomeWork earnMoneyPage = new EarnMoneyPageHomeWork(driver);
         return earnMoneyPage;
     }
+
+    public SearchPageHomeWork openSearchPage(String destination) {
+        var city = driver.findElement(By.xpath("//h1[text()='"+destination+"']"));
+        city.click();
+        return new SearchPageHomeWork(driver);
+    }
 }
