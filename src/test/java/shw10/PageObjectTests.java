@@ -39,7 +39,7 @@ public class PageObjectTests {
     @Test
 
     public void singUpToApp_Successful() throws InterruptedException {
-        var landingPage = new LandingPage(driver);
+        var landingPage = new java.shw10.LandingPage(driver);
         landingPage.openPage();
         SignUpPage signupPage = landingPage.openSignUpPage();
         String email = "name" + signupPage.randomInt()+"@mail.com";
