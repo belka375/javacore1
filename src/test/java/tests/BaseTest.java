@@ -12,11 +12,12 @@ public class BaseTest {
     @BeforeMethod
     public void startUp() throws NoSuchMethodException {
         var factory = new BrowserFactory();
-        driver = factory.createWebDriver(BrowserType.FIREFOX);
+        driver = factory.createWebDriver(BrowserType.CHROME);
+        driver.manage().window().maximize();
     }
     @AfterMethod
     public void tearDown() throws InterruptedException{
-        Thread.sleep(7000);
+        Thread.sleep(1000);
         driver.quit();
     }
 
