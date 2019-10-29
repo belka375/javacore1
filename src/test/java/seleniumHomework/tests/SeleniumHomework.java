@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import seleniumHomework.helpers.GetStringFromClipboard;
+import seleniumHomework.helpers.Scroll;
 import seleniumHomework.pageObjects.LandingPage;
 import seleniumHomework.pageObjects.SignUpPage;
 
@@ -38,12 +39,15 @@ public class SeleniumHomework extends BaseTest {
             Assert.assertTrue(driver.findElements(By.cssSelector(".Trip__LinkWrapper-fulyrM.ewiHv")).size()==6);
         }
 
+        //Homework14
+        @Test
+        public void scrolDownManePage(){
+            var landingPage = new LandingPage(driver);
+            landingPage.open();
+            Scroll.down(driver,"2500");
+            landingPage.getcreateTripAndStarErningButton().click();
+        }
 
-    /*
-    Создать тест используя Page Object Model
-1. зайти на титульную страницу
-2. зайти в Нью-Йорк
-3. убедится что видны 6 туров*/
 
 
 

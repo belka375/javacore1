@@ -65,4 +65,8 @@ public class LandingPage extends BasePage{
         wait.until(x->x.findElement(By.cssSelector(".Trip__LinkWrapper-fulyrM.ewiHv")));
         return newYorkPage;
     }
+
+    public WebElement getcreateTripAndStarErningButton(){
+        return wait.until(x->driver.findElement(By.xpath("//*[contains(text(),'Create a Trip & Start Earning')]")));
+    }
 }
