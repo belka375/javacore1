@@ -29,7 +29,7 @@ public class TestsHomeWork extends BaseTest {
     }
 
     @Test
-    public void SigUpTest() {
+    public void sigUpTest() {
         LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
         landingPage.openTestingPage();
 
