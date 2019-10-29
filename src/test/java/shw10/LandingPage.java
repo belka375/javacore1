@@ -1,4 +1,4 @@
-package shw10;
+package java.shw10;
 //*Write test, using Page Object Model
 //*Site https://deens-master.now.sh/
 //*workflow -> Sign up:

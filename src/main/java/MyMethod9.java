@@ -1,3 +1,4 @@
+/*
 public class MyMethod9 {
     public static void main(String[] args) {
 
@@ -32,3 +33,5 @@ public class MyMethod9 {
 
     }
 }
+*/
+

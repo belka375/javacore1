@@ -18,12 +18,12 @@ public class BrowserFactory {
     }
 
     private WebDriver GetFirefoxDriver() {
-        System.setProperty("webdriver.gecko.driver","geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","geckodriver");
         return new FirefoxDriver();
     }
 
     private WebDriver GetChromeDriver() {
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         return new ChromeDriver();
     }
 }
