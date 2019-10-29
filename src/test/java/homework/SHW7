@@ -1,0 +1,22 @@
+Main page
+
+Logo deens = [src='/logo.svg']
+“Earn Money” button = a[href='/earn-money']
+“Create trip” = [data-testid='createTripHeaderButton']
+Login button = [href='/login']
+Sign up button = [href*='register']
+Search bar: [name='search']
+“Customizable travels created by locals for free” =[class*=Home__HomeTagLine]
+
+
+Login Page
+
+picture on a login page = .login-img
+email credentials window = #email
+Password credentials window =#password
+Login submit button = [data-testid= 'loginSubmit']
+Sign up button under the  Log In windows = .login-q-text>*:first-child
+Forgot Password = a[href='/recover-password']
+Plan your next trip with us =.login-img-content
+
+
