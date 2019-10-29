@@ -1,17 +1,15 @@
-package hw10;
+package DeensPages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import hw10.SignUp;
+import hw11.EarnMoney;
+import hw13.SearchDestination;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import pageObjects.LoginPage;
-
 import java.time.Duration;
 
-
-public class MainPage {
+public class MainPage  {
     private WebDriver driver;
     Wait<WebDriver> wait;
     public MainPage(WebDriver driver){
@@ -49,4 +47,35 @@ public class MainPage {
     public boolean isLogged() {
         return getUserAvatar();
     }
-}
+
+    public WebElement openEarnMoneyPage() {
+        return wait.until(x->driver.findElement(By.xpath("//*[@href='/earn-money']")));
+    }
+    public MainPage login(String user, String password) {
+        getEmail().sendKeys(user);
+        getPassword().sendKeys(password);
+        getButton().click();
+        return new MainPage(driver);
+    }
+    private WebElement getEmail() {
+        return wait.until(x->x.findElement(By.id("email")));
+    }
+    private WebElement getButton() {
+        return driver.findElement(By.xpath("//*[@data-testid='loginSubmit']"));
+    }
+    private WebElement getPassword() {
+        return driver.findElement(By.id("password"));
+    }
+    public EarnMoney openEarnMoney() {
+        getEarnMoney().click();
+        return new EarnMoney(driver);
+    }
+    private WebElement getEarnMoney() {
+        return driver.findElement(By.linkText("Earn Money"));
+    }
+    public SearchDestination open(String new_york) {
+        var searchNewYork=driver.findElement(By.name("search"));
+        searchNewYork.sendKeys("New York", Keys.RETURN);
+        return new SearchDestination(driver);
+    }
+    }

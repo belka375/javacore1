@@ -1,5 +1,6 @@
 package hw10;
 
+import DeensPages.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import static helpers.RandomStringGenerator.randomEmail;
 import static helpers.RandomStringGenerator.randomString;
 
 
-public class Tests {
+public class Tests  {
     WebDriver driver;
 
 

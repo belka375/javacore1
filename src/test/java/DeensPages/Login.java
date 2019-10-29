@@ -1,11 +1,11 @@
-package hw10;
+package DeensPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Wait;
 
-public class LogIn {
+public class Login {
     private WebDriver driver;
     Wait<WebDriver> wait;
     public void logIn(String user, String password) {
