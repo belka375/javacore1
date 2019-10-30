@@ -1,5 +1,6 @@
 package pageObjects;
 
+import HW10.SignUpPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,4 +34,6 @@ public class LandingPage {
         LoginPage loginPage = new LoginPage(driver);
         return loginPage;
     }
+
 }
+
