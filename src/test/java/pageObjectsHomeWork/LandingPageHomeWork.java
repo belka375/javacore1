@@ -1,6 +1,7 @@
 package pageObjectsHomeWork;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -66,8 +67,27 @@ public class LandingPageHomeWork extends BasePage {
     }
 
     public SearchPageHomeWork openSearchPage(String destination) {
-        var city = driver.findElement(By.xpath("//h1[text()='"+destination+"']"));
+        var city = driver.findElement(By.xpath("//h1[text()='" + destination + "']"));
         city.click();
         return new SearchPageHomeWork(driver);
     }
+
+    WebElement craeteTripButton() {
+        return driver.findElement(By.xpath("(//*[@*='/new/trip'])[2]"));
+    }
+
+    public void scrollDownPage() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", craeteTripButton());
+        craeteTripButton().click();
+    }
+
+    public boolean whereDoYouWantToGo_Message() {
+        return wait.until(x -> driver.findElement(By.cssSelector("[class$='jmrRAj']"))).isDisplayed();
+    }
+
+    public boolean messageDisplayed() {
+        return whereDoYouWantToGo_Message();
+    }
 }
+

@@ -68,7 +68,7 @@ public class TestsHomeWork extends BaseTest {
 
     }
 
-
+    // Home Work 13
     @Test
     public void searchForNewYorkTripTest() {
         var landingPage = new LandingPageHomeWork(driver);
@@ -76,6 +76,16 @@ public class TestsHomeWork extends BaseTest {
         SearchPageHomeWork searchPage = landingPage.openSearchPage("New York");
         var results = searchPage.getTrips();
         Assert.assertEquals(results.size(), 6);
+    }
+
+    // Home Work 14
+    @Test
+    public void scrollDown_clickCreateTripButton() {
+        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        landingPage.openTestingPage();
+        landingPage.scrollDownPage();
+        var message = landingPage.messageDisplayed();
+        Assert.assertTrue(message, "Pop up message with text 'Where do you want to go?' is not visible");
     }
 }
 
