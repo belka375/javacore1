@@ -1,11 +1,9 @@
-package shomework13.pageObjects;
+package shomework14.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import pageObjects.EarnMoneyPage;
 
 
@@ -63,4 +61,11 @@ public class LandingPage extends BasePage {
         return new DestinationPage(driver);
    }
 
+    public void openNewTrip() {
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        var createTrip=driver.findElement(By.cssSelector("div>a>p"));
+        createTrip.click();
+
+    }
 }
