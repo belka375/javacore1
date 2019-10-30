@@ -1,31 +1,36 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import listeners.RetryAnalyzer;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.DestinationPage;
 import pageObjects.LandingPage;
-import pageObjects.LoginPage;
 
-import java.time.Duration;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 
 import static helpers.RandomStringGenerator.randomEmail;
 import static helpers.RandomStringGenerator.randomString;
 
-public class PageObjectTests {
-    WebDriver driver;
+public class PageObjectTests extends BaseTest{
 
-    @BeforeMethod
-    public void startUp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-        driver = new ChromeDriver();
+    @Test
+    public void checkNumberOfTripsInNewYork(){
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        DestinationPage destinationPage = landingPage.open("New York");
+        var trips = destinationPage.getTrips();
+        Assert.assertEquals(trips.size(),6);
     }
-    @AfterMethod
-    public void tearDown() throws InterruptedException{
-        Thread.sleep(7000);
-        driver.quit();
+    @Test
+    public void getReferenceCode() throws IOException, UnsupportedFlavorException, InterruptedException {
+        var landingPage = loginToApp("smarot10","Password_10");
+        Thread.sleep(3000);
+        var earnMoney = landingPage.openEarnMoneyPage();
+        var textFromField = earnMoney.getCodeField().getAttribute("value");
+        var textFromClipboard = earnMoney.getTextFromClipboard().split("=")[1];
+
+        Assert.assertEquals(textFromField,textFromClipboard);
     }
 
     @Test
@@ -33,7 +38,7 @@ public class PageObjectTests {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
     }
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void loginToApp() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();

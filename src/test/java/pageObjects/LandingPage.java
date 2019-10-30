@@ -1,21 +1,10 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
-import java.time.Duration;
-
-public class LandingPage {
-    private WebDriver driver;
-    Wait<WebDriver> wait;
+public class LandingPage extends BasePage{
     public LandingPage(WebDriver driver){
-        this.driver = driver;
-        wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(250))
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(Exception.class);
+        super(driver);
     }
 
     public void open() {
@@ -25,6 +14,10 @@ public class LandingPage {
     private WebElement getLoginButton(){
         var loginButton = wait.until(x->driver.findElement(By.xpath("//*[@href='/login']")));
         return loginButton;
+    }
+
+    private WebElement getEarnMoney(){
+        return driver.findElement(By.linkText("Earn Money"));
     }
     public LoginPage openLoginPage() {
 
@@ -49,5 +42,15 @@ public class LandingPage {
 
     public boolean isLogged() {
         return getUserAvatar();
+    }
+
+    public EarnMoneyPage openEarnMoneyPage() {
+        getEarnMoney().click();
+        return new EarnMoneyPage(driver);
+    }
+    public DestinationPage open(String destination) {
+        var city = driver.findElement(By.xpath("//h1[text()='"+destination+"']"));
+        city.click();
+        return new DestinationPage(driver);
     }
 }
