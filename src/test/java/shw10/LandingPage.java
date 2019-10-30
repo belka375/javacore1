@@ -1,4 +1,4 @@
-package java.shw10;
+package shw10;
 //*Write test, using Page Object Model
 //*Site https://deens-master.now.sh/
 //*workflow -> Sign up:
@@ -14,8 +14,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import shw10.SignUpPage;
-
 import java.time.Duration;
 
     public class LandingPage {
@@ -33,6 +31,7 @@ import java.time.Duration;
 
         public void openPage() {
             driver.get("https://deens-master.now.sh/");
+
         }
 
         public WebElement getSignupButton() {

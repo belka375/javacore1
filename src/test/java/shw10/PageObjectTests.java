@@ -17,10 +17,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.NoSuchElementException;
-import java.util.Random;
-
 public class PageObjectTests {
     WebDriver driver;
 
@@ -39,12 +35,9 @@ public class PageObjectTests {
     @Test
 
     public void singUpToApp_Successful() throws InterruptedException {
-        var landingPage = new java.shw10.LandingPage(driver);
+        var landingPage = new LandingPage(driver);
         landingPage.openPage();
-        SignUpPage signupPage = landingPage.openSignUpPage();
-        String email = "name" + signupPage.randomInt()+"@mail.com";
-        String password = "XXXXX" + signupPage.randomInt();
-        signupPage.signup("name", email, password);
+
 
         Assert.assertTrue(driver.findElement(By.cssSelector("[src='/world.png']")).isDisplayed());
     }
