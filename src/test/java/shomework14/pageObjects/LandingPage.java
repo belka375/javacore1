@@ -66,6 +66,9 @@ public class LandingPage extends BasePage {
                 .executeScript("window.scrollTo(0, document.body.scrollHeight)");
         var createTrip=driver.findElement(By.cssSelector("div>a>p"));
         createTrip.click();
-
     }
+
+     public WebElement getNewTripWindow(){
+         return driver.findElement(By.cssSelector("[style='margin-bottom: 30px;']"));
+     }
 }

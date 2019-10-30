@@ -16,7 +16,7 @@ public class PageObjectTests extends BaseTest {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
         landingPage.openNewTrip();
-        boolean newTrip = driver.findElement(By.cssSelector("[style='margin-bottom: 30px;']")).isDisplayed();
+        boolean newTrip = landingPage.getNewTripWindow().isDisplayed();
         Assert.assertTrue(newTrip);
     }
 
