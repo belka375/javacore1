@@ -1,7 +1,9 @@
 package tests;
 
+import listeners.RetryAnalyzer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageObjects.DestinationPage;
 import pageObjects.LandingPage;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -13,6 +15,14 @@ import static helpers.RandomStringGenerator.randomString;
 public class PageObjectTests extends BaseTest{
 
     @Test
+    public void checkNumberOfTripsInNewYork(){
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        DestinationPage destinationPage = landingPage.open("New York");
+        var trips = destinationPage.getTrips();
+        Assert.assertEquals(trips.size(),6);
+    }
+    @Test
     public void getReferenceCode() throws IOException, UnsupportedFlavorException, InterruptedException {
         var landingPage = loginToApp("smarot10","Password_10");
         Thread.sleep(3000);
@@ -21,7 +31,6 @@ public class PageObjectTests extends BaseTest{
         var textFromClipboard = earnMoney.getTextFromClipboard().split("=")[1];
 
         Assert.assertEquals(textFromField,textFromClipboard);
-//        Assert.assertEquals("https://deens-master.now.sh/register?ref="+textFromField,textFromClipboard);
     }
 
     @Test
@@ -29,7 +38,7 @@ public class PageObjectTests extends BaseTest{
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
     }
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void loginToApp() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();

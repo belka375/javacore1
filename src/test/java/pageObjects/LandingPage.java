@@ -48,4 +48,9 @@ public class LandingPage extends BasePage{
         getEarnMoney().click();
         return new EarnMoneyPage(driver);
     }
+    public DestinationPage open(String destination) {
+        var city = driver.findElement(By.xpath("//h1[text()='"+destination+"']"));
+        city.click();
+        return new DestinationPage(driver);
+    }
 }
