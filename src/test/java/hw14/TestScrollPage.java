@@ -16,7 +16,8 @@ public class TestScrollPage extends BaseTests {
         var button = driver.findElement(By.xpath("//*[contains(text(),'Create a Trip & Start Earning')]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", button);
         button.click();
-        driver.getCurrentUrl();
-        Assert.assertTrue(true,"https://deens-master.now.sh/new/trip");
+        var popUp=driver.findElements(By.xpath("//*[@class='TripCreator__Option-eyiRVG dMLMqa']"));
+        Assert.assertEquals(popUp.size(),3);
+
     }
 }
