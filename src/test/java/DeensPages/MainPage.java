@@ -3,15 +3,11 @@ package DeensPages;
 import hw10.SignUp;
 import hw11.EarnMoney;
 import hw13.SearchDestination;
-import hw14.CreateTripFooter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.w3c.dom.Document;
 import pageObjects.LoginPage;
-
 import java.time.Duration;
-
 import static org.openqa.selenium.By.*;
 
 public class MainPage  {
@@ -84,3 +80,4 @@ public class MainPage  {
         return new SearchDestination(driver);
     }
 }
+
