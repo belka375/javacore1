@@ -1,4 +1,4 @@
-package HW10;
+package HW10.HWT;
 
 import helpers.GetClipboard;
 import org.openqa.selenium.By;

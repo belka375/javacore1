@@ -1,4 +1,4 @@
-package HW10;
+package HW10.HWT;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
