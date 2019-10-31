@@ -2,7 +2,9 @@ package tests;
 
 import browserFactory.BrowserFactory;
 import enums.BrowserType;
+import helpers.GetScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageObjects.LandingPage;
@@ -16,8 +18,12 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
     @AfterMethod
-    public void tearDown() throws InterruptedException{
-        Thread.sleep(1000);
+    public void tearDown(ITestResult result) throws InterruptedException{
+        if(result.getStatus()==ITestResult.FAILURE){
+            GetScreenshot.capture(driver, result.getName());
+        }
+
+        Thread.sleep(7000);
         driver.quit();
     }
 
