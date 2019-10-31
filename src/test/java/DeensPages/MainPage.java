@@ -79,5 +79,15 @@ public class MainPage  {
         searchNewYork.sendKeys("New York", Keys.RETURN);
         return new SearchDestination(driver);
     }
+
+    public void scrollToButton() throws InterruptedException {
+        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        js.executeScript("arguments[0].scrollIntoView();",clickButton());
+        clickButton().click();
+    }
+    public WebElement clickButton(){
+       var button=driver.findElement(By.xpath("//*[contains(text(),'Create a Trip & Start Earning')]"));
+       return button;
+    }
 }
 
