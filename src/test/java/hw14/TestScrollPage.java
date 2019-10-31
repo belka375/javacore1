@@ -10,7 +10,7 @@ public class TestScrollPage extends BaseTests {
     JavascriptExecutor js = (JavascriptExecutor) driver;
 
     @org.testng.annotations.Test
-    public void scroll_checkCreateTripButton_() throws InterruptedException {
+    public void scroll_checkCreateTripButton_(){
         MainPage mainPage=new MainPage(driver);
         mainPage.open();
         var button = driver.findElement(By.xpath("//*[contains(text(),'Create a Trip & Start Earning')]"));
@@ -18,6 +18,5 @@ public class TestScrollPage extends BaseTests {
         button.click();
         var popUp=driver.findElements(By.xpath("//*[@class='TripCreator__Option-eyiRVG dMLMqa']"));
         Assert.assertEquals(popUp.size(),3);
-
     }
 }

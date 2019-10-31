@@ -16,7 +16,7 @@ public class MainPage  {
     public MainPage(WebDriver driver){
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
+                .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(250))
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(Exception.class);
