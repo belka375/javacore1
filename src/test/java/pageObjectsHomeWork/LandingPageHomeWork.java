@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class LandingPageHomeWork extends BasePage {
 
@@ -88,6 +89,16 @@ public class LandingPageHomeWork extends BasePage {
 
     public boolean messageDisplayed() {
         return whereDoYouWantToGo_Message();
+    }
+
+    //Home work 15
+    public void hoverOverLoginButton() {
+        Actions action = new Actions(driver);
+        action.moveToElement(logInButton()).build().perform();
+    }
+
+    public boolean loginButtonWithChengedColor(){
+        return wait.until(x->driver.findElement(By.cssSelector("[class$='gjsHQW']>div>a:hover"))).isDisplayed();
     }
 }
 

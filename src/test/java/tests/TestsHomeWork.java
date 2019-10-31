@@ -87,5 +87,15 @@ public class TestsHomeWork extends BaseTest {
         var message = landingPage.messageDisplayed();
         Assert.assertTrue(message, "Pop up message with text 'Where do you want to go?' is not visible");
     }
+
+    //Home Work 15
+    @Test
+    public void hoverOverOnLoginButton_AssertColorChenging_Test(){
+        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        landingPage.openTestingPage();
+        landingPage.hoverOverLoginButton();
+        var loginButtonOtherColor = landingPage.loginButtonWithChengedColor();
+        Assert.assertTrue(loginButtonOtherColor, "LogIn button didn't change it color");
+    }
 }
 
