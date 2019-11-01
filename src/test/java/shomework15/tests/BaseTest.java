@@ -1,12 +1,12 @@
-package shomework14.tests;
+package shomework15.tests;
 
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import shomework14.browserFactory.BrowserFactory;
-import shomework14.enums.BrowserType;
-import shomework14.pageObjects.LandingPage;
+import shomework15.browserFactory.BrowserFactory;
+import shomework15.enums.BrowserType;
+import shomework15.pageObjects.LandingPage;
 
 public class BaseTest {
     WebDriver driver;

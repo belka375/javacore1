@@ -1,9 +1,11 @@
-package shomework14.pageObjects;
+package shomework15.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 import pageObjects.EarnMoneyPage;
 
 
@@ -55,20 +57,30 @@ public class LandingPage extends BasePage {
         return new EarnMoneyPage(driver);
     }
 
-   public DestinationPage open(String destination){
-        var city = driver.findElement(By.xpath("//h1[text()='"+destination+"']"));
+    public DestinationPage open(String destination) {
+        var city = driver.findElement(By.xpath("//h1[text()='" + destination + "']"));
         city.click();
         return new DestinationPage(driver);
-   }
+    }
 
-    public void openNewTrip() throws InterruptedException{
+    public void openNewTrip() throws InterruptedException {
         ((JavascriptExecutor) driver)
                 .executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        var createTrip=driver.findElement(By.cssSelector("div>a>p"));
+        var createTrip = driver.findElement(By.cssSelector("div>a>p"));
         createTrip.click();
     }
 
-     public WebElement getNewTripWindow(){
-         return driver.findElement(By.cssSelector("[style='margin-bottom: 30px;']"));
-     }
+    public WebElement getNewTripWindow() {
+        return driver.findElement(By.cssSelector("[style='margin-bottom: 30px;']"));
+    }
+
+    public String getLoginButtonColor() {
+        String color = getLoginButton().getCssValue("background-color");
+        return Color.fromString(color).asHex();
+    }
+
+    public void hoverLoginButton() {
+        Actions action = new Actions(driver);
+        action.moveToElement(getLoginButton()).perform();
+    }
 }

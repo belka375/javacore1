@@ -1,9 +1,9 @@
-package shomework14.tests;
+package shomework15.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import shomework14.pageObjects.DestinationPage;
-import shomework14.pageObjects.LandingPage;
+import shomework15.pageObjects.DestinationPage;
+import shomework15.pageObjects.LandingPage;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
@@ -11,7 +11,17 @@ import java.io.IOException;
 
 public class PageObjectTests extends BaseTest {
     @Test
-    public void clickOnCreateTripAndStartEarningButton() throws  InterruptedException{
+    public void hoverMouseOverLoginButton_ColorChanged() {
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        String loginButtonColorBefore = landingPage.getLoginButtonColor();
+        landingPage.hoverLoginButton();
+        String loginButtonColorAfter = landingPage.getLoginButtonColor();
+        Assert.assertNotSame(loginButtonColorBefore, loginButtonColorAfter);
+    }
+
+    @Test
+    public void clickOnCreateTripAndStartEarningButton() throws InterruptedException {
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
         landingPage.openNewTrip();
