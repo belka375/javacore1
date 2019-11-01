@@ -13,14 +13,13 @@ public class test14 extends BaseTest {
 
 
     @Test
-    public void checkTripCreatorOpens(JavascriptExecutor jse) {
+    public void checkTripCreatorOpens() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();
-        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        WebElement createTripLink = driver.findElement(By.xpath("//*[text()='Create a Trip & Start Earning']"));
-        createTripLink.click();
+        landingPage.getCreateTripLink();
 
-        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Start from scratch with an empty trip']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Start from scratch with an empty trip']")).isEnabled());
     }
+
 
 }

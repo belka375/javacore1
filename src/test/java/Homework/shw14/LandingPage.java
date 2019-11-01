@@ -1,8 +1,6 @@
 package Homework.shw14;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 public class LandingPage extends BasePage{
 
@@ -15,18 +13,24 @@ public class LandingPage extends BasePage{
     }
 
 
-    private WebElement getCreateTripLink(){
-        var createTripLink = wait.until(x->driver.findElement(By.xpath("//*[text()='Create a Trip & Start Earning']")));
-        return createTripLink;
-
+    public WebElement openCreateTripLink() throws InterruptedException {
+        boolean staleElement = true;
+        WebElement button = null;
+        while(staleElement){
+            try{
+                button = driver.findElement(By.xpath("//*[text()='Create a Trip & Start Earning']"));
+                staleElement = false;
+            } catch(StaleElementReferenceException e){
+                staleElement = true;
+                Thread.sleep(100);
+            }
+        }
+        return button;
     }
-    public void clickCreateTrip(){
-        getCreateTripLink().click();
-    }
 
-    private LandingPage openNewTripPage() {
-        var tripCreator = new LandingPage(driver);
-        return tripCreator;
+    public void getCreateTripLink() throws InterruptedException{
+        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        openCreateTripLink().click();
     }
-
 }

@@ -1,5 +1,6 @@
 package Homework.shw14;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -15,6 +16,7 @@ public class BasePage {
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class);
+                .ignoring(Exception.class)
+                .ignoring(StaleElementReferenceException.class);
     }
 }
