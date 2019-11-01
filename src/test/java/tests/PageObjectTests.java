@@ -15,6 +15,13 @@ import static helpers.RandomStringGenerator.randomString;
 public class PageObjectTests extends BaseTest{
 
     @Test
+    public void scrollPage() throws InterruptedException {
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        landingPage.openBottomButton();
+        Assert.assertEquals(driver.getCurrentUrl(),"https://deens-master.now.sh/new/trip");
+    }
+    @Test
     public void checkNumberOfTripsInNewYork(){
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
