@@ -1,7 +1,7 @@
 package HW10.HWtest;
 
-import HW10.HWtest.HWObjects.LandingPage;
-import HW10.HWtest.HWObjects.SignUpPage;
+import HW10.HWT.LandingP;
+import HW10.HWT.SignUpPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -10,13 +10,13 @@ import org.testng.annotations.Test;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
-public class tests extends BaseT {
+public class tests extends BaseTest {
      WebDriver driver;
 
      @Test
     public void openSignUP() throws InterruptedException {
-        LandingPage landingPage=new LandingPage(driver);
-        landingPage.open();
+        LandingP landingPage=new LandingP(driver);
+        landingPage.openLP();
        SignUpPage signUpPage = landingPage.openSignUpPage();
        Thread.sleep(3000);
        signUpPage.signup("user","email","password");
