@@ -1,6 +1,5 @@
 package shomework14.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import shomework14.pageObjects.DestinationPage;
