@@ -22,7 +22,8 @@ public class BaseTest {
         if(result.getStatus()==ITestResult.FAILURE){
             GetScreenshot.capture(driver, result.getName());
         }
-        Thread.sleep(1000);
+
+        Thread.sleep(7000);
         driver.quit();
     }
 
