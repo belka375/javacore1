@@ -31,7 +31,7 @@ public class PageObjectTests14 {
             driver.quit();
         }
 
-    @Test(enabled=true)
+    @Test(enabled=false)
     public void findButtonWithoutScroll()  {
         var landingPage = new LandingPage14(driver);
         landingPage.openPage();
