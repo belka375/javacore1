@@ -9,16 +9,16 @@ import pageObjects.LandingPage;
 
 public class BaseTest {
     WebDriver driver;
-    @BeforeMethod
-    public void startUp() throws NoSuchMethodException {
-        var factory = new BrowserFactory();
-        driver = factory.createWebDriver(BrowserType.CHROME);
-        driver.manage().window().maximize();
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException{
-        Thread.sleep(1000);
-        driver.quit();
+        @BeforeMethod
+        public void startUp() throws NoSuchMethodException {
+            var factory = new BrowserFactory();
+            driver = factory.createWebDriver(BrowserType.CHROME);
+            driver.manage().window().maximize();
+        }
+        @AfterMethod
+        public void tearDown() throws InterruptedException{
+            Thread.sleep(1000);
+            driver.quit();
     }
 
     protected LandingPage loginToApp(String username, String password) {

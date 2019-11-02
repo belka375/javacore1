@@ -1,10 +1,10 @@
 package pageObjects;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
+        import org.openqa.selenium.WebDriver;
+        import org.openqa.selenium.support.ui.FluentWait;
+        import org.openqa.selenium.support.ui.Wait;
 
-import java.time.Duration;
+        import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
