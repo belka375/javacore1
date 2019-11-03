@@ -15,7 +15,7 @@ public class BaseTest {
 
 
     @BeforeMethod
-    @Parameters({browser})
+    @Parameters({"browser"})
     public void startUp(String browserName) throws NoSuchMethodException, NoSuchFieldError {
         BrowserType browserType;
         switch (browserName){
