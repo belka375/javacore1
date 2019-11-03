@@ -46,5 +46,13 @@ public class LandingP extends BasePages{
     private WebElement getEarnMoneyB() {
         return wait.until(x->x.findElement(new By.ByLinkText("Earn Money")));
     }
+
+
+
+    public SearchResults open(String city) {
+         var cities =driver.findElement(By.xpath("//h1[text()='"+city+"']"));
+         cities.click();
+         return new SearchResults(driver);
+    }
 }
 

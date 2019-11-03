@@ -1,9 +1,9 @@
 package HW10.HWtest;
 
 import HW10.HWT.LandingP;
+import HW10.HWT.SearchResults;
 import HW10.HWT.SignUpPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
 public class tests extends BaseTest {
-     WebDriver driver;
+
 
      @Test
     public void openSignUP() throws InterruptedException {
@@ -40,4 +40,14 @@ Assert.assertEquals(getTextFromField,getTextCopied);
 
 
     }
+    @Test
+    public void checkNumberOfTripsInNY(){
+         LandingP landingP =new LandingP(driver);
+         landingP.openLP();
+        SearchResults searchResults=landingP.open("New York");
+        var trips=searchResults.getTrips();
+        Assert.assertEquals(trips.size(),6);
+
+    }
+
 }
