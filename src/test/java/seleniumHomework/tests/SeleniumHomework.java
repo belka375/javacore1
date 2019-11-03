@@ -1,6 +1,7 @@
 package seleniumHomework.tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import seleniumHomework.helpers.GetStringFromClipboard;
@@ -31,27 +32,30 @@ public class SeleniumHomework extends BaseTest {
 
         //Homework13
         @Test
-        public void openNewYorkAndAssert6ToгrsPresent() throws InterruptedException {
+        public void openNewYorkAndAssert6ToгrsPresent() {
             var landingPage = new LandingPage(driver);
             landingPage.open();
             landingPage.openNewYorToursPage();
-           // landingPage.openNewYorToursPageByChousingFirstElement();
             Assert.assertTrue(driver.findElements(By.cssSelector(".Trip__LinkWrapper-fulyrM.ewiHv")).size()==6);
         }
 
-        //Homework14
-        @Test
-        public void scrolDownManePage(){
+    //Homework14
+    @Test
+    public void scrolDownManePage(){
             var landingPage = new LandingPage(driver);
             landingPage.open();
             Scroll.down(driver,"2500");
             landingPage.getcreateTripAndStarErningButton().click();
         }
 
-
-
-
-
-
-
+    //Homework15
+    @Test
+    public void hoverOverLoginButton () {
+        var landingPage = new LandingPage(driver);
+        landingPage.open();
+        String defaultColor = landingPage.getLoginButton().getCssValue("background-color");
+        Actions hover = new Actions(driver);
+        hover.moveToElement(landingPage.getLoginButton()).build().perform();
+        Assert.assertNotSame(defaultColor, (landingPage.getLoginButton().getCssValue("background-color")));
+        }
 }
