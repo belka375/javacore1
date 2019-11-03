@@ -4,6 +4,7 @@ import HW10.HWT.LandingP;
 import HW10.HWT.SearchResults;
 import HW10.HWT.SignUpPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -40,13 +41,25 @@ Assert.assertEquals(getTextFromField,getTextCopied);
 
 
     }
-    @Test
+    @Test(enabled = false)
     public void checkNumberOfTripsInNY(){
          LandingP landingP =new LandingP(driver);
          landingP.openLP();
         SearchResults searchResults=landingP.open("New York");
         var trips=searchResults.getTrips();
         Assert.assertEquals(trips.size(),6);
+
+    }
+    @Test
+    public void Open_CreateATrip() throws InterruptedException {
+         LandingP landingP=new LandingP(driver);
+         landingP.openDeens();
+         JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        landingP.button().click();
+        var whereToGo = driver.findElement(By.xpath("//h2[text()='Where do you want to go?']"));
+        Assert.assertTrue(true, String.valueOf(whereToGo));
 
     }
 
