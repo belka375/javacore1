@@ -6,14 +6,14 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-public class BasePage {
+public class BasePageHomeWork {
     protected WebDriver driver;
     protected Wait<WebDriver>wait;
 
-    public BasePage(WebDriver driver){
+    public BasePageHomeWork(WebDriver driver){
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(15))
+                .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(250))
                 .ignoring(Exception.class);
     }

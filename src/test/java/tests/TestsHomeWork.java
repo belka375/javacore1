@@ -1,14 +1,10 @@
 package tests;
 
 import helpers.GetStringFromClipboard;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjectsHomeWork.LandingPageHomeWork;
-import pageObjectsHomeWork.SearchPageHomeWork;
+import pageObjectsHomeWork.LandingPageHomeWorkHomeWork;
+import pageObjectsHomeWork.SearchPageHomeWorkHomeWork;
 
 import static helpers.CreatingRandomUserCredentials.*;
 
@@ -17,7 +13,7 @@ public class TestsHomeWork extends BaseTest {
 
     @Test
     public void logInTest() throws Exception {
-        var landingPage = new LandingPageHomeWork(driver);
+        var landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
         var logInPage = landingPage.openLogInPage();
         logInPage = landingPage.openLogInPage();
@@ -30,7 +26,7 @@ public class TestsHomeWork extends BaseTest {
 
     @Test
     public void sigUpTest() {
-        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        LandingPageHomeWorkHomeWork landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
 
         var signUpPage = landingPage.openSignUpPageHomeWork();
@@ -49,7 +45,7 @@ public class TestsHomeWork extends BaseTest {
 
     @Test
     public void logIn_MoveToEarnMoneyPage_CopyReferralCode() throws Exception {
-        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        LandingPageHomeWorkHomeWork landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
 
         var loginPage = landingPage.openLogInPage();
@@ -71,9 +67,9 @@ public class TestsHomeWork extends BaseTest {
     // Home Work 13
     @Test
     public void searchForNewYorkTripTest() {
-        var landingPage = new LandingPageHomeWork(driver);
+        var landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
-        SearchPageHomeWork searchPage = landingPage.openSearchPage("New York");
+        SearchPageHomeWorkHomeWork searchPage = landingPage.openSearchPage("New York");
         var results = searchPage.getTrips();
         Assert.assertEquals(results.size(), 6);
     }
@@ -81,7 +77,7 @@ public class TestsHomeWork extends BaseTest {
     // Home Work 14
     @Test
     public void scrollDown_clickCreateTripButton() {
-        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        LandingPageHomeWorkHomeWork landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
         landingPage.scrollDownPage();
         var message = landingPage.messageDisplayed();
@@ -91,7 +87,7 @@ public class TestsHomeWork extends BaseTest {
     //Home Work 15
     @Test
     public void hoverOverOnLoginButton_AssertColorChenging_Test(){
-        LandingPageHomeWork landingPage = new LandingPageHomeWork(driver);
+        LandingPageHomeWorkHomeWork landingPage = new LandingPageHomeWorkHomeWork(driver);
         landingPage.openTestingPage();
         landingPage.hoverOverLoginButton();
         var loginButtonOtherColor = landingPage.loginButtonWithChengedColor();

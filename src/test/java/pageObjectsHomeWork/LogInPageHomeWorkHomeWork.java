@@ -5,10 +5,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LogInPageHomeWork extends BasePage {
+public class LogInPageHomeWorkHomeWork extends BasePageHomeWork {
 
 
-    public LogInPageHomeWork(WebDriver driver) {
+    public LogInPageHomeWorkHomeWork(WebDriver driver) {
         super(driver);
     }
 
@@ -39,10 +39,10 @@ public class LogInPageHomeWork extends BasePage {
         //searchInputField().sendKeys(Keys.RETURN);
     }
 
-    public SearchPageHomeWork openSearchPage(WebDriver driver) {
+    public SearchPageHomeWorkHomeWork openSearchPage(WebDriver driver) {
         wait.until(x -> driver.findElement(By.cssSelector(".Trip__LinkWrapper-fulyrM.ewiHv")));
 
-        SearchPageHomeWork searchPage = new SearchPageHomeWork(driver);
+        SearchPageHomeWorkHomeWork searchPage = new SearchPageHomeWorkHomeWork(driver);
         return searchPage;
 
     }

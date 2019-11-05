@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class EarnMoneyPageHomeWork extends BasePage {
+public class EarnMoneyPageHomeWorkHomeWork extends BasePageHomeWork {
 
 
-    public EarnMoneyPageHomeWork(WebDriver driver){
+    public EarnMoneyPageHomeWorkHomeWork(WebDriver driver){
         super(driver);
     }
 

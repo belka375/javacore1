@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class SearchPageHomeWork extends BasePage {
+public class SearchPageHomeWorkHomeWork extends BasePageHomeWork {
 
-    public SearchPageHomeWork(WebDriver driver) {
+    public SearchPageHomeWorkHomeWork(WebDriver driver) {
         super(driver);
     }
 

@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class LandingPageHomeWork extends BasePage {
+public class LandingPageHomeWorkHomeWork extends BasePageHomeWork {
 
 
-    public LandingPageHomeWork(WebDriver driver) {
+    public LandingPageHomeWorkHomeWork(WebDriver driver) {
         super(driver);
     }
 
@@ -22,9 +22,9 @@ public class LandingPageHomeWork extends BasePage {
         return wait.until(x -> driver.findElement(By.xpath("//*[@href='/login']")));
     }
 
-    public LogInPageHomeWork openLogInPage() {
+    public LogInPageHomeWorkHomeWork openLogInPage() {
         logInButton().click();
-        LogInPageHomeWork logInPage = new LogInPageHomeWork(driver);
+        LogInPageHomeWorkHomeWork logInPage = new LogInPageHomeWorkHomeWork(driver);
         return logInPage;
     }
 
@@ -41,9 +41,9 @@ public class LandingPageHomeWork extends BasePage {
         return wait.until(x -> driver.findElement(By.cssSelector("[href='/register']")));
     }
 
-    public SignUpPageHomeWork openSignUpPageHomeWork() {
+    public SignUpPageHomeWorkHomeWork openSignUpPageHomeWork() {
         signUpButton().click();
-        SignUpPageHomeWork signUpPage = new SignUpPageHomeWork(driver);
+        SignUpPageHomeWorkHomeWork signUpPage = new SignUpPageHomeWorkHomeWork(driver);
         return signUpPage;
     }
 
@@ -60,17 +60,17 @@ public class LandingPageHomeWork extends BasePage {
         return wait.until(x -> driver.findElement(By.xpath("//*[@href='/earn-money']")));
     }
 
-    public EarnMoneyPageHomeWork openEarnMoneyPage(WebDriver driver) {
+    public EarnMoneyPageHomeWorkHomeWork openEarnMoneyPage(WebDriver driver) {
         wait.until(x -> driver.findElement(By.xpath("(//div[@width='auto'])[2]")));
         earnMoneyButton().click();
-        EarnMoneyPageHomeWork earnMoneyPage = new EarnMoneyPageHomeWork(driver);
+        EarnMoneyPageHomeWorkHomeWork earnMoneyPage = new EarnMoneyPageHomeWorkHomeWork(driver);
         return earnMoneyPage;
     }
 
-    public SearchPageHomeWork openSearchPage(String destination) {
+    public SearchPageHomeWorkHomeWork openSearchPage(String destination) {
         var city = driver.findElement(By.xpath("//h1[text()='" + destination + "']"));
         city.click();
-        return new SearchPageHomeWork(driver);
+        return new SearchPageHomeWorkHomeWork(driver);
     }
 
     WebElement craeteTripButton() {
