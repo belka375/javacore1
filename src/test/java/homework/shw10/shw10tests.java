@@ -9,6 +9,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static helpers.RandomStringGenerator.randomEmail;
+import static helpers.RandomStringGenerator.randomString;
+
 public class shw10tests {
     WebDriver driver;
 
@@ -30,11 +33,22 @@ public class shw10tests {
         landingPage.open();
         SignUpPage signUpPage = landingPage.openSignUpPage();
 
-        signUpPage.signUp("user", "username99@username.com", "password99");
+        String username = randomString(10);
+        String password = randomString(12);
+        String email = randomEmail();
 
-        WebElement landingPageNote = driver.findElement(By.cssSelector("[class*=Home__HomeTagLine]"));
-        var note = landingPageNote.getText();
-        Assert.assertEquals(note, "Customizable travels created by locals for free");
+        landingPage = signUpPage.registerNewUser(username, email, password);
+
+        var logged = landingPage.isLogged();
+
+        Assert.assertTrue(logged);
+
+
+      //landingPage=signUpPage.signUp("user", "username99@username.com", "password99");
+
+//        WebElement landingPageNote = driver.findElement(By.cssSelector("[class*=Home__HomeTagLine]"));
+//        var note = landingPageNote.getText();
+//        Assert.assertEquals(note, "Customizable travels created by locals for free");
 
 
 

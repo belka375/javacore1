@@ -31,6 +31,33 @@ public class PageObjectTests {
         Thread.sleep(7000);
         driver.quit();
     }
+
+    //homework 11(earn money) with Baurzhan
+    @Test
+    public void getReferenceCode(){
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        var loginPage = landingPage.openLoginPage();
+        loginPage.login("smarot10","Password_10");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void clickEarnMoney(){
         LandingPage landingPage = new LandingPage(driver);

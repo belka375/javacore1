@@ -18,7 +18,7 @@ public class LandingPage {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(5))
-                .pollingEvery(Duration.ofSeconds(50))
+                .pollingEvery(Duration.ofMillis(50))
                 .ignoring(Exception.class);
 
     }
@@ -37,5 +37,12 @@ public class LandingPage {
         return signUpPage;
     }
 
+    private boolean getUserAvatar(){
+        return wait.until(x-> driver.findElement(By.cssSelector("[alt='user avatar']")).isDisplayed());
+    }
 
+    public boolean isLogged() {
+        return getUserAvatar();
+
+    }
 }

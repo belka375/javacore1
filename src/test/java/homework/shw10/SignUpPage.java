@@ -18,19 +18,20 @@ public class SignUpPage {
         this.driver = driver;
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(5))
-                .pollingEvery(Duration.ofSeconds(50))
+                .pollingEvery(Duration.ofMillis(50))
                 .ignoring(Exception.class);
 
     }
 
 
-    public void signUp(String username, String email, String password){
-        getUserNameField().clear();
-        getUserNameField().sendKeys(username);
-        getEmailField().sendKeys(email);
-        getPasswordField().sendKeys(password);
-        getButton().click();
-    }
+//    public LandingPage signUp(String username, String email, String password){
+//        getUserNameField().clear();
+//        getUserNameField().sendKeys(username);
+//        getEmailField().sendKeys(email);
+//        getPasswordField().sendKeys(password);
+//        getButton().click();
+//        return new LandingPage(driver);
+//    }
 
 
     private WebElement getUserNameField() {
@@ -47,5 +48,12 @@ public class SignUpPage {
     }
 
 
-
+    public LandingPage registerNewUser(String username, String email, String password) {
+        getUserNameField().clear();
+        getUserNameField().sendKeys(username);
+        getEmailField().sendKeys(email);
+        getPasswordField().sendKeys(password);
+        getButton().click();
+        return new LandingPage(driver);
+    }
 }

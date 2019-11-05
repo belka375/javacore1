@@ -50,6 +50,14 @@ public class TestRecord {
         driver.quit();
 
     }
+    @Test
+    public void clickAviasales(){
+        driver.get("https://www.aviasales.com/");
+        driver.findElement(By.id("origin")).sendKeys("NYC");
+        driver.findElement(By.id("destination")).sendKeys("LAS");
+        driver.findElement(By.xpath("//*")).sendKeys("LAS");
+
+    }
 
     //lesson 9 (Fluent wait)
     @Test

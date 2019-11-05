@@ -24,12 +24,13 @@ public class LoginPage {
 
     }
 
-    public void login(String user, String password) {
+    public LandingPage login(String user, String password) {
         System.out.println("in the login method");
         getEmailField().sendKeys(user);
-        System.out.println("send user name");
+        System.out.println("send username");
         getPasswordField().sendKeys(password);
         getButton().click();
+        return new LandingPage(driver);
 
     }
 
