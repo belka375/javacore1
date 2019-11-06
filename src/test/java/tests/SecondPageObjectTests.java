@@ -6,15 +6,16 @@ import org.testng.annotations.Test;
 import pageObjects.DestinationPage;
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
+
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
 
-public class PageObjectTests extends BaseTest {
+public class SecondPageObjectTests extends BaseTest {
 
     //homework13
     @Test
-    public void checkNumberOfTripsInNewYork(){
+    public void second_checkNumberOfTripsInNewYork(){
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
         DestinationPage destinationPage = landingPage.open("New York");
@@ -26,7 +27,7 @@ public class PageObjectTests extends BaseTest {
 
     //homework 11(earn money) with Baurzhan
     @Test
-    public void getReferenceCode() throws IOException, UnsupportedFlavorException, InterruptedException {
+    public void second_getReferenceCode() throws IOException, UnsupportedFlavorException, InterruptedException {
         var landingPage = loginTOApp("smarot10", "Password_10");
         Thread.sleep(3000);
         var earnMoney = landingPage.openEarnMoneyPage();
@@ -40,13 +41,12 @@ public class PageObjectTests extends BaseTest {
 
 
     @Test
-    public void clickEarnMoney(){
+    public void second_clickEarnMoney(){
         LandingPage landingPage = new LandingPage(driver);
         landingPage.open();
     }
     @Test(retryAnalyzer = RetryAnalyzer.class)
-
-    public void loginTOApp() throws InterruptedException {
+    public void second_loginTOApp() throws InterruptedException {
         var landingPage = new LandingPage(driver);
         landingPage.open();
         LoginPage loginPage = landingPage.openLoginPage();
