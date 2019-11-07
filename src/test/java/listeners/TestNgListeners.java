@@ -1,13 +1,18 @@
 package listeners;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestNgListener implements ITestListener {
+public class TestNgListeners implements ITestListener {
+    Logger logger;
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        
+        logger = LogManager.getLogger();
+        logger.info("test " +  iTestResult.getName());
+
     }
 
     @Override
