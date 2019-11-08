@@ -12,6 +12,18 @@ import java.io.IOException;
 
 public class PageObjectTests extends BaseTest {
 
+    //homework 14
+    @Test
+    public void scrollPage(){
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.open();
+        landingPage.openBottomoButton();
+
+        Assert.assertEquals(driver.getCurrentUrl(), "https://deens-master.now.sh/new/trip");
+
+
+    }
+
     //homework13
     @Test
     public void checkNumberOfTripsInNewYork(){
