@@ -1,30 +1,38 @@
 package tests;
 
-import browserFactory.BrowserFactory;
-import enums.BrowserType;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pageObjects.LandingPage;
+import org.testng.annotations.BeforeTest;
+
+import java.time.Duration;
+
 
 public class BaseTest {
-    public WebDriver driver;
+    protected WebDriver driver;
+    FluentWait<WebDriver> wait;
+
 
     @BeforeMethod
-    public void startUp() throws NoSuchMethodException {
-        var factory = new BrowserFactory();
-        driver = factory.createWebDriver(BrowserType.CHROME);
+  public void startUp(){
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        driver = new ChromeDriver();
+
+        wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(50))
+                .pollingEvery(Duration.ofMillis(100))
+                .ignoring(NoSuchMethodException.class);
+
     }
+
     @AfterMethod
     public void tearDown() throws InterruptedException{
-        Thread.sleep(7000);
+        Thread.sleep(5000);
         driver.quit();
     }
 
-    protected LandingPage loginToApp(String username, String password) {
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.open();
-        var loginPage = landingPage.openLoginPage();
-        return loginPage.login("smarot10","Password_10");
-    }
 }

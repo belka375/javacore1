@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All tests" parallel="classes" thread-count="2">
+    <test name="All tests" preserve-order="true">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.TestAviasale">
+                <methods>
+                    <include name="getPriceAviasale" />
+                </methods>
+            </class>
+            <class name="tests.TestAviasale">
+            </class>
+        </classes>
+    </test>
+</suite>
